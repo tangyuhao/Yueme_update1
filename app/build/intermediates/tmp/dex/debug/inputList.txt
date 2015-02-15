@@ -1,0 +1,16 @@
+D:\android_ui\leanchat-android-master1\app\build\intermediates\classes\debug
+D:\android_ui\leanchat-android-master1\app\build\intermediates\pre-dexed\debug\support-annotations-21.0.3-6c51e4d9f6d7abac3ecabc40cee5932d1c94b9fe.jar
+D:\android_ui\leanchat-android-master1\app\build\intermediates\pre-dexed\debug\avossearch-v2.6.9.1-88576a14920b48a29eb6c2e59a167a5de6bf6efc.jar
+D:\android_ui\leanchat-android-master1\app\build\intermediates\pre-dexed\debug\httpmime-4.2.4-699beb8b3e5c944b7b08cfdab9637cfff463bcd8.jar
+D:\android_ui\leanchat-android-master1\app\build\intermediates\pre-dexed\debug\butterknife-6.0.0-11bc734c672d8eb732f166f71bbd4cc48511a068.jar
+D:\android_ui\leanchat-android-master1\app\build\intermediates\pre-dexed\debug\avosstatistics-v2.6.9.1-ed8e59dbe6df4c32d1645d4fc0477ddc044a8468.jar
+D:\android_ui\leanchat-android-master1\app\build\intermediates\pre-dexed\debug\prettytime-3.2.5.Final-a35a0e95c2c3c280ac418586ebcdcd2b22738a7c.jar
+D:\android_ui\leanchat-android-master1\app\build\intermediates\pre-dexed\debug\android-async-http-1.4.6-06bd1938c05ae855a5df7c1985cd5510d18f6936.jar
+D:\android_ui\leanchat-android-master1\app\build\intermediates\pre-dexed\debug\internal_impl-21.0.3-96972e7139b36540dd1583b0da98113f9a27c960.jar
+D:\android_ui\leanchat-android-master1\app\build\intermediates\pre-dexed\debug\locSDK_4.2-2edde02951dd991c75a16dcf668c3fe80eb372be.jar
+D:\android_ui\leanchat-android-master1\app\build\intermediates\pre-dexed\debug\avospush-v2.6.9.1-f93196c8b9cbde4fbc2051c9fe946e19e22d847d.jar
+D:\android_ui\leanchat-android-master1\app\build\intermediates\pre-dexed\debug\fastjson-a0f0307434d7d24c69e8c97b15aa99255b327458.jar
+D:\android_ui\leanchat-android-master1\app\build\intermediates\pre-dexed\debug\avoscloud-v2.6.9.1-11558fadf913d83bf5ac46a5734b511ccf66760b.jar
+D:\android_ui\leanchat-android-master1\app\build\intermediates\pre-dexed\debug\universal-image-loader-1.9.2_sources-803a9c71e7ee3323cd820628a94aa195ec1b4702.jar
+D:\android_ui\leanchat-android-master1\app\build\intermediates\pre-dexed\debug\classes-c8574142eddba2bdf6bb008b99df7760363690fb.jar
+D:\android_ui\leanchat-android-master1\app\build\intermediates\pre-dexed\debug\baidumapapi_v3_0_0-00576ada758d86d279bd69898b2c877baf9cb2c4.jar

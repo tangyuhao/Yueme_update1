@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        jar="D:\android_ui\leanchat-android-master1\app\build\intermediates\exploded-aar\com.android.support\support-v4\21.0.3\classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="2c91c949a45a21cdecf26e03951e46c7beec9ad8">
+        <dex dex="D:\android_ui\leanchat-android-master1\app\build\intermediates\pre-dexed\debug\classes-c8574142eddba2bdf6bb008b99df7760363690fb.jar" />
+    </item>
+    <item
+        jar="D:\android_ui\leanchat-android-master1\app\libs\avosstatistics-v2.6.9.1.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="d91909b2b9101320b53cf84587f89aa9a0f10a21">
+        <dex dex="D:\android_ui\leanchat-android-master1\app\build\intermediates\pre-dexed\debug\avosstatistics-v2.6.9.1-ed8e59dbe6df4c32d1645d4fc0477ddc044a8468.jar" />
+    </item>
+    <item
+        jar="D:\android_ui\leanchat-android-master1\app\libs\httpmime-4.2.4.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="dba4d4d224e2ca872af5be8d2992777583145478">
+        <dex dex="D:\android_ui\leanchat-android-master1\app\build\intermediates\pre-dexed\debug\httpmime-4.2.4-699beb8b3e5c944b7b08cfdab9637cfff463bcd8.jar" />
+    </item>
+    <item
+        jar="D:\android_ui\leanchat-android-master1\app\libs\avospush-v2.6.9.1.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="5bd308075cce1d7d9d59b7739fd32766e11d30af">
+        <dex dex="D:\android_ui\leanchat-android-master1\app\build\intermediates\pre-dexed\debug\avospush-v2.6.9.1-f93196c8b9cbde4fbc2051c9fe946e19e22d847d.jar" />
+    </item>
+    <item
+        jar="D:\android_ui\leanchat-android-master1\app\libs\avossearch-v2.6.9.1.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="1db5ee9e5a1f5a1c16a52dda061f33c8966de09a">
+        <dex dex="D:\android_ui\leanchat-android-master1\app\build\intermediates\pre-dexed\debug\avossearch-v2.6.9.1-88576a14920b48a29eb6c2e59a167a5de6bf6efc.jar" />
+    </item>
+    <item
+        jar="D:\android_ui\leanchat-android-master1\app\libs\prettytime-3.2.5.Final.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="84f05b7911e736cd6913301e90bab3fbaa2f40da">
+        <dex dex="D:\android_ui\leanchat-android-master1\app\build\intermediates\pre-dexed\debug\prettytime-3.2.5.Final-a35a0e95c2c3c280ac418586ebcdcd2b22738a7c.jar" />
+    </item>
+    <item
+        jar="D:\android_ui\leanchat-android-master1\app\libs\avoscloud-v2.6.9.1.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="51ac785b56bf3fe221d976e63b5e39ed3731bb2a">
+        <dex dex="D:\android_ui\leanchat-android-master1\app\build\intermediates\pre-dexed\debug\avoscloud-v2.6.9.1-11558fadf913d83bf5ac46a5734b511ccf66760b.jar" />
+    </item>
+    <item
+        jar="D:\android_ui\leanchat-android-master1\app\libs\baidumapapi_v3_0_0.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="b39155228374e50c537705e9bfc10d3f69c2397a">
+        <dex dex="D:\android_ui\leanchat-android-master1\app\build\intermediates\pre-dexed\debug\baidumapapi_v3_0_0-00576ada758d86d279bd69898b2c877baf9cb2c4.jar" />
+    </item>
+    <item
+        jar="D:\android_ui\leanchat-android-master1\app\libs\universal-image-loader-1.9.2_sources.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="e33324b770223932d467e4ec39639b0c15f3b94e">
+        <dex dex="D:\android_ui\leanchat-android-master1\app\build\intermediates\pre-dexed\debug\universal-image-loader-1.9.2_sources-803a9c71e7ee3323cd820628a94aa195ec1b4702.jar" />
+    </item>
+    <item
+        jar="D:\android_ui\leanchat-android-master1\app\libs\butterknife-6.0.0.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="3a10b25b6820e19102e118711afe6a66c0bae123">
+        <dex dex="D:\android_ui\leanchat-android-master1\app\build\intermediates\pre-dexed\debug\butterknife-6.0.0-11bc734c672d8eb732f166f71bbd4cc48511a068.jar" />
+    </item>
+    <item
+        jar="D:\android_ui\leanchat-android-master1\app\libs\fastjson.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="d449ce9b6023c059db09be5170229162a77e007a">
+        <dex dex="D:\android_ui\leanchat-android-master1\app\build\intermediates\pre-dexed\debug\fastjson-a0f0307434d7d24c69e8c97b15aa99255b327458.jar" />
+    </item>
+    <item
+        jar="D:\android_ui\leanchat-android-master1\app\libs\android-async-http-1.4.6.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="a845a88238be0b5be9d238652c1bc0605ef91f52">
+        <dex dex="D:\android_ui\leanchat-android-master1\app\build\intermediates\pre-dexed\debug\android-async-http-1.4.6-06bd1938c05ae855a5df7c1985cd5510d18f6936.jar" />
+    </item>
+    <item
+        jar="D:\android_ui\leanchat-android-master1\app\build\intermediates\exploded-aar\com.android.support\support-v4\21.0.3\libs\internal_impl-21.0.3.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="01ec05bfbafcc07646ba813000bf2ef11742dd03">
+        <dex dex="D:\android_ui\leanchat-android-master1\app\build\intermediates\pre-dexed\debug\internal_impl-21.0.3-96972e7139b36540dd1583b0da98113f9a27c960.jar" />
+    </item>
+    <item
+        jar="C:\Users\tyh\AppData\Local\Android\sdk\extras\android\m2repository\com\android\support\support-annotations\21.0.3\support-annotations-21.0.3.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="4b74cefe1f0c1b819e7260c8627a14674e37fd35">
+        <dex dex="D:\android_ui\leanchat-android-master1\app\build\intermediates\pre-dexed\debug\support-annotations-21.0.3-6c51e4d9f6d7abac3ecabc40cee5932d1c94b9fe.jar" />
+    </item>
+    <item
+        jar="D:\android_ui\leanchat-android-master1\app\libs\locSDK_4.2.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="41b93335a2753c93f8b8f56741615cb81ea72437">
+        <dex dex="D:\android_ui\leanchat-android-master1\app\build\intermediates\pre-dexed\debug\locSDK_4.2-2edde02951dd991c75a16dcf668c3fe80eb372be.jar" />
+    </item>
+
+</items>
