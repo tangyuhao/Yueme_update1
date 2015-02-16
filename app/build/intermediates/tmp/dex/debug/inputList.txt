@@ -1,0 +1,16 @@
+D:\android_ui\yuemeapp\app\build\intermediates\classes\debug
+D:\android_ui\yuemeapp\app\build\intermediates\pre-dexed\debug\support-annotations-21.0.3-6c51e4d9f6d7abac3ecabc40cee5932d1c94b9fe.jar
+D:\android_ui\yuemeapp\app\build\intermediates\pre-dexed\debug\avossearch-v2.6.9.1-0666c4bb90d67c83702882d409f3bafaf066782b.jar
+D:\android_ui\yuemeapp\app\build\intermediates\pre-dexed\debug\httpmime-4.2.4-64c4e7cab30d789cc1cfca5713eed6d97c410940.jar
+D:\android_ui\yuemeapp\app\build\intermediates\pre-dexed\debug\butterknife-6.0.0-7cf633b571845dd23978efe15f97017e5f01e4ad.jar
+D:\android_ui\yuemeapp\app\build\intermediates\pre-dexed\debug\avosstatistics-v2.6.9.1-d0f7d395269939e1c156b557bd9878362cb69714.jar
+D:\android_ui\yuemeapp\app\build\intermediates\pre-dexed\debug\prettytime-3.2.5.Final-bbfc47355941c2d683d78a2a52dc0c9f68d70d6e.jar
+D:\android_ui\yuemeapp\app\build\intermediates\pre-dexed\debug\android-async-http-1.4.6-28416e06e90a42b8433b8c4f18d7766e9c61d9ac.jar
+D:\android_ui\yuemeapp\app\build\intermediates\pre-dexed\debug\internal_impl-21.0.3-c00399a8b84fcc059040dea2cb71c9114cbdf7aa.jar
+D:\android_ui\yuemeapp\app\build\intermediates\pre-dexed\debug\locSDK_4.2-cbbbdc14e0215d52decda01b415690920fd624ac.jar
+D:\android_ui\yuemeapp\app\build\intermediates\pre-dexed\debug\avospush-v2.6.9.1-0aec2e3f1d556a90bc8ddf715d4dbd4c59b57cf8.jar
+D:\android_ui\yuemeapp\app\build\intermediates\pre-dexed\debug\fastjson-ffb6b81869832e5ed1db7a2db19b2b2686666581.jar
+D:\android_ui\yuemeapp\app\build\intermediates\pre-dexed\debug\avoscloud-v2.6.9.1-90a7607dc40496c5abb89cc0d8e6507a37b1b523.jar
+D:\android_ui\yuemeapp\app\build\intermediates\pre-dexed\debug\universal-image-loader-1.9.2_sources-22b69586f86f6cff4f47be66ceda3f6241b2af90.jar
+D:\android_ui\yuemeapp\app\build\intermediates\pre-dexed\debug\classes-40973f15dcc9dbc9f6e9be186411fd21e4d33c8e.jar
+D:\android_ui\yuemeapp\app\build\intermediates\pre-dexed\debug\baidumapapi_v3_0_0-3c9a229048ecf53bc9ea1f2f5b32ae2644571a96.jar
