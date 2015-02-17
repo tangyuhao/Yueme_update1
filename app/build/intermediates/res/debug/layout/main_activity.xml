@@ -120,4 +120,4 @@
         android:layout_height="match_parent"
         android:layout_above="@id/main_bottom" />
 
-</RelativeLayout><!-- From: file:/D:/android_ui/yuemeapp/app/src/main/res/layout/main_activity.xml -->
+</RelativeLayout><!-- From: file:/D:/github/yueme/app/src/main/res/layout/main_activity.xml -->

@@ -7,7 +7,7 @@
 
     <include layout="@layout/base_header_layout" />
 
-    <com.avoscloud.yueme.ui.view.BaseListView
+    <com.syc.yueme.ui.view.BaseListView
         android:id="@+id/convList"
         android:layout_width="match_parent"
         android:layout_height="match_parent"

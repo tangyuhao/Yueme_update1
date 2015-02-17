@@ -7,6 +7,7 @@
     <color name="dark_tree_green">#428666</color>
     <color name="color_bottom_text_normal">#9da0a4</color>
     <color name="color_bottom_text_press">#4f9ef6</color>
+    <color name="titlebar_color">#2C97E8</color>
 
     <color name="common_blue">#2C97E8</color>
     <color name="transparent">#ffff</color>

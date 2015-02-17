@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.avoscloud.yueme"
+    package="com.syc.yueme"
     android:versionCode="11"
     android:versionName="1.0.9">
 
@@ -37,11 +37,12 @@
     <application
         android:label="@string/app_name"
         android:icon="@drawable/icon"
-        android:theme="@android:style/Theme.Holo.Light.NoActionBar"
-        android:name="com.avoscloud.yueme.base.App">
+        android:theme="@style/Customtheme"
+        android:name="com.syc.yueme.base.App">
+        <!--android:theme="@android:style/Theme.Holo.Light.NoActionBar"-->
 
         <activity
-            android:name="com.avoscloud.yueme.ui.activity.ChatActivity"
+            android:name="com.syc.yueme.ui.activity.ChatActivity"
             android:launchMode="singleTask"
             android:theme="@style/MainTheme" />
 
@@ -55,14 +56,14 @@
             </intent-filter>
         </receiver>
 
-        <receiver android:name="com.avoscloud.yueme.service.receiver.MsgReceiver">
+        <receiver android:name="com.syc.yueme.service.receiver.MsgReceiver">
             <intent-filter>
                 <action android:name="android.intent.action.BOOT_COMPLETED" />
                 <action android:name="com.avoscloud.session.action" />
             </intent-filter>
         </receiver>
 
-        <receiver android:name="com.avoscloud.yueme.service.receiver.GroupMsgReceiver">
+        <receiver android:name="com.syc.yueme.service.receiver.GroupMsgReceiver">
             <intent-filter>
                 <action android:name="android.intent.action.BOOT_COMPLETED" />
                 <action android:name="com.avoscloud.group.action" />
@@ -70,15 +71,15 @@
         </receiver>
 
         <activity
-            android:name="com.avoscloud.yueme.ui.activity.MainActivity"
+            android:name="com.syc.yueme.ui.activity.MainActivity"
             android:launchMode="singleTask" />
 
         <activity
-            android:name="com.avoscloud.yueme.ui.activity.UpdateContentActivity"
+            android:name="com.syc.yueme.ui.activity.UpdateContentActivity"
             android:theme="@style/MainTheme" />
 
         <activity
-            android:name="com.avoscloud.yueme.ui.activity.SplashActivity"
+            android:name="com.syc.yueme.ui.activity.SplashActivity"
             android:theme="@android:style/Theme.Holo.Light.NoActionBar.Fullscreen">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -86,45 +87,45 @@
             </intent-filter>
         </activity>
 
-        <activity android:name="com.avoscloud.yueme.ui.activity.ImageBrowerActivity" />
+        <activity android:name="com.syc.yueme.ui.activity.ImageBrowerActivity" />
 
         <activity
-            android:name="com.avoscloud.yueme.ui.activity.LocationActivity"
+            android:name="com.syc.yueme.ui.activity.LocationActivity"
             android:theme="@style/MainTheme" />
 
-        <activity android:name="com.avoscloud.yueme.ui.activity.LoginActivity" />
+        <activity android:name="com.syc.yueme.ui.activity.LoginActivity" />
 
         <activity
-            android:name="com.avoscloud.yueme.ui.activity.RegisterActivity"
-            android:theme="@style/MainTheme" />
-
-        <activity
-            android:name="com.avoscloud.yueme.ui.activity.NewFriendActivity"
+            android:name="com.syc.yueme.ui.activity.RegisterActivity"
             android:theme="@style/MainTheme" />
 
         <activity
-            android:name="com.avoscloud.yueme.ui.activity.AddFriendActivity"
+            android:name="com.syc.yueme.ui.activity.NewFriendActivity"
             android:theme="@style/MainTheme" />
 
         <activity
-            android:name="com.avoscloud.yueme.ui.activity.PersonInfoActivity"
+            android:name="com.syc.yueme.ui.activity.AddFriendActivity"
             android:theme="@style/MainTheme" />
 
         <activity
-            android:name="com.avoscloud.yueme.ui.activity.NotifySettingActivity"
+            android:name="com.syc.yueme.ui.activity.PersonInfoActivity"
             android:theme="@style/MainTheme" />
 
         <activity
-            android:name="com.avoscloud.yueme.ui.activity.GroupListActivity"
+            android:name="com.syc.yueme.ui.activity.NotifySettingActivity"
+            android:theme="@style/MainTheme" />
+
+        <activity
+            android:name="com.syc.yueme.ui.activity.GroupListActivity"
             android:label="@string/group"
             android:theme="@style/MainTheme" />
 
         <activity
-            android:name="com.avoscloud.yueme.ui.activity.GroupDetailActivity"
+            android:name="com.syc.yueme.ui.activity.GroupDetailActivity"
             android:theme="@style/MainTheme" />
 
         <activity
-            android:name="com.avoscloud.yueme.ui.activity.GroupAddMembersActivity"
+            android:name="com.syc.yueme.ui.activity.GroupAddMembersActivity"
             android:theme="@style/MainTheme"
             android:label="@string/inviteMembers" />
 

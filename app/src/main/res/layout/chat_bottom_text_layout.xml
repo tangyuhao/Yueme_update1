@@ -7,7 +7,7 @@
     android:layout_height="@dimen/chatBottomHeight"
     android:gravity="center_vertical">
 
-    <com.avoscloud.yueme.ui.view.EmotionEditText
+    <com.syc.yueme.ui.view.EmotionEditText
         android:id="@+id/textEdit"
         android:layout_width="0dp"
         android:layout_weight="1"
