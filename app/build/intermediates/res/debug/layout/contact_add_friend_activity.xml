@@ -35,7 +35,7 @@
             android:textSize="14sp" />
     </LinearLayout>
 
-    <com.avoscloud.yueme.ui.view.xlist.XListView
+    <com.syc.yueme.ui.view.xlist.XListView
         android:id="@+id/searchList"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -46,4 +46,4 @@
         android:fastScrollEnabled="true"
         android:paddingBottom="10dp" />
 
-</LinearLayout><!-- From: file:/D:/android_ui/yuemeapp/app/src/main/res/layout/contact_add_friend_activity.xml -->
+</LinearLayout><!-- From: file:/D:/github/yueme/app/src/main/res/layout/contact_add_friend_activity.xml -->

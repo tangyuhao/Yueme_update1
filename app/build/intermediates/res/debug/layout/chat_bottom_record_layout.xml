@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="@dimen/chatBottomHeight">
 
-    <com.avoscloud.yueme.ui.view.RecordButton
+    <com.syc.yueme.ui.view.RecordButton
         android:id="@+id/recordBtn"
         android:layout_width="0dp"
         android:layout_weight="1"
@@ -23,4 +23,4 @@
         android:layout_margin="@dimen/chatBottomBtnMargin"
         android:layout_gravity="center_vertical"
         android:background="@drawable/btn_keyboard" />
-</LinearLayout><!-- From: file:/D:/android_ui/yuemeapp/app/src/main/res/layout/chat_bottom_record_layout.xml -->
+</LinearLayout><!-- From: file:/D:/github/yueme/app/src/main/res/layout/chat_bottom_record_layout.xml -->

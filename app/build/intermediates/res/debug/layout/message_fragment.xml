@@ -7,10 +7,10 @@
 
     <include layout="@layout/base_header_layout" />
 
-    <com.avoscloud.yueme.ui.view.BaseListView
+    <com.syc.yueme.ui.view.BaseListView
         android:id="@+id/convList"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:cacheColorHint="#00000000"
         android:divider="@null" />
-</LinearLayout><!-- From: file:/D:/android_ui/yuemeapp/app/src/main/res/layout/message_fragment.xml -->
+</LinearLayout><!-- From: file:/D:/github/yueme/app/src/main/res/layout/message_fragment.xml -->

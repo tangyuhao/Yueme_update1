@@ -282,18 +282,27 @@
 
     <style name="ActionBarTitleStyle">
         <item name="android:textColor">#fff</item>
+        <item name="android:textSize">@dimen/titlebar_text_size</item>
     </style>
 
-    <style name="ActionBarStyle" parent="@android:style/Widget.Holo.ActionBar">
+    <style name="ActionBarStyle" parent="@android:style/Widget.Holo.Light.ActionBar.Solid.Inverse">
         <item name="android:background">@color/common_blue</item>
-        <item name="android:titleTextStyle">@style/ActionBarTitleStyle</item>
+        <item name="android:subtitleTextStyle">@style/ActionBarTitleStyle</item>
         <!--<item name="android:icon">@android:color/transparent</item>-->
     </style>
 
     <style name="MainTheme" parent="android:Theme.Holo.Light">
         <item name="android:actionBarStyle">@style/ActionBarStyle</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:actionMenuTextAppearance">@style/ActionBarMenuStyle</item>
         <item name="android:homeAsUpIndicator">@drawable/back_btn</item>
         <item name="android:actionMenuTextColor">@color/white</item>
+    </style>
+
+    <style name="ActionBarMenuStyle">
+        <item name="android:textColor">#fff</item>
+        <item name="android:textSize">@dimen/ActionBarMenuSize</item>
+
     </style>
 
     <style name="Avatar">
@@ -307,5 +316,11 @@
         <item name="android:layout_marginLeft">@dimen/myspace_margin_left</item>
         <item name="android:layout_centerVertical">true</item>
     </style>
+
+    <style name="Customtheme" parent="@android:style/Theme.Holo.Light.NoActionBar">
+        <item name="android:windowContentOverlay">@null</item>
+    </style>
+
+
 
 </resources>

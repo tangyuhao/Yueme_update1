@@ -19,6 +19,8 @@
     <dimen name="activity_vertical_margin">16dp</dimen>
 
     <dimen name="text_size_large">18sp</dimen>
+    <dimen name="ActionBarMenuSize">16sp</dimen>
+    <dimen name="titlebar_text_size">18sp</dimen>
     <dimen name="registerLeftWidth">100dp</dimen>
 
     <!-- Default screen margins, per the Android Design guidelines. -->
@@ -30,4 +32,5 @@
     <dimen name="chatMaxNameWidth">50dp</dimen>
     <dimen name="chatImageWidth">100dp</dimen>
     <dimen name="myspace_margin_left">10dp</dimen>
+
 </resources>

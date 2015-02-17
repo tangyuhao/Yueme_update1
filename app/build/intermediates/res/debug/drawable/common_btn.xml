@@ -3,4 +3,4 @@
 <selector xmlns:android="http://schemas.android.com/apk/res/android">
     <item android:drawable="@drawable/common_btn_pressed" android:state_pressed="true" />
     <item android:drawable="@drawable/common_btn_normal" />
-</selector><!-- From: file:/D:/android_ui/yuemeapp/app/src/main/res/drawable/common_btn.xml -->
+</selector><!-- From: file:/D:/github/yueme/app/src/main/res/drawable/common_btn.xml -->
