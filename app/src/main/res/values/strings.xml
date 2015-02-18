@@ -130,5 +130,6 @@
 
     <string name="listEmptyHint">无数据</string>
     <string name="noMore">已无更多</string>
+    <string name="yue">约！</string>
 
 </resources>
