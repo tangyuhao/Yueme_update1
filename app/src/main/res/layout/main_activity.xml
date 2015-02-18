@@ -19,15 +19,15 @@
             android:layout_weight="1">
 
             <Button
-                android:id="@+id/btn_message"
+                android:id="@+id/btn_discover"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:drawableTop="@drawable/tabbar_chat"
+                android:drawableTop="@drawable/tabbar_discover"
                 android:onClick="onTabSelect"
                 android:paddingBottom="2dip"
                 android:paddingTop="7dip"
                 android:scaleType="matrix"
-                android:text="@string/messages"
+                android:text="@string/discover"
                 android:background="@null"
                 android:textColor="@drawable/tab_textcolor"
                 android:textSize="12sp" />
@@ -84,17 +84,17 @@
         </RelativeLayout>
 
         <Button
-            android:id="@+id/btn_discover"
+            android:id="@+id/btn_message"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:drawableTop="@drawable/tabbar_discover"
+            android:drawableTop="@drawable/tabbar_chat"
             android:onClick="onTabSelect"
             android:paddingBottom="2dip"
             android:paddingTop="7dip"
             android:background="@null"
             android:scaleType="matrix"
-            android:text="@string/discover"
+            android:text="@string/messages"
             android:textColor="@drawable/tab_textcolor"
             android:textSize="12sp" />
 

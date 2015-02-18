@@ -6,8 +6,26 @@
     android:layout_height="match_parent"
     android:background="#f2f2f2">
 
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
     <include layout="@layout/base_header_layout" />
 
+    <Button
+        android:id="@+id/btn_yue"
+        android:layout_width="80dp"
+        android:layout_height="40dp"
+        android:background="@drawable/buttonstyle"
+        android:gravity="center"
+        android:layout_marginRight="5dp"
+        android:layout_marginTop="4dp"
+        android:layout_alignParentRight="true"
+        android:text="@string/yue"
+        android:textColor="@color/base_color_text_white"
+        android:textSize="@dimen/text_size_large" />
+
+</RelativeLayout>
     <com.syc.yueme.ui.view.BaseListView
         android:id="@+id/list_near"
         android:layout_width="match_parent"
@@ -19,4 +37,4 @@
         android:fastScrollEnabled="true"
         android:paddingBottom="10dp" />
 
-</LinearLayout><!-- From: file:/D:/github/yueme/app/src/main/res/layout/discover_fragment.xml -->
+</LinearLayout><!-- From: file:/C:/Users/wangweijia/Desktop/Yueme_update1/app/src/main/res/layout/discover_fragment.xml -->

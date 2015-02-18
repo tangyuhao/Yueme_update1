@@ -53,8 +53,8 @@ public class MainActivity extends BaseActivity {
 
     //mySpaceBtn.performClick();
     //contactBtn.performClick();
-    conversationBtn.performClick();
-    //discoverBtn.performClick();
+    //conversationBtn.performClick();
+    discoverBtn.performClick();
     initBaiduLocClient();
 
     //UpdateService.createUpdateInfoInBackground();
