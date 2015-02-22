@@ -55,7 +55,7 @@ public class LoginActivity extends BaseEntryActivity implements OnClickListener 
   @Override
   public void onClick(View v) {
     if (v == registerBtn) {
-      Utils.goActivity(ctx, RegisterActivity.class);
+      Utils.goActivity(ctx, RegisterActivity1.class);
     } else {
       login();
     }
