@@ -36,7 +36,7 @@ public class MySpaceFragment extends BaseFragment implements View.OnClickListene
     private static final int IMAGE_PICK_REQUEST = 1;
     private static final int CROP_REQUEST = 2;
     TextView usernameView, schoolidView;
-    ImageView avatarView;
+    ImageView avatarView,avatarBackgroundView;
     View myyueLayout, avatarLayout,yingyueLayout,
             specialyueLayout, notifyLayout, passwordchangeLayout;
 
@@ -63,6 +63,7 @@ public class MySpaceFragment extends BaseFragment implements View.OnClickListene
     private void findView() {
         View fragmentView = getView();
         usernameView = (TextView) fragmentView.findViewById(R.id.username);
+        avatarBackgroundView = (ImageView) fragmentView.findViewById(R.id.avatarbackground);
         avatarView = (ImageView) fragmentView.findViewById(R.id.avatar);
         myyueLayout = fragmentView.findViewById(R.id.myyueLayout);
         avatarLayout = fragmentView.findViewById(R.id.avatarLayout);

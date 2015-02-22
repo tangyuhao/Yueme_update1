@@ -40,6 +40,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="156dp"
                     android:src="@drawable/avatarbackground"
+                    android:scaleType="fitXY"
                     android:layout_centerHorizontal="true"
                     android:layout_alignParentBottom="true" />
                 <!--end-->
@@ -84,8 +85,9 @@
                 android:id="@+id/myyueLayout"
                 android:layout_width="match_parent"
                 android:layout_height="60dp"
-                android:background="@drawable/card_background_white"
-                android:padding="0dp">
+                android:background="@drawable/layoutpress"
+                android:padding="0dp"
+                android:clickable="true">
 
                 <TextView
                     android:id="@+id/myyue_cd"
@@ -119,18 +121,21 @@
 
             </RelativeLayout>
             <RelativeLayout
+                android:onClick="onClick"
                 android:id="@+id/yingyueLayout"
                 android:layout_width="match_parent"
                 android:layout_height="60dp"
-                android:background="@drawable/card_background_white"
-                android:padding="0dp">
+                android:background="@drawable/layoutpress"
+                android:padding="0dp"
+                android:clickable="true"
+                android:focusableInTouchMode="true">
 
                 <TextView
                     android:id="@+id/yingyue_cd"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_centerInParent="true"
-                    android:text="应约状态" />
+                    android:text="应约状态"/>
                 <!--灰色分界线-->
                 <!--end-->
 
@@ -143,7 +148,7 @@
                     android:layout_marginRight="10dp"
                     android:drawablePadding="10dp"
                     android:src="@drawable/register_bottom_arrow"
-                    android:id="@+id/imageViewyingyue_cd" />
+                    android:id="@+id/imageViewyingyue_cd"/>
                 <ImageView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -152,15 +157,17 @@
                     android:id="@+id/picture_yingyue"
                     android:layout_alignParentTop="true"
                     android:layout_alignParentLeft="true"
-                    android:layout_toLeftOf="@+id/yingyue_cd" />
+                    android:layout_toLeftOf="@+id/yingyue_cd"/>
 
             </RelativeLayout>
             <RelativeLayout
                 android:id="@+id/specialyueLayout"
                 android:layout_width="match_parent"
                 android:layout_height="60dp"
-                android:background="@drawable/card_background_white"
-                android:padding="0dp">
+                android:background="@drawable/layoutpress"
+                android:padding="0dp"
+                android:clickable="true"
+                android:focusableInTouchMode="false">
 
                 <TextView
                     android:id="@+id/specialyue_cd"
@@ -204,7 +211,9 @@
                 android:id="@+id/notifyLayout"
                 android:layout_width="match_parent"
                 android:layout_height="60dp"
-                android:background="@drawable/card_background_white"
+                android:background="@drawable/layoutpress"
+                android:clickable="true"
+
                 >
 
                 <TextView
@@ -237,10 +246,13 @@
             </RelativeLayout>
 
             <RelativeLayout
+
                 android:id="@+id/passwordchangeLayout"
                 android:layout_width="match_parent"
                 android:layout_height="60dp"
-                android:background="@drawable/card_background_white"
+                android:background="@drawable/layoutpress"
+                android:clickable="true"
+
                 >
 
                 <TextView

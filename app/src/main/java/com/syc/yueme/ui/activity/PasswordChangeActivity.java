@@ -22,17 +22,23 @@ public class PasswordChangeActivity extends BaseEntryActivity implements OnClick
     EditText passwordEdit, emailEdit,oldpasswordEdit;
     TextView usernameView;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         // TODO Auto-generated method stub
         super.onCreate(savedInstanceState);
         setContentView(R.layout.password_change_activity);
+       // initActionBar(App.ctx.getString(R.string.changePassword));
+
         findView();
         AVUser curUser = AVUser.getCurrentUser();
         usernameView.setText(curUser.getUsername());
+
     }
 
     private void findView() {
+       // initActionBar(App.ctx.getString(R.string.changePassword));
+
         passwordEdit = (EditText) findViewById(R.id.passwordEdit);
         oldpasswordEdit=(EditText) findViewById(R.id.oldpasswordEdit);
         emailEdit = (EditText) findViewById(R.id.ensurePasswordEdit);
