@@ -128,5 +128,29 @@
     <string name="noequal">您的账号和密码不匹配</string>
     <string name="changeFailed">改密失败</string>
     <string name="changeSucceed">改密成功</string>
+    <string name="title_activity_register_activity2">RegisterActivity2</string>
+    <string name="title_activity_register_activity1">RegisterActivity1</string>
+    <string name="title_activity_register_activity3">RegisterActivity3</string>
+    <string name="title_activity_register_activity4">RegisterActivity4</string>
+
+
+    <string name="username_used">对不起，该用户名已被使用</string>
+    <string name="student_id_empty">学号不能为空</string>
+
+    <string-array name="school_array">
+        <item>复旦大学</item>
+        <item>同济大学</item>
+        <item>上海交通大学</item>
+    </string-array>
+
+    <string-array name="school_mail">
+        <item>\@fudan.edu.cn</item>
+        <item>\@tongji.edu.cn</item>
+        <item>\@sjtu.edu.cn</item>
+    </string-array>
+
+    <string name="note1">我们将发送一封邮件到您的学号邮箱，验证完成就能使用。</string>
+    <string name="title_activity_register6">Register6</string>
+    <string name="title_activity_register_successful">Register_successful</string>
 
 </resources>

@@ -4,4 +4,4 @@
     <item android:state_selected="true" android:color="@color/color_bottom_text_press" />
     <item android:state_selected="false" android:color="@color/color_bottom_text_normal" />
 
-</selector><!-- From: file:/D:/github/yueme/app/src/main/res/drawable/tab_textcolor.xml -->
+</selector><!-- From: file:/Users/kawhi/AndroidStudioProjects/Yueme_update1/app/src/main/res/drawable/tab_textcolor.xml -->
