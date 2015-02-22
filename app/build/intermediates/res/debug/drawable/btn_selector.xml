@@ -4,4 +4,4 @@
     <item android:drawable="@color/common_blue" android:state_selected="true" />
     <item android:drawable="@android:color/transparent" />
 
-</selector><!-- From: file:/C:/Users/wangweijia/Desktop/Yueme_update1/app/src/main/res/drawable/btn_selector.xml -->
+</selector><!-- From: file:/D:/git_master3/Yueme_update1/app/src/main/res/drawable/btn_selector.xml -->

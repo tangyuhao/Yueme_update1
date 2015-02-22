@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+
     <dimen name="radius">5dp</dimen>
     <dimen name="chatBottomHeight">50dp</dimen>
     <dimen name="userHead">45dp</dimen>
@@ -11,13 +12,11 @@
     <dimen name="avatarSize">50dp</dimen>
     <dimen name="playBtnWidth">30dp</dimen>
     <dimen name="chatBottomBtnSize">30dp</dimen>
-
     <dimen name="common_list_item_height">60dp</dimen>
     <dimen name="base_line_width_1">1dip</dimen>
     <dimen name="base_action_bar_height">48.0dip</dimen>
     <dimen name="register_margin">10.0dp</dimen>
     <dimen name="activity_vertical_margin">16dp</dimen>
-
     <dimen name="text_size_large">18sp</dimen>
     <dimen name="ActionBarMenuSize">16sp</dimen>
     <dimen name="titlebar_text_size">18sp</dimen>
@@ -32,5 +31,6 @@
     <dimen name="chatMaxNameWidth">50dp</dimen>
     <dimen name="chatImageWidth">100dp</dimen>
     <dimen name="myspace_margin_left">10dp</dimen>
+    <dimen name="activity_horizontal_margin">16dp</dimen>
 
 </resources>

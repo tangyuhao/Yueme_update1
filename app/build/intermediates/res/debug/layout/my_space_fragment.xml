@@ -3,7 +3,9 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="@color/base_bg">
+
 
     <include layout="@layout/base_header_layout" />
 
@@ -19,22 +21,36 @@
             <RelativeLayout
                 android:id="@+id/avatarLayout"
                 android:layout_width="match_parent"
-                android:layout_height="80dp"
-                android:background="@drawable/btn_selector"
-                android:padding="10dp">
+                android:layout_height="156dp"
+                android:background="@drawable/card_background_white"
+                android:padding="0dp">
 
-                <TextView
-                    android:text="@string/avatar"
-                    style="@style/myspace_left_text" />
 
+                <!--<TextView-->
+                <!--android:text="@string/avatar"-->
+                <!--style="@style/myspace_left_text"-->
+                <!--android:id="@+id/textView2"-->
+                <!--android:layout_alignTop="@+id/imageView2"-->
+                <!--android:layout_centerHorizontal="true" />-->
+
+
+                <!--添加头像部分的背景图片-->
+                <ImageView
+                    android:id="@+id/avatarbackground"
+                    android:layout_width="match_parent"
+                    android:layout_height="156dp"
+                    android:src="@drawable/avatarbackground"
+                    android:layout_centerHorizontal="true"
+                    android:layout_alignParentBottom="true" />
+                <!--end-->
                 <ImageView
                     android:id="@+id/avatar"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_centerInParent="true"
-                    android:src="@drawable/default_user_avatar" />
-
-
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:src="@drawable/default_user_avatar"
+                    android:layout_marginLeft="58dp"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentLeft="true" />
                 <ImageView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -42,48 +58,44 @@
                     android:layout_centerVertical="true"
                     android:layout_marginRight="10dp"
                     android:drawablePadding="10dp"
-                    android:src="@drawable/register_bottom_arrow" />
-            </RelativeLayout>
+                    android:src="@drawable/register_bottom_arrow"
+                    android:id="@+id/imageView2" />
 
-
-            <RelativeLayout
-                android:id="@+id/usernameLayout"
-                android:layout_width="match_parent"
-                android:layout_height="80dp"
-                android:background="@drawable/btn_selector"
-                android:padding="10dp">
-
-                <TextView
-                    style="@style/myspace_left_text"
-                    android:text="@string/username" />
-
+                <!--增加用户名和学号文本，其中学号文本暂时没有设置-->
                 <TextView
                     android:id="@+id/username"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_centerInParent="true"
-                    android:text="username" />
-
-
+                    android:text="username"
+                    android:layout_above="@+id/imageView2"
+                    android:layout_toRightOf="@+id/avatar"
+                    android:layout_marginLeft="8dp" />
+                <TextView
+                    android:id="@+id/schoolnumber"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="schoolnumber"
+                    android:layout_below="@+id/imageView2"
+                    android:layout_alignLeft="@+id/username" />
+                <!--end-->
             </RelativeLayout>
 
             <RelativeLayout
-                android:id="@+id/sexLayout"
+                android:id="@+id/myyueLayout"
                 android:layout_width="match_parent"
-                android:layout_height="80dp"
-                android:background="@drawable/btn_selector"
-                android:padding="10dp">
+                android:layout_height="60dp"
+                android:background="@drawable/card_background_white"
+                android:padding="0dp">
 
                 <TextView
-                    style="@style/myspace_left_text"
-                    android:text="@string/sex" />
-
-                <TextView
-                    android:id="@+id/sex"
+                    android:id="@+id/myyue_cd"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_centerInParent="true"
-                    android:text="sex" />
+                    android:text="我的状态" />
+                <!--灰色分界线-->
+                <!--end-->
+
 
                 <ImageView
                     android:layout_width="wrap_content"
@@ -92,15 +104,108 @@
                     android:layout_centerVertical="true"
                     android:layout_marginRight="10dp"
                     android:drawablePadding="10dp"
-                    android:src="@drawable/register_bottom_arrow" />
+                    android:src="@drawable/register_bottom_arrow"
+                    android:id="@+id/imageViewmyyue_cd" />
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawablePadding="10dp"
+                    android:src="@drawable/myyue"
+                    android:id="@+id/picture_myyue"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentLeft="true"
+                    android:layout_toLeftOf="@+id/myyue_cd" />
+
+
+            </RelativeLayout>
+            <RelativeLayout
+                android:id="@+id/yingyueLayout"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:background="@drawable/card_background_white"
+                android:padding="0dp">
+
+                <TextView
+                    android:id="@+id/yingyue_cd"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:text="应约状态" />
+                <!--灰色分界线-->
+                <!--end-->
+
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="10dp"
+                    android:drawablePadding="10dp"
+                    android:src="@drawable/register_bottom_arrow"
+                    android:id="@+id/imageViewyingyue_cd" />
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawablePadding="10dp"
+                    android:src="@drawable/yingyue"
+                    android:id="@+id/picture_yingyue"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentLeft="true"
+                    android:layout_toLeftOf="@+id/yingyue_cd" />
+
+            </RelativeLayout>
+            <RelativeLayout
+                android:id="@+id/specialyueLayout"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:background="@drawable/card_background_white"
+                android:padding="0dp">
+
+                <TextView
+                    android:id="@+id/specialyue_cd"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:text="特别关注" />
+                <!--灰色分界线-->
+                <!--end-->
+
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="10dp"
+                    android:drawablePadding="10dp"
+                    android:src="@drawable/register_bottom_arrow"
+                    android:id="@+id/imageViewspecialyue_cd" />
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawablePadding="10dp"
+                    android:src="@drawable/specialyue"
+                    android:id="@+id/picture_specialyue"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentLeft="true"
+                    android:layout_toLeftOf="@+id/specialyue_cd" />
+
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="15dp"
+                android:background="@drawable/btn_selector"
+                android:padding="10dp">
+
             </RelativeLayout>
 
             <RelativeLayout
                 android:id="@+id/notifyLayout"
                 android:layout_width="match_parent"
-                android:layout_height="80dp"
-                android:background="@drawable/btn_selector"
-                android:padding="10dp">
+                android:layout_height="60dp"
+                android:background="@drawable/card_background_white"
+                >
 
                 <TextView
                     android:id="@+id/notifySetting"
@@ -108,6 +213,8 @@
                     android:layout_height="wrap_content"
                     android:layout_centerInParent="true"
                     android:text="@string/notifySetting" />
+                <!--灰色分界线-->
+                <!--end-->
 
                 <ImageView
                     android:layout_width="wrap_content"
@@ -117,42 +224,73 @@
                     android:layout_marginRight="10dp"
                     android:drawablePadding="10dp"
                     android:src="@drawable/register_bottom_arrow" />
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawablePadding="10dp"
+                    android:src="@drawable/setting"
+                    android:id="@+id/picture_setting"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentLeft="true"
+                    android:layout_toLeftOf="@+id/notifySetting" />
+
             </RelativeLayout>
 
             <RelativeLayout
-                android:id="@+id/updateLayout"
+                android:id="@+id/passwordchangeLayout"
                 android:layout_width="match_parent"
-                android:layout_height="80dp"
-                android:background="@drawable/btn_selector"
-                android:padding="10dp">
+                android:layout_height="60dp"
+                android:background="@drawable/card_background_white"
+                >
 
                 <TextView
+                    android:id="@+id/passwordchange_cd"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_centerInParent="true"
-                    android:text="@string/checkUpdate" />
+                    android:text="修改密码" />
+                <!--灰色分界线-->
+                <!--end-->
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="10dp"
+                    android:drawablePadding="10dp"
+                    android:src="@drawable/register_bottom_arrow" />
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawablePadding="10dp"
+                    android:src="@drawable/friend"
+                    android:id="@+id/picture_friend"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentLeft="true"
+                    android:layout_toLeftOf="@+id/passwordchange_cd" />
 
             </RelativeLayout>
 
 
-            <RelativeLayout
-                android:id="@+id/logoutLayout"
-                android:layout_width="match_parent"
-                android:layout_height="80dp"
-                android:padding="10dp">
+            <!--<RelativeLayout-->
+            <!--android:id="@+id/logoutLayout"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="80dp"-->
+            <!--android:padding="10dp">-->
 
-                <TextView
-                    android:id="@+id/logout"
-                    android:layout_width="match_parent"
-                    android:gravity="center"
-                    android:layout_height="match_parent"
-                    style="@style/My.Button.logout"
-                    android:layout_centerInParent="true"
-                    android:text="注销" />
+            <!--<TextView-->
+            <!--android:id="@+id/logout"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:gravity="center"-->
+            <!--android:layout_height="match_parent"-->
+            <!--style="@style/My.Button.logout"-->
+            <!--android:layout_centerInParent="true"-->
+            <!--android:text="注销" />-->
 
-            </RelativeLayout>
+            <!--</RelativeLayout>-->
         </LinearLayout>
     </ScrollView>
 
 
-</LinearLayout><!-- From: file:/C:/Users/wangweijia/Desktop/Yueme_update1/app/src/main/res/layout/my_space_fragment.xml -->
+</LinearLayout><!-- From: file:/D:/git_master3/Yueme_update1/app/src/main/res/layout/my_space_fragment.xml -->

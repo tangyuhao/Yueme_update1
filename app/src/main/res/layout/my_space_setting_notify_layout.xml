@@ -3,13 +3,32 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:weightSum="1">
 
     <fragment
         android:id="@+id/fragment"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:name="com.syc.yueme.ui.activity.NotifySettingFragment" />
+        android:layout_height="440dp"
+        android:name="com.syc.yueme.ui.activity.NotifySettingFragment"
+        android:layout_weight="0.99" />
+    <RelativeLayout
+        android:id="@+id/logoutLayout"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:padding="10dp"
+        android:onClick="onClick">
+
+        <TextView
+            android:id="@+id/logout"
+            android:layout_width="match_parent"
+            android:gravity="center"
+            android:layout_height="match_parent"
+            style="@style/My.Button.logout"
+            android:layout_centerInParent="true"
+            android:text="注销" />
+
+    </RelativeLayout>
 
 </LinearLayout>
 

@@ -34,6 +34,7 @@
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
     <!-- SD卡读取权限，用户写入离线定位数据 -->
     <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+
     <!-- baidumap 所需的权限 -end -->
     <application
         android:name="com.syc.yueme.base.App"
@@ -136,6 +137,11 @@
         <meta-data
             android:name="com.baidu.lbsapi.API_KEY"
             android:value="PUT3u7lIPY49Ck0bqceFA3ue" />
+
+        <activity
+            android:name="com.syc.yueme.ui.activity.PasswordChangeActivity"
+            android:label="@string/title_activity_password_change" >
+        </activity>
     </application>
 
 </manifest>

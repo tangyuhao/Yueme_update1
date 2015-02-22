@@ -2,7 +2,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.syc.yueme"
     android:versionCode="11"
-    android:versionName="1.0.9">
+    android:versionName="1.0.9" >
 
     <uses-sdk android:minSdkVersion="15" />
 
@@ -25,45 +25,43 @@
     <uses-permission android:name="android.permission.BROADCAST_STICKY" />
     <uses-permission android:name="android.permission.WRITE_SETTINGS" />
 
-    <!--location-->
-    <!-- 这个权限用于进行网络定位-->
+    <!-- location -->
+    <!-- 这个权限用于进行网络定位 -->
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
-    <!-- 这个权限用于访问GPS定位-->
+    <!-- 这个权限用于访问GPS定位 -->
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
-    <!-- SD卡读取权限，用户写入离线定位数据-->
+    <!-- SD卡读取权限，用户写入离线定位数据 -->
     <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
     <!-- baidumap 所需的权限 -end -->
-
     <application
-        android:label="@string/app_name"
+        android:name=".base.App"
         android:icon="@drawable/icon"
-        android:theme="@style/Customtheme"
-        android:name="com.syc.yueme.base.App">
-        <!--android:theme="@android:style/Theme.Holo.Light.NoActionBar"-->
+        android:label="@string/app_name"
+        android:theme="@style/Customtheme" >
+
+        <!-- android:theme="@android:style/Theme.Holo.Light.NoActionBar" -->
 
         <activity
-            android:name="com.syc.yueme.ui.activity.ChatActivity"
+            android:name=".ui.activity.ChatActivity"
             android:launchMode="singleTask"
             android:theme="@style/MainTheme" />
 
         <service android:name="com.avos.avoscloud.PushService" />
 
-        <receiver android:name="com.avos.avoscloud.AVBroadcastReceiver">
+        <receiver android:name="com.avos.avoscloud.AVBroadcastReceiver" >
             <intent-filter>
                 <action android:name="android.intent.action.BOOT_COMPLETED" />
                 <action android:name="android.intent.action.USER_PRESENT" />
                 <action android:name="com.avoscloud.chat.RETRY_CONNECT" />
             </intent-filter>
         </receiver>
-
-        <receiver android:name="com.syc.yueme.service.receiver.MsgReceiver">
+        <receiver android:name=".service.receiver.MsgReceiver" >
             <intent-filter>
                 <action android:name="android.intent.action.BOOT_COMPLETED" />
                 <action android:name="com.avoscloud.session.action" />
             </intent-filter>
         </receiver>
-
-        <receiver android:name="com.syc.yueme.service.receiver.GroupMsgReceiver">
+        <receiver android:name=".service.receiver.GroupMsgReceiver" >
             <intent-filter>
                 <action android:name="android.intent.action.BOOT_COMPLETED" />
                 <action android:name="com.avoscloud.group.action" />
@@ -71,63 +69,51 @@
         </receiver>
 
         <activity
-            android:name="com.syc.yueme.ui.activity.MainActivity"
+            android:name=".ui.activity.MainActivity"
             android:launchMode="singleTask" />
-
         <activity
-            android:name="com.syc.yueme.ui.activity.UpdateContentActivity"
+            android:name=".ui.activity.UpdateContentActivity"
             android:theme="@style/MainTheme" />
-
         <activity
-            android:name="com.syc.yueme.ui.activity.SplashActivity"
-            android:theme="@android:style/Theme.Holo.Light.NoActionBar.Fullscreen">
+            android:name=".ui.activity.SplashActivity"
+            android:theme="@android:style/Theme.Holo.Light.NoActionBar.Fullscreen" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
-        <activity android:name="com.syc.yueme.ui.activity.ImageBrowerActivity" />
-
+        <activity android:name=".ui.activity.ImageBrowerActivity" />
         <activity
-            android:name="com.syc.yueme.ui.activity.LocationActivity"
+            android:name=".ui.activity.LocationActivity"
             android:theme="@style/MainTheme" />
-
-        <activity android:name="com.syc.yueme.ui.activity.LoginActivity" />
-
+        <activity android:name=".ui.activity.LoginActivity" />
         <activity
-            android:name="com.syc.yueme.ui.activity.RegisterActivity"
+            android:name=".ui.activity.RegisterActivity"
             android:theme="@style/MainTheme" />
-
         <activity
-            android:name="com.syc.yueme.ui.activity.NewFriendActivity"
+            android:name=".ui.activity.NewFriendActivity"
             android:theme="@style/MainTheme" />
-
         <activity
-            android:name="com.syc.yueme.ui.activity.AddFriendActivity"
+            android:name=".ui.activity.AddFriendActivity"
             android:theme="@style/MainTheme" />
-
         <activity
-            android:name="com.syc.yueme.ui.activity.PersonInfoActivity"
+            android:name=".ui.activity.PersonInfoActivity"
             android:theme="@style/MainTheme" />
-
         <activity
-            android:name="com.syc.yueme.ui.activity.NotifySettingActivity"
+            android:name=".ui.activity.NotifySettingActivity"
             android:theme="@style/MainTheme" />
-
         <activity
-            android:name="com.syc.yueme.ui.activity.GroupListActivity"
+            android:name=".ui.activity.GroupListActivity"
             android:label="@string/group"
             android:theme="@style/MainTheme" />
-
         <activity
-            android:name="com.syc.yueme.ui.activity.GroupDetailActivity"
+            android:name=".ui.activity.GroupDetailActivity"
             android:theme="@style/MainTheme" />
-
         <activity
-            android:name="com.syc.yueme.ui.activity.GroupAddMembersActivity"
-            android:theme="@style/MainTheme"
-            android:label="@string/inviteMembers" />
+            android:name=".ui.activity.GroupAddMembersActivity"
+            android:label="@string/inviteMembers"
+            android:theme="@style/MainTheme" />
 
         <service
             android:name="com.baidu.location.f"
@@ -136,13 +122,23 @@
 
         <!-- Don't forgot InitActivity -->
 
-        <!--<meta-data
-            android:name="com.baidu.lbsapi.API_KEY"
-            android:value="fnWUFPMrQfBv9nzkzFOY8ILT" />-->
 
-        <!--prod-->
+        <!--
+            <meta-data
+            android:name="com.baidu.lbsapi.API_KEY"
+            android:value="fnWUFPMrQfBv9nzkzFOY8ILT" />
+        -->
+
+
+        <!-- prod -->
         <meta-data
             android:name="com.baidu.lbsapi.API_KEY"
             android:value="PUT3u7lIPY49Ck0bqceFA3ue" />
+
+        <activity
+            android:name=".ui.activity.PasswordChangeActivity"
+            android:label="@string/title_activity_password_change" >
+        </activity>
     </application>
+
 </manifest>
