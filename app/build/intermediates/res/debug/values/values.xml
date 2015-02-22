@@ -1,11 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <!-- From: file:/D:/github/yueme/app/src/main/res/values/bools.xml -->
+    <!-- From: file:/Users/kawhi/AndroidStudioProjects/Yueme_update1/app/src/main/res/values/strings.xml -->
+    <eat-comment/>
+    <string-array name="school_array">
+        <item>复旦大学</item>
+        <item>同济大学</item>
+        <item>上海交通大学</item>
+    </string-array>
+    <string-array name="school_mail">
+        <item>\@fudan.edu.cn</item>
+        <item>\@tongji.edu.cn</item>
+        <item>\@sjtu.edu.cn</item>
+    </string-array>
+    <!-- From: file:/Users/kawhi/AndroidStudioProjects/Yueme_update1/app/src/main/res/values/bools.xml -->
     <eat-comment/>
     <bool name="defaultNotifyWhenNews">true</bool>
     <bool name="defaultVibrateNotify">true</bool>
     <bool name="defaultVoiceNotify">true</bool>
-    <!-- From: file:/D:/github/yueme/app/src/main/res/values/colors.xml -->
+    <!-- From: file:/Users/kawhi/AndroidStudioProjects/Yueme_update1/app/src/main/res/values/colors.xml -->
     <eat-comment/>
     <color name="base_actionbar_bg">#f5f5f5</color>
     <color name="base_bg">#f4f6f6</color>
@@ -30,7 +42,7 @@
     <color name="tree_green">#5CB98D</color>
     <color name="white">#fff</color>
     <declare-styleable name="PlayBtn"><attr format="boolean" name="left"/></declare-styleable>
-    <!-- From: file:/D:/github/yueme/app/src/main/res/values/dimens.xml -->
+    <!-- From: file:/Users/kawhi/AndroidStudioProjects/Yueme_update1/app/src/main/res/values/dimens.xml -->
     <eat-comment/>
     <dimen name="ActionBarMenuSize">16sp</dimen>
     <dimen name="activity_horizontal_margin">16dp</dimen>
@@ -61,7 +73,7 @@
     <dimen name="tip_icon_size">10dp</dimen>
     <dimen name="titlebar_text_size">18sp</dimen>
     <dimen name="userHead">45dp</dimen>
-    <!-- From: file:/D:/github/yueme/app/src/main/res/values/strings.xml -->
+    <!-- From: file:/Users/kawhi/AndroidStudioProjects/Yueme_update1/app/src/main/res/values/strings.xml -->
     <eat-comment/>
     <string name="account">账号 </string>
     <string name="action_settings">Settings</string>
@@ -137,6 +149,7 @@
     <string name="noResult">无相关结果</string>
     <string name="noequal">您的账号和密码不匹配</string>
     <string name="not_have_account">还没有账号？</string>
+    <string name="note1">我们将发送一封邮件到您的学号邮箱，验证完成就能使用。</string>
     <string name="notifySetting">提醒设置</string>
     <string name="notifyWhenNews">接收新消息通知</string>
     <string name="password">密码</string>
@@ -176,21 +189,29 @@
     <string name="sort">排序</string>
     <string name="status_offline">[离线请留言]</string>
     <string name="status_online">[在线]</string>
+    <string name="student_id_empty">学号不能为空</string>
     <string name="sure">确定</string>
     <string name="sureToUpdate">确定更新版本吗</string>
     <string name="tips">提示</string>
     <string name="title_activity_password_change">PasswordChangeActivity</string>
+    <string name="title_activity_register6">Register6</string>
+    <string name="title_activity_register_activity1">RegisterActivity1</string>
+    <string name="title_activity_register_activity2">RegisterActivity2</string>
+    <string name="title_activity_register_activity3">RegisterActivity3</string>
+    <string name="title_activity_register_activity4">RegisterActivity4</string>
+    <string name="title_activity_register_successful">Register_successful</string>
     <string name="unknown">未知</string>
     <string name="updateLog">更新日志</string>
     <string name="username">用户名</string>
     <string name="username_cannot_null">用户名不能为空</string>
+    <string name="username_used">对不起，该用户名已被使用</string>
     <string name="versionIsAlreadyNew">已经是最新版本了</string>
     <string name="vibrate">震动</string>
     <string name="voice">语音</string>
     <string name="xlistview_footer_hint_normal">查看更多</string>
     <string name="xlistview_footer_hint_ready">松开载入更多</string>
     <string name="yue">约！</string>
-    <!-- From: file:/D:/github/yueme/app/src/main/res/values/styles.xml -->
+    <!-- From: file:/Users/kawhi/AndroidStudioProjects/Yueme_update1/app/src/main/res/values/styles.xml -->
     <eat-comment/>
     <style name="ActionBar">
         <item name="android:orientation">horizontal</item>

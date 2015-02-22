@@ -14,7 +14,7 @@ public class User {
   public static final String LOCATION = "location";
   public static final String GENDER = "gender";
   public static final String INSTALLATION = "installation";
-
+    public static final String SCHOOL = "school";
   public static String[] genderStrings = new String[]{App.ctx.getString(R.string.male),
       App.ctx.getString(R.string.female)};
 
@@ -68,6 +68,16 @@ public class User {
     return genderStrings[gender.getValue()];
   }
 
+    public static void setSchool(AVUser user, String school)
+    {
+        user.put(SCHOOL,school);
+    }
+
+    public static String getSchool(AVUser user)
+    {
+        String school = user.get(SCHOOL).toString();
+        return school;
+    }
   public static AVInstallation getInstallation(AVUser user) {
     try {
       return user.getAVObject(INSTALLATION, AVInstallation.class);

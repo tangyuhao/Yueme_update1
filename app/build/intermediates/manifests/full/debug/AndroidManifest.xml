@@ -142,6 +142,22 @@
             android:name="com.syc.yueme.ui.activity.PasswordChangeActivity"
             android:label="@string/title_activity_password_change" >
         </activity>
+        <activity
+            android:name="com.syc.yueme.ui.activity.RegisterActivity2"
+            android:label="@string/title_activity_register_activity2" >
+        </activity>
+        <activity
+            android:name="com.syc.yueme.ui.activity.RegisterActivity1"
+            android:label="@string/title_activity_register_activity1" >
+        </activity>
+        <activity
+            android:name="com.syc.yueme.ui.activity.RegisterActivity3"
+            android:label="@string/title_activity_register_activity3" >
+        </activity>
+        <activity
+            android:name="com.syc.yueme.ui.activity.RegisterActivity4"
+            android:label="@string/title_activity_register_activity4" >
+        </activity>
     </application>
 
 </manifest>

@@ -9,6 +9,7 @@ import android.widget.EditText;
 import android.widget.TextView;
 import com.avos.avoscloud.AVUser;
 import com.syc.yueme.R;
+import com.syc.yueme.avobject.User;
 import com.syc.yueme.service.UserService;
 import com.syc.yueme.util.NetAsyncTask;
 import com.syc.yueme.util.Utils;
@@ -19,11 +20,26 @@ public class LoginActivity extends BaseEntryActivity implements OnClickListener 
   Button loginBtn;
   TextView registerBtn;
 
-  @Override
+
+    static int posi; // for the school choice
+    static User.Gender gender; // for the gender choice
+    static String username;
+    static String student_id;
+    static String psw;
+    static String psw_confirm;
+
+
+    @Override
   protected void onCreate(Bundle savedInstanceState) {
     // TODO Auto-generated method stub
     super.onCreate(savedInstanceState);
     setContentView(R.layout.entry_login_activity);
+        posi = 0;
+        gender = User.Gender.Male;
+        username = "";
+        student_id = "";
+        psw = "";
+        psw_confirm = "";
     init();
   }
 
