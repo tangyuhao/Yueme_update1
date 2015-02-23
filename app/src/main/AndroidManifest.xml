@@ -99,6 +99,9 @@
             android:name=".ui.activity.AddFriendActivity"
             android:theme="@style/MainTheme" />
         <activity
+            android:name=".ui.activity.YueUpdateActivity"
+            android:theme="@style/MainTheme" />
+        <activity
             android:name=".ui.activity.PersonInfoActivity"
             android:theme="@style/MainTheme" />
         <activity

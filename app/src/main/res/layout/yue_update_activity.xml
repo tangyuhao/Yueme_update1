@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/theme_bg_color"
+    android:orientation="vertical">
+
+
+    <EditText
+        android:id="@+id/yue_content"
+        android:layout_width="fill_parent"
+        android:padding="10dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_height="200dp"
+        android:layout_below="@+id/tip6"
+        android:background="@drawable/edittext"
+        android:drawablePadding="25dip"
+        android:paddingLeft="15dip"
+        android:shadowDx="0.0"
+        android:shadowDy="1.0"
+        android:shadowRadius="1.0"
+        android:textColorHint="#ffdddddd"
+        android:hint="内容"
+        android:gravity="top"/>
+
+    <EditText
+        android:id="@+id/yue_time"
+        android:layout_width="fill_parent"
+        android:padding="10dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/edittext"
+        android:drawablePadding="25dip"
+        android:hint="时间"
+        android:paddingLeft="15dip"
+        android:shadowDx="0.0"
+        android:shadowDy="1.0"
+        android:shadowRadius="1.0"
+        android:textColorHint="#ffdddddd" />
+
+    <EditText
+        android:id="@+id/yue_location"
+        android:layout_width="fill_parent"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="20dp"
+        android:padding="10dp"
+        android:layout_marginLeft="20dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/edittext"
+        android:drawablePadding="25dip"
+        android:hint="地点"
+        android:paddingLeft="15dip"
+        android:shadowDx="0.0"
+        android:shadowDy="1.0"
+        android:shadowRadius="1.0"
+        android:textColorHint="#ffdddddd"/>
+
+    <Button
+        android:id="@+id/btn_yue_updateg"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/base_action_bar_height"
+        android:layout_margin="@dimen/activity_vertical_margin"
+        android:background="@drawable/common_btn"
+        android:gravity="center"
+        android:text="发布"
+        android:textColor="@color/base_color_text_white"
+        android:textSize="@dimen/text_size_large" />
+
+
+</LinearLayout>
