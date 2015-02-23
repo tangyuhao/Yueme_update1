@@ -20,6 +20,7 @@ import com.syc.yueme.R;
 import com.syc.yueme.avobject.User;
 import com.syc.yueme.base.App;
 import com.syc.yueme.service.UserService;
+import com.syc.yueme.ui.view.HeaderLayout;
 import com.syc.yueme.util.NetAsyncTask;
 import com.syc.yueme.util.Utils;
 
@@ -29,12 +30,13 @@ public class RegisterActivity4 extends BaseEntryActivity {
 
     boolean emailCheck;
     String email;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         Log.i("Test", "进入第四个界面");
         super.onCreate(savedInstanceState);
         setContentView(R.layout.entry_register_activity4);
+        HeaderLayout headerLayout = (HeaderLayout) findViewById(R.id.headerLayout);
+        headerLayout.showTitle(R.string.student_id);
         EditText v = (EditText)findViewById(R.id.editText1);
         if(LoginActivity.student_id != null){
             v.setText(LoginActivity.student_id);

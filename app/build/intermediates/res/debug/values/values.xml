@@ -176,6 +176,7 @@
     <string name="release_to_refresh">释放立即刷新</string>
     <string name="reverseGeoCodeResultIs">反编码得到的地址：</string>
     <string name="right">好的</string>
+    <string name="school">学校</string>
     <string name="search">搜索</string>
     <string name="select_picture">选择图片</string>
     <string name="send">发送</string>
@@ -189,17 +190,16 @@
     <string name="sort">排序</string>
     <string name="status_offline">[离线请留言]</string>
     <string name="status_online">[在线]</string>
+    <string name="student_id">学号</string>
     <string name="student_id_empty">学号不能为空</string>
     <string name="sure">确定</string>
     <string name="sureToUpdate">确定更新版本吗</string>
     <string name="tips">提示</string>
     <string name="title_activity_password_change">PasswordChangeActivity</string>
-    <string name="title_activity_register6">Register6</string>
     <string name="title_activity_register_activity1">RegisterActivity1</string>
     <string name="title_activity_register_activity2">RegisterActivity2</string>
     <string name="title_activity_register_activity3">RegisterActivity3</string>
     <string name="title_activity_register_activity4">RegisterActivity4</string>
-    <string name="title_activity_register_successful">Register_successful</string>
     <string name="unknown">未知</string>
     <string name="updateLog">更新日志</string>
     <string name="username">用户名</string>

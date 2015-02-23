@@ -133,6 +133,18 @@
     <string name="title_activity_register_activity3">RegisterActivity3</string>
     <string name="title_activity_register_activity4">RegisterActivity4</string>
 
+    <!--entry_register1-->
+    <string name="school">学校</string>
+    
+    
+    <!--entry_register2-->
+
+
+    <!--entry_register3-->
+
+    <!--entry_register4-->
+    <string name="student_id">学号</string>
+    <string name="note1">我们将发送一封邮件到您的学号邮箱，验证完成就能使用。</string>
 
     <string name="username_used">对不起，该用户名已被使用</string>
     <string name="student_id_empty">学号不能为空</string>
@@ -149,8 +161,6 @@
         <item>\@sjtu.edu.cn</item>
     </string-array>
 
-    <string name="note1">我们将发送一封邮件到您的学号邮箱，验证完成就能使用。</string>
-    <string name="title_activity_register6">Register6</string>
-    <string name="title_activity_register_successful">Register_successful</string>
+
 
 </resources>

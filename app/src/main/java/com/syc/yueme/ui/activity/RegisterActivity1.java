@@ -10,6 +10,7 @@ import android.widget.ArrayAdapter;
 import android.widget.Spinner;
 
 import com.syc.yueme.R;
+import com.syc.yueme.ui.view.HeaderLayout;
 import com.syc.yueme.util.Utils;
 
 public class RegisterActivity1 extends BaseEntryActivity {
@@ -23,6 +24,9 @@ public class RegisterActivity1 extends BaseEntryActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.entry_register_activity1);
+
+        HeaderLayout headerLayout = (HeaderLayout)findViewById(R.id.headerLayout);
+        headerLayout.showTitle(R.string.school);
         schools = getResources().getStringArray(R.array.school_array);
         //下拉框函数
         schoolSpinner = (Spinner)findViewById(R.id.spin_school);

@@ -15,16 +15,21 @@ import com.avos.avoscloud.AVUser;
 import com.avos.avoscloud.FindCallback;
 import com.syc.yueme.R;
 import com.syc.yueme.avobject.User;
+import com.syc.yueme.ui.view.HeaderLayout;
 import com.syc.yueme.util.Utils;
 
 import java.util.List;
 
 public class RegisterActivity2 extends BaseEntryActivity {
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.entry_register_activity2);
+        HeaderLayout headerLayout = (HeaderLayout) findViewById(R.id.headerLayout);
+        headerLayout.showTitle(R.string.nickname);
+
         if(LoginActivity.gender == User.Gender.Male) {
             RadioButton radio = (RadioButton) findViewById(R.id.btnMan);
             radio.setChecked(true);

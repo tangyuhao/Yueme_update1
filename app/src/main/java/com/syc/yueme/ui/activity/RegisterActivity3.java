@@ -9,14 +9,19 @@ import android.view.View;
 import android.widget.TextView;
 
 import com.syc.yueme.R;
+import com.syc.yueme.ui.view.HeaderLayout;
 import com.syc.yueme.util.Utils;
 
 public class RegisterActivity3 extends BaseEntryActivity {
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.entry_register_activity3);
+
+        HeaderLayout headerLayout = (HeaderLayout) findViewById(R.id.headerLayout);
+
+        headerLayout.showTitle(R.string.password);
+
         TextView v1 = (TextView) findViewById(R.id.editText1);
         TextView v2 = (TextView) findViewById(R.id.editText2);
 
