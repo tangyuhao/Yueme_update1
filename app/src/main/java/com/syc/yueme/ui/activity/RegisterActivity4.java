@@ -2,11 +2,14 @@ package com.syc.yueme.ui.activity;
 
 import android.app.Activity;
 import android.os.Bundle;
+import android.text.Editable;
+import android.text.TextWatcher;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.TextView;
 
 import com.avos.avoscloud.AVException;
@@ -32,12 +35,30 @@ public class RegisterActivity4 extends BaseEntryActivity {
         Log.i("Test", "进入第四个界面");
         super.onCreate(savedInstanceState);
         setContentView(R.layout.entry_register_activity4);
-        TextView v = (TextView)findViewById(R.id.editText1);
+        EditText v = (EditText)findViewById(R.id.editText1);
         if(LoginActivity.student_id != null){
             v.setText(LoginActivity.student_id);
         }
         Button b = (Button)findViewById(R.id.button2);
         emailCheck = b.getText().equals("注册") ? true : false;
+
+        v.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+                Button b1 = (Button)findViewById(R.id.button2);
+                b1.setText("验证学邮");
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {
+
+            }
+        });
     }
 
     public void onClickone(View view)
