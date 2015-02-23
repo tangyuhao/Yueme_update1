@@ -63,15 +63,11 @@ public class RegisterActivity4 extends BaseEntryActivity {
 
         if(emailCheck)
         {
-            AVUser user = new AVUser();
-            user.setEmail(email);
-            user.setUsername(LoginActivity.username);
-            user.setPassword(LoginActivity.psw);
-
             new NetAsyncTask(ctx) {
                 @Override
                 protected void doInBack() throws Exception {
                     AVUser user = UserService.signUp(LoginActivity.username, LoginActivity.psw);
+                    user.setEmail(email);
                     User.setGender(user, LoginActivity.gender);
                     String school = getResources().getStringArray(R.array.school_array)[LoginActivity.posi];
                     User.setSchool(user, school);
