@@ -69,6 +69,7 @@ public class RegisterActivity4 extends BaseEntryActivity {
                     AVUser user = UserService.signUp(LoginActivity.username, LoginActivity.psw);
                     user.setEmail(email);
                     User.setGender(user, LoginActivity.gender);
+                    User.setStuId(user,LoginActivity.student_id);
                     String school = getResources().getStringArray(R.array.school_array)[LoginActivity.posi];
                     User.setSchool(user, school);
                     user.setFetchWhenSave(true);
