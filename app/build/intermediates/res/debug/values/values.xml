@@ -276,6 +276,7 @@
     </style>
     <style name="Customtheme" parent="@android:style/Theme.Holo.Light.NoActionBar">
         <item name="android:windowContentOverlay">@null</item>
+        <item name="android:colorBackground">@color/red</item>
     </style>
     <style name="DialogWindowTitle">
         <item name="android:maxLines">1</item>

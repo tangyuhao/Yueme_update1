@@ -72,7 +72,7 @@ public class UserFriendAdapter extends BaseAdapter implements SectionIndexer {
     int section = getSectionForPosition(position);
     if (position == getPositionForSection(section)) {
       alpha.setVisibility(View.VISIBLE);
-      alpha.setText(friend.getSortLetters());
+      alpha.setText("   " + friend.getSortLetters());
     } else {
       alpha.setVisibility(View.GONE);
     }

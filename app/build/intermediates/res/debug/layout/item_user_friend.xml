@@ -8,7 +8,7 @@
         android:id="@+id/alpha"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="#e3e3e3"
+        android:background="#ffe9e9e9"
         android:padding="2dp"
         android:textSize="18sp"
         android:textColor="@color/guide_color" />
@@ -24,7 +24,8 @@
             style="@style/My.ImageView.Photo_Avatar"
             android:layout_alignParentLeft="true"
             android:src="@drawable/default_user_avatar"
-            android:layout_centerVertical="true" />
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="12dp" />
 
         <TextView
             android:id="@+id/tv_friend_name"

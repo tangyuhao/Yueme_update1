@@ -46,8 +46,6 @@ public class DiscoverFragment extends BaseFragment implements View.OnClickListen
     private void findView() {
         View fragmentView = getView();
         yueButton = (Button) fragmentView.findViewById(R.id.btn_yue);
-
-
        yueButton.setOnClickListener(this);
     }
 
