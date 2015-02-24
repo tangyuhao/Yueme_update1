@@ -2,6 +2,7 @@ package com.syc.yueme.avobject;
 
 import android.util.Log;
 
+import com.avos.avoscloud.AVClassName;
 import com.avos.avoscloud.AVException;
 import com.avos.avoscloud.AVObject;
 import com.avos.avoscloud.AVUser;
@@ -11,19 +12,32 @@ import com.avos.avoscloud.SaveCallback;
 /**
  * Created by tyh on 2015/2/24.
  */
-public class Comments {
+@AVClassName("Comments")
+public class Comments extends AVObject{
     public static final String USERSEND = "userSend";
     public static final String CONTENTS_COMMENTS = "contents";
     public static final String COMMENTS = "Comments";
-    public static void setContents(AVObject message, String contents)
+    public Comments()
     {
-        message.put(CONTENTS_COMMENTS,contents);
+        super(COMMENTS);
     }
 
-    public static void saveCommentsInBackground(final AVObject comments)
+    public Comments (AVUser sendUser, String contents)
     {
-        final String cmtId = comments.getObjectId();
-        comments.saveInBackground(new SaveCallback() {
+        super(COMMENTS);
+        this.put(CONTENTS_COMMENTS,contents);
+        this.put(USERSEND,sendUser);
+    }
+
+    public void setContents(String contents)
+    {
+        this.put(CONTENTS_COMMENTS,contents);
+    }
+
+    public void saveCommentsInBackground()
+    {
+        final String cmtId = this.getObjectId();
+        this.saveInBackground(new SaveCallback() {
             public void done(AVException e2) {
                 if (e2 == null) {
                     // 保存成功
@@ -37,20 +51,11 @@ public class Comments {
 
     }
 
-    public static AVObject createCommentsWithSave(AVUser sendUser, String contents)
 
+    public void delete()
     {
-
-        AVObject comments = new AVObject(COMMENTS);
-        comments.put(CONTENTS_COMMENTS,contents);
-        comments.put(USERSEND,sendUser);
-        saveCommentsInBackground(comments);
-        return comments;
-    }
-    public static void deleteComments(AVObject comments)
-    {
-        final String msgId = comments.getObjectId();
-        comments.deleteInBackground(new DeleteCallback() {
+        final String msgId = this.getObjectId();
+        this.deleteInBackground(new DeleteCallback() {
             public void done(AVException e2) {
                 if (e2 == null) {
                     // 保存成功

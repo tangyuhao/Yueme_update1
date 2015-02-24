@@ -2,6 +2,7 @@ package com.syc.yueme.avobject;
 
 import android.util.Log;
 
+import com.avos.avoscloud.AVClassName;
 import com.avos.avoscloud.AVException;
 import com.avos.avoscloud.AVFile;
 import com.avos.avoscloud.AVObject;
@@ -18,7 +19,8 @@ import java.util.Objects;
 /**
  * Created by tyh on 2015/2/23.
  */
-public class Message {
+@AVClassName("Message")
+public class Message extends AVObject{
     public static enum  relationMode_mesg {ADD,REMOVE};
     public static enum  classification {SHENGHUO,WANSHUA,XUEXI,YUNDONG,QITA};
     public static final String SHENGHUO = "生活";
@@ -26,6 +28,7 @@ public class Message {
     public static final String XUEXI = "学习";
     public static final String YUNDONG = "运动";
     public static final String QITA = "其他";
+    public static final String MESSAGE = "Message";
     public static final String TYPE = "type";
     public static final String TIME = "time";
     public static final String LOCATION_MES = "location";
@@ -42,10 +45,15 @@ public class Message {
     public static final String COMMENTS = "comments";
     public static final String SHOW = "show";
 
-    public static boolean createMessage(classification type,String time,String location,
-                                        String contents, String numberOfPeople)
+    public Message()
     {
-        AVObject message = new AVObject("Message");
+        super(MESSAGE);
+    }
+
+    public Message(classification type,String time,String location,
+                   String contents, String numberOfPeople)
+    {
+        super(MESSAGE);
         String type_string = new String();
         switch (type)
         {
@@ -55,68 +63,39 @@ public class Message {
             case YUNDONG: type_string = YUNDONG;break;
             case QITA: type_string = QITA;break;
         }
-        message.put(TYPE,type_string);
-        message.put(TIME,time);
-        message.put(LOCATION_MES,location);
-        message.put(CONTENTS_MESG,contents);
-        message.put(NUMBEROFPEOPLE,numberOfPeople);
-        try {
-            message.save();
-            return true;
-        } catch (AVException e) {
-            // e.getMessage() 捕获的异常信息
-            //异常则创建失败，返回false
-            return false;
-        }
+        this.put(TYPE,type_string);
+        this.put(TIME,time);
+        this.put(LOCATION_MES,location);
+        this.put(CONTENTS_MESG,contents);
+        this.put(NUMBEROFPEOPLE,numberOfPeople);
+//        try {
+//            this.save();
+//        } catch (AVException e) {
+//            // e.getMessage() 捕获的异常信息
+//            //异常则创建失败，返回false
+//        }
     }
 
-    public static boolean createMessage(String type,String time,String location,
-                                        String contents, String numberOfPeople,
-                                        AVFile image)
+
+
+    public Message(String type,String time,String location,
+                   String contents, String numberOfPeople,AVFile image)
     {
-        AVObject message = new AVObject("Message");
-        message.put(TYPE,type);
-        message.put(TIME,time);
-        message.put(LOCATION_MES,location);
-        message.put(CONTENTS_MESG,contents);
-        message.put(NUMBEROFPEOPLE,numberOfPeople);
-        message.put(SENDUSER,AVUser.getCurrentUser());
-        //TODO 图片上传函数
-        try {
-            message.save();
-            return true;
-        } catch (AVException e) {
-            // e.getMessage() 捕获的异常信息
-            //异常则创建失败，返回false
-            return false;
-        }
+        super(MESSAGE);
+        this.put(TYPE,type);
+        this.put(TIME,time);
+        this.put(LOCATION_MES,location);
+        this.put(CONTENTS_MESG,contents);
+        this.put(NUMBEROFPEOPLE,numberOfPeople);
+        this.put(SENDUSER,AVUser.getCurrentUser());
+        this.put(IMAGE,image);
     }
 
 
-    public static void addYueUser_test(AVObject message,AVUser user) {
-        AVRelation<AVObject> relation = message.getRelation(YUEUSER);
-        relation.add(user);
-    }
-
-    public static void changeYueUserNoSearchSave(AVObject message, relationMode_mesg mode) {
+    public void changeYueUser(relationMode_mesg mode) {
         AVUser user = AVUser.getCurrentUser();
         if (user != null) Log.d("获得当前USER",user.getUsername());
-        AVRelation<AVObject> relation = message.getRelation(YUEUSER);
-        if (mode == relationMode_mesg.ADD)
-        {
-            relation.add(user);
-        }
-        else if (mode == relationMode_mesg.REMOVE)
-        {
-            relation.remove(user);
-        }
-
-    }
-
-    public static void changeLikeUserNoSearchSave(AVObject message, relationMode_mesg mode) {
-        AVUser user = AVUser.getCurrentUser();
-        if (user != null) Log.d("获得当前USER",user.getUsername());
-        AVRelation<AVObject> relation = message.getRelation(LIKEUSER);
+        AVRelation<AVObject> relation = this.getRelation(YUEUSER);
         if (mode == relationMode_mesg.ADD)
         {
             relation.add(user);
@@ -127,10 +106,9 @@ public class Message {
         }
     }
 
-    public static void changeIgnoreUserNoSearchSave(AVObject message, relationMode_mesg mode) {
-        AVUser user = AVUser.getCurrentUser();
+    public void changeYueUser(relationMode_mesg mode, AVUser user) {
         if (user != null) Log.d("获得当前USER",user.getUsername());
-        AVRelation<AVObject> relation = message.getRelation(IGNOREUSER);
+        AVRelation<AVObject> relation = this.getRelation(YUEUSER);
         if (mode == relationMode_mesg.ADD)
         {
             relation.add(user);
@@ -141,9 +119,94 @@ public class Message {
         }
     }
 
-    public static void changeCommentsNoSearchSave(AVObject message, AVObject comments, relationMode_mesg mode) {
+    public void changeLikeUser(relationMode_mesg mode) {
+        AVUser user = AVUser.getCurrentUser();
+        if (user != null) Log.d("获得当前USER",user.getUsername());
+        AVRelation<AVObject> relation = this.getRelation(LIKEUSER);
+        if (mode == relationMode_mesg.ADD)
+        {
+            relation.add(user);
+        }
+        else if (mode == relationMode_mesg.REMOVE)
+        {
+            relation.remove(user);
+        }
+    }
+
+    public void changeLikeUser(relationMode_mesg mode, AVUser user) {
+        if (user != null) Log.d("获得当前USER",user.getUsername());
+        AVRelation<AVObject> relation = this.getRelation(LIKEUSER);
+        if (mode == relationMode_mesg.ADD)
+        {
+            relation.add(user);
+        }
+        else if (mode == relationMode_mesg.REMOVE)
+        {
+            relation.remove(user);
+        }
+    }
+
+    public void changeIgnoreUser(relationMode_mesg mode) {
+        AVUser user = AVUser.getCurrentUser();
+        if (user != null) Log.d("获得当前USER",user.getUsername());
+        AVRelation<AVObject> relation = this.getRelation(IGNOREUSER);
+        if (mode == relationMode_mesg.ADD)
+        {
+            relation.add(user);
+        }
+        else if (mode == relationMode_mesg.REMOVE)
+        {
+            relation.remove(user);
+        }
+    }
+
+    public void changeIgnoreUser(relationMode_mesg mode, AVUser user) {
+        if (user != null) Log.d("获得当前USER",user.getUsername());
+        AVRelation<AVObject> relation = this.getRelation(IGNOREUSER);
+        if (mode == relationMode_mesg.ADD)
+        {
+            relation.add(user);
+        }
+        else if (mode == relationMode_mesg.REMOVE)
+        {
+            relation.remove(user);
+        }
+    }
+
+    public void changeSuccessYueUser(relationMode_mesg mode) {
+        AVUser user = AVUser.getCurrentUser();
+        if (user != null) Log.d("获得当前USER",user.getUsername());
+        AVRelation<AVObject> relation = this.getRelation(SUCCESSYUEUSER);
+        if (mode == relationMode_mesg.ADD)
+        {
+            relation.add(user);
+        }
+        else if (mode == relationMode_mesg.REMOVE)
+        {
+            relation.remove(user);
+        }
+    }
+
+    public void changeSuccessYueUser(relationMode_mesg mode, AVUser user) {
+        if (user != null) Log.d("获得当前USER",user.getUsername());
+        AVRelation<AVObject> relation = this.getRelation(SUCCESSYUEUSER);
+        if (mode == relationMode_mesg.ADD)
+        {
+            relation.add(user);
+        }
+        else if (mode == relationMode_mesg.REMOVE)
+        {
+            relation.remove(user);
+        }
+    }
+
+
+
+
+
+    public void changeComments(AVObject comments, relationMode_mesg mode) {
         if (comments != null) Log.d("获得当前COMMENTS",comments.getString(CONTENTS_CMTS));
-        AVRelation<AVObject> relation = message.getRelation(COMMENTS);
+        AVRelation<AVObject> relation = this.getRelation(COMMENTS);
         if (mode == relationMode_mesg.ADD)
         {
             relation.add(comments);
@@ -154,287 +217,10 @@ public class Message {
         }
     }
 
-    public static void changeSuccessYueUserNoSearchSave(AVObject message, relationMode_mesg mode) {
-        AVUser user = AVUser.getCurrentUser();
-        if (user != null) Log.d("获得当前USER",user.getUsername());
-        AVRelation<AVObject> relation = message.getRelation(SUCCESSYUEUSER);
-        if (mode == relationMode_mesg.ADD)
-        {
-            relation.add(user);
-        }
-        else if (mode == relationMode_mesg.REMOVE)
-        {
-            relation.remove(user);
-        }    }
-
-
-
-
-
-    public static void changeYueUserWithSearchSave(final String mesgObjectId,final relationMode_mesg mode)
+    public void saveMessageInBackground()
     {
-        AVQuery<AVObject> query = new AVQuery<AVObject>("Message");
-        query.getInBackground(mesgObjectId, new GetCallback<AVObject>() {
-            public void done(AVObject message, AVException e) {
-
-                if (e == null) {
-                    final String msgId = message.getObjectId();
-                    Log.d("获取message", "id是" + message.getObjectId());
-                    Message.changeYueUserNoSearchSave(message, mode);
-                    message.saveInBackground(new SaveCallback() {
-                        public void done(AVException e2) {
-                            if (e2 == null) {
-                                // 保存成功
-                                Log.d("保存成功", "message的Id是" + msgId);
-                            } else {
-                                // 保存失败，输出错误信息
-                                Log.d("保存失败", "错误: " + e2.getMessage());
-                            }
-                        }
-                    });
-                } else {
-                    Log.d("错误，原因","云端没有这个Id");
-                }
-            }
-        });
-    }
-
-    public static void changeLikeUserWithSearchSave(final String mesgObjectId, final relationMode_mesg mode)
-    {
-        AVQuery<AVObject> query = new AVQuery<AVObject>("Message");
-        query.getInBackground(mesgObjectId, new GetCallback<AVObject>() {
-            public void done(AVObject message, AVException e) {
-
-                if (e == null) {
-                    final String msgId = message.getObjectId();
-                    Log.d("获取message", "id是" + message.getObjectId());
-                    Message.changeLikeUserNoSearchSave(message, mode);
-                    message.saveInBackground(new SaveCallback() {
-                        public void done(AVException e2) {
-                            if (e2 == null) {
-                                // 保存成功
-                                Log.d("保存成功", "message的Id是" + msgId);
-                            } else {
-                                // 保存失败，输出错误信息
-                                Log.d("保存失败", "错误: " + e2.getMessage());
-                            }
-                        }
-                    });
-                } else {
-                    Log.d("错误，原因","云端没有这个Id");
-                }
-            }
-        });
-    }
-
-    public static void changeIgnoreUserWithSearchSave(final String mesgObjectId, final relationMode_mesg mode)
-    {
-        AVQuery<AVObject> query = new AVQuery<AVObject>("Message");
-        query.getInBackground(mesgObjectId, new GetCallback<AVObject>() {
-            public void done(AVObject message, AVException e) {
-
-                if (e == null) {
-                    final String msgId = message.getObjectId();
-                    Log.d("获取message", "id是" + message.getObjectId());
-                    Message.changeIgnoreUserNoSearchSave(message, mode);
-                    message.saveInBackground(new SaveCallback() {
-                        public void done(AVException e2) {
-                            if (e2 == null) {
-                                // 保存成功
-                                Log.d("保存成功", "message的Id是" + msgId);
-                            } else {
-                                // 保存失败，输出错误信息
-                                Log.d("保存失败", "错误: " + e2.getMessage());
-                            }
-                        }
-                    });
-                } else {
-                    Log.d("错误，原因","云端没有这个Id");
-                }
-            }
-        });
-    }
-
-    public static void changeSuccessYueUserWithSearchSave(final String mesgObjectId, final relationMode_mesg mode)
-    {
-        AVQuery<AVObject> query = new AVQuery<AVObject>("Message");
-        query.getInBackground(mesgObjectId, new GetCallback<AVObject>() {
-            public void done(AVObject message, AVException e) {
-
-                if (e == null) {
-                    final String msgId = message.getObjectId();
-                    Log.d("获取message", "id是" + message.getObjectId());
-                    Message.changeSuccessYueUserNoSearchSave(message, mode);
-                    message.saveInBackground(new SaveCallback() {
-                        public void done(AVException e2) {
-                            if (e2 == null) {
-                                // 保存成功
-                                Log.d("保存成功", "message的Id是" + msgId);
-                            } else {
-                                // 保存失败，输出错误信息
-                                Log.d("保存失败", "错误: " + e2.getMessage());
-                            }
-                        }
-                    });
-                } else {
-                    Log.d("错误，原因","云端没有这个Id");
-                }
-            }
-        });
-    }
-    public static void changeCommentsWithSearchSave(final String mesgObjectId,final AVObject comments, final relationMode_mesg mode)
-    {
-        AVQuery<AVObject> query = new AVQuery<AVObject>("Message");
-        query.getInBackground(mesgObjectId, new GetCallback<AVObject>() {
-            public void done(AVObject message, AVException e) {
-
-                if (e == null) {
-                    final String msgId = message.getObjectId();
-                    Log.d("获取message", "id是" + message.getObjectId());
-                    Message.changeCommentsNoSearchSave(message, comments, mode);
-                    message.saveInBackground(new SaveCallback() {
-                        public void done(AVException e2) {
-                            if (e2 == null) {
-                                // 保存成功
-                                Log.d("保存成功", "message的Id是" + msgId);
-                            } else {
-                                // 保存失败，输出错误信息
-                                Log.d("保存失败", "错误: " + e2.getMessage());
-                            }
-                        }
-                    });
-                } else {
-                    Log.d("错误，原因","云端没有这个Id");
-                }
-            }
-        });
-    }
-
-    public static void changeYueUserWithSave(final AVObject message, final relationMode_mesg mode)
-    {
-
-        if (message != null)
-        {
-            final String msgId = message.getObjectId();
-            Log.d("获取message", "id是" + message.getObjectId());
-            Message.changeYueUserNoSearchSave(message, mode);
-            message.saveInBackground(new SaveCallback() {
-                public void done(AVException e2) {
-                    if (e2 == null) {
-                        // 保存成功
-                        Log.d("保存成功", "message的Id是" + msgId);
-                    } else {
-                        // 保存失败，输出错误信息
-                        Log.d("保存失败", "错误: " + e2.getMessage());
-                    }
-                }
-            });
-
-        }
-
-    }
-
-    public static void changeLikeUserWithSave(final AVObject message, final relationMode_mesg mode)
-    {
-
-        if (message != null)
-        {
-            final String msgId = message.getObjectId();
-            Log.d("获取message", "id是" + message.getObjectId());
-            Message.changeLikeUserNoSearchSave(message, mode);
-            message.saveInBackground(new SaveCallback() {
-                public void done(AVException e2) {
-                    if (e2 == null) {
-                        // 保存成功
-                        Log.d("保存成功", "message的Id是" + msgId);
-                    } else {
-                        // 保存失败，输出错误信息
-                        Log.d("保存失败", "错误: " + e2.getMessage());
-                    }
-                }
-            });
-
-        }
-
-    }
-
-    public static void changeIgnoreUserWithSave(final AVObject message, final relationMode_mesg mode)
-    {
-
-        if (message != null)
-        {
-            final String msgId = message.getObjectId();
-            Log.d("获取message", "id是" + message.getObjectId());
-            Message.changeIgnoreUserNoSearchSave(message, mode);
-            message.saveInBackground(new SaveCallback() {
-                public void done(AVException e2) {
-                    if (e2 == null) {
-                        // 保存成功
-                        Log.d("保存成功", "message的Id是" + msgId);
-                    } else {
-                        // 保存失败，输出错误信息
-                        Log.d("保存失败", "错误: " + e2.getMessage());
-                    }
-                }
-            });
-
-        }
-
-    }
-
-    public static void changeSuccessYueUserWithSave(final AVObject message, final relationMode_mesg mode)
-    {
-
-        if (message != null)
-        {
-            final String msgId = message.getObjectId();
-            Log.d("获取message", "id是" + message.getObjectId());
-            Message.changeSuccessYueUserNoSearchSave(message, mode);
-            message.saveInBackground(new SaveCallback() {
-                public void done(AVException e2) {
-                    if (e2 == null) {
-                        // 保存成功
-                        Log.d("保存成功", "message的Id是" + msgId);
-                    } else {
-                        // 保存失败，输出错误信息
-                        Log.d("保存失败", "错误: " + e2.getMessage());
-                    }
-                }
-            });
-
-        }
-
-    }
-
-
-    public static void changeCommentsWithSave(final AVObject message, final  AVObject comments, final relationMode_mesg mode)
-    {
-
-        if (message != null)
-        {
-            final String msgId = message.getObjectId();
-            Log.d("获取message", "id是" + message.getObjectId());
-            Message.changeCommentsNoSearchSave(message, comments, mode);
-            message.saveInBackground(new SaveCallback() {
-                public void done(AVException e2) {
-                    if (e2 == null) {
-                        // 保存成功
-                        Log.d("保存成功", "message的Id是" + msgId);
-                    } else {
-                        // 保存失败，输出错误信息
-                        Log.d("保存失败", "错误: " + e2.getMessage());
-                    }
-                }
-            });
-
-        }
-
-    }
-
-    public static void saveMessageInBackground(final AVObject message)
-    {
-        final String msgId = message.getObjectId();
-        message.saveInBackground(new SaveCallback() {
+        final String msgId = this.getObjectId();
+        this.saveInBackground(new SaveCallback() {
             public void done(AVException e2) {
                 if (e2 == null) {
                     // 保存成功
@@ -448,55 +234,57 @@ public class Message {
 
     }
 
-    public static void setType(AVObject message, String type)
+    public void setType(String type)
     {
-        message.put(TYPE,type);
+        this.put(TYPE,type);
     }
 
-    public static  String getType(AVObject message)
+    public String getType()
+
     {
-       return message.getString(TYPE);
+       return this.getString(TYPE);
     }
 
-    public static void setContents(AVObject message, String contents)
+    public void setContents(String contents)
     {
-        message.put(CONTENTS_MESG,contents);
+        this.put(CONTENTS_MESG,contents);
     }
 
-    public static String getContents(AVObject message)
+    public String getContents()
     {
-        return message.getString(CONTENTS_MESG);
+        return this.getString(CONTENTS_MESG);
     }
 
-    public static void setNumberofpeople(AVObject message, String numberOfPeople)
+    public void setNumberofpeople(String numberOfPeople)
     {
-        message.put(NUMBEROFPEOPLE,numberOfPeople);
+        this.put(NUMBEROFPEOPLE,numberOfPeople);
     }
 
-    public static String getNumberofpeople(AVObject message)
+    public String getNumberofpeople()
     {
-        return message.getString(NUMBEROFPEOPLE);
+        return this.getString(NUMBEROFPEOPLE);
     }
 
-    public static void setTime(AVObject message, String time)
+    public void setTime(String time)
     {
-        message.put(TIME,time);
+        this.put(TIME,time);
     }
 
-    public static String getTime(AVObject message)
+    public String getTime()
     {
-        return message.getString(TIME);
+        return this.getString(TIME);
     }
 
-    public static void setImage(AVObject message, AVFile image)
+    public void setImage( AVFile image)
+
     {
-        message.put(IMAGE,image);
+        this.put(IMAGE,image);
     }
 
-    public static AVFile getImage(AVObject message)
+    public AVFile getImage()
     {
 
-        AVFile avFile = message.getAVFile(IMAGE);
+        AVFile avFile = this.getAVFile(IMAGE);
         avFile.getDataInBackground(new GetDataCallback(){
             public void done(byte[] data, AVException e){
                 //process data or exception.
@@ -506,10 +294,10 @@ public class Message {
         return avFile;
     }
 
-    public static void deleteMessage(AVObject message)
+    public void delete()
     {
-        final String msgId = message.getObjectId();
-        message.deleteInBackground(new DeleteCallback() {
+        final String msgId = this.getObjectId();
+        this.deleteInBackground(new DeleteCallback() {
             public void done(AVException e2) {
                 if (e2 == null) {
                     // 保存成功

@@ -9,6 +9,8 @@ import com.avos.avoscloud.*;
 import com.syc.yueme.R;
 import com.syc.yueme.avobject.AddRequest;
 import com.syc.yueme.avobject.ChatGroup;
+import com.syc.yueme.avobject.Comments;
+import com.syc.yueme.avobject.Message;
 import com.syc.yueme.avobject.UpdateInfo;
 import com.syc.yueme.service.ChatService;
 import com.syc.yueme.service.UpdateService;
@@ -49,7 +51,9 @@ public class App extends Application {
       //我们的
       String appId = "27dmy933wiy3fkbet7yavxsyfg097xq0tjthzah1b6od2flr";
       String appKey = "qg6jtyb3k05joug6ucfaebreyl2ujncb38qyxd13oa8vbeh6";
-    AVOSCloud.initialize(this, appId, appKey);
+      AVObject.registerSubclass(Message.class);
+      AVObject.registerSubclass(Comments.class);
+      AVOSCloud.initialize(this, appId, appKey);
 
     //AVOSCloud.initialize(this, publicId,publicKey);
 
