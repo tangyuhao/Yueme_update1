@@ -101,6 +101,9 @@
             android:name="com.syc.yueme.ui.activity.AddFriendActivity"
             android:theme="@style/MainTheme" />
         <activity
+            android:name="com.syc.yueme.ui.activity.YueUpdateActivity"
+            android:theme="@style/MainTheme" />
+        <activity
             android:name="com.syc.yueme.ui.activity.PersonInfoActivity"
             android:theme="@style/MainTheme" />
         <activity

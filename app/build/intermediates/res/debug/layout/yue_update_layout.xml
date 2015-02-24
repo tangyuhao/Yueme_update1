@@ -5,12 +5,10 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <include layout="@layout/base_header_layout" />
-
-    <com.syc.yueme.ui.view.BaseListView
-        android:id="@+id/convList"
+    <fragment
+        android:id="@+id/fragment"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:cacheColorHint="#00000000"
-        android:divider="@null" />
-</LinearLayout><!-- From: file:/D:/github/yueme/app/src/main/res/layout/message_fragment.xml -->
+        android:name="com.syc.yueme.ui.activity.YueUpdateFragment" />
+
+</LinearLayout><!-- From: file:/D:/github/yueme/app/src/main/res/layout/yue_update_layout.xml -->
