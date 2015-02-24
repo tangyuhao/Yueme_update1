@@ -44,7 +44,8 @@ public class UserFriendAdapter extends BaseAdapter implements SectionIndexer {
 
   @Override
   public Object getItem(int position) {
-    return data.get(position);
+   SortUser a = data.get(position - 1);
+      return a;
   }
 
   @Override

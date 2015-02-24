@@ -274,6 +274,7 @@ public class ContactFragment extends BaseFragment implements OnItemClickListener
   public boolean onItemLongClick(AdapterView<?> arg0, View arg1, int position,
                                  long arg3) {
     // TODO Auto-generated method stub
+      int pos = position;
     SortUser user = (SortUser) userAdapter.getItem(position - 1);
     showDeleteDialog(user);
     return true;
