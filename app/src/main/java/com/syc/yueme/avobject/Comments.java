@@ -22,7 +22,7 @@ public class Comments extends AVObject{
         super(COMMENTS);
     }
 
-    public Comments (AVUser sendUser, String contents)
+    public Comments (User sendUser, String contents)
     {
         super(COMMENTS);
         this.put(CONTENTS_COMMENTS,contents);

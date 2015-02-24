@@ -67,6 +67,7 @@ public class Message extends AVObject{
         this.put(TIME,time);
         this.put(LOCATION_MES,location);
         this.put(CONTENTS_MESG,contents);
+        this.put(SENDUSER,AVUser.getCurrentUser());
         this.put(NUMBEROFPEOPLE,numberOfPeople);
 //        try {
 //            this.save();
@@ -76,21 +77,33 @@ public class Message extends AVObject{
 //        }
     }
 
-
-
-    public Message(String type,String time,String location,
+    public Message(classification type,String time,String location,
                    String contents, String numberOfPeople,AVFile image)
     {
         super(MESSAGE);
-        this.put(TYPE,type);
+        String type_string = new String();
+        switch (type)
+        {
+            case SHENGHUO: type_string = SHENGHUO;break;
+            case WANSHUA: type_string = WANSHUA;break;
+            case XUEXI: type_string = XUEXI;break;
+            case YUNDONG: type_string = YUNDONG;break;
+            case QITA: type_string = QITA;break;
+        }
+        this.put(TYPE,type_string);
         this.put(TIME,time);
         this.put(LOCATION_MES,location);
         this.put(CONTENTS_MESG,contents);
-        this.put(NUMBEROFPEOPLE,numberOfPeople);
         this.put(SENDUSER,AVUser.getCurrentUser());
+        this.put(NUMBEROFPEOPLE,numberOfPeople);
         this.put(IMAGE,image);
+//        try {
+//            this.save();
+//        } catch (AVException e) {
+//            // e.getMessage() 捕获的异常信息
+//            //异常则创建失败，返回false
+//        }
     }
-
 
     public void changeYueUser(relationMode_mesg mode) {
         AVUser user = AVUser.getCurrentUser();
@@ -234,6 +247,17 @@ public class Message extends AVObject{
 
     }
 
+    public void setLocation(String location)
+    {
+        this.put(LOCATION_MES,location);
+    }
+
+    public String getLocation()
+
+    {
+       return this.getString(LOCATION_MES);
+    }
+
     public void setType(String type)
     {
         this.put(TYPE,type);
@@ -242,7 +266,7 @@ public class Message extends AVObject{
     public String getType()
 
     {
-       return this.getString(TYPE);
+        return this.getString(TYPE);
     }
 
     public void setContents(String contents)
