@@ -12,7 +12,7 @@ import com.syc.yueme.base.App;
 
 import java.util.Date;
 
-public class User {
+public class User extends AVUser{
     public static enum  relationMode_user {ADD,REMOVE}
     public static final String USERNAME = "username";
     public static final String PASSWORD = "password";
@@ -99,57 +99,67 @@ public class User {
         return genderStrings[gender.getValue()];
     }
 
-    public static boolean getEmailverified(AVUser user)
+    public boolean getEmailverified()
     {
-        return user.getBoolean(EMAILVERIFIED);
+        return this.getBoolean(EMAILVERIFIED);
     }
 
-    public static boolean getMobilePhoneVerified(AVUser user)
+    public boolean getMobilePhoneVerified()
     {
-        return user.getBoolean(MOBILEPHONEVERIFIED);
+        return this.getBoolean(MOBILEPHONEVERIFIED);
     }
 
-    public static void setNickname(AVUser user, String nickname)
+    public void setNickname(String nickname)
     {
-        user.put(NICKNAME,nickname);
+        this.put(NICKNAME, nickname);
     }
 
-    public static String getNickname(AVUser user)
+    public String getNickname()
     {
-
-        return user.getString(NICKNAME);
+        return this.getString(NICKNAME);
     }
 
-    public static void setSign(AVUser user, String sign)
+    public void setSign(String sign)
     {
-        user.put(SIGN,sign);
+        this.put(SIGN, sign);
     }
 
-    public static String getSign(AVUser user)
+    public String getSign()
     {
-        return user.getString(SIGN);
+        return this.getString(SIGN);
     }
 
-    public static void setMobilephonenumber(AVUser user, String mobilePhoneNumber)
+    public void setMobilephonenumber(String mobilePhoneNumber)
     {
-        user.put(MOBILEPHONENUMBER,mobilePhoneNumber);
+        this.put(MOBILEPHONENUMBER, mobilePhoneNumber);
     }
 
-    public static String getMobilephonenumber(AVUser user)
+    public String getMobilephonenumber()
     {
 
-        return user.getString(MOBILEPHONENUMBER);
+        return this.getString(MOBILEPHONENUMBER);
     }
 
-    public static void setYPA(AVUser user, int ypa)
+    public void setYPA(int ypa)
     {
-        user.put(YPA,ypa);
+        this.put(YPA, ypa);
     }
 
-    public static int getYPA(AVUser user)
+    public int getYPA()
     {
-        int ypa = user.getInt(YPA);
+        int ypa = this.getInt(YPA);
         return ypa;
+    }
+
+    public void setSchool(String school)
+    {
+        this.put(SCHOOL,school);
+    }
+
+    public String getSchool()
+    {
+        String school = this.getString(SCHOOL);
+        return school;
     }
 
     public static void setSchool(AVUser user, String school)
@@ -160,6 +170,17 @@ public class User {
     public static String getSchool(AVUser user)
     {
         String school = user.getString(SCHOOL);
+        return school;
+    }
+
+    public void setStuId(String stuId)
+    {
+        this.put(STUID,stuId);
+    }
+
+    public String getStuId()
+    {
+        String school = this.getString(STUID);
         return school;
     }
 
@@ -185,72 +206,63 @@ public class User {
             return null;
         }
     }
-    public static void setPeoples(AVUser user, String peoples)
+    public void setPeoples(String peoples)
     {
-        user.put(PEOPLES,peoples);
+        this.put(PEOPLES,peoples);
     }
-    public static String getPeoples(AVUser user) {
-        return user.getString(PEOPLES);
+    public String getPeoples() {
+        return this.getString(PEOPLES);
     }
 
-    public static void setHometown(AVUser user, String hometown)
+    public void setHometown(String hometown)
     {
-        user.put(HOMETOWN,hometown);
+        this.put(HOMETOWN,hometown);
     }
 
-    public static String getHometown(AVUser user) {
-        return user.getString(HOMETOWN);
+    public String getHometown() {
+        return this.getString(HOMETOWN);
     }
 
-    public static void setCharacristics(AVUser user, String characristics)
+    public void setCharacristics(String characristics)
     {
-        user.put(CHARACRISTICS,characristics);
+        this.put(CHARACRISTICS,characristics);
     }
 
-    public static String getCharacristics(AVUser user) {
-        return user.getString(CHARACRISTICS);
+    public String getCharacristics() {
+        return this.getString(CHARACRISTICS);
     }
 
-    public static void setHobbies(AVUser user, String hobbies)
+    public void setHobbies(String hobbies)
     {
-        user.put(HOBBIES,hobbies);
+        this.put(HOBBIES,hobbies);
     }
 
-    public static String getHobbies(AVUser user) {
-        return user.getString(HOBBIES);
+    public String getHobbies() {
+        return this.getString(HOBBIES);
     }
 
-    public static void setSpeciality(AVUser user, String speciality)
+    public void setSpeciality(String speciality)
     {
-        user.put(SPECIALITY,speciality);
+        this.put(SPECIALITY,speciality);
     }
 
-    public static String getSpeciality(AVUser user) {
-        return user.getString(SPECIALITY);
+    public String getSpeciality() {
+        return this.getString(SPECIALITY);
     }
 
-    public static void setEmail(AVUser user, String email)
+    public String getBirthday() {
+        return this.getString(BIRTHDAY);
+    }
+
+    public void setBirthday(String birthday)
     {
-        user.put(EMAIL,email);
+        this.put(BIRTHDAY,birthday);
     }
 
-    public static String getEmail(AVUser user) {
-        return user.getString(EMAIL);
-    }
-
-    public static String getBirthday(AVUser user) {
-        return user.getString(BIRTHDAY);
-    }
-
-    public static void setBirthday(AVUser user, String birthday)
+    public void changeIgnMesg(AVObject ignMesg, relationMode_user mode)
     {
-        user.put(BIRTHDAY,birthday);
-    }
-
-    public static void changeIgnMesg(AVUser user, AVObject ignMesg, relationMode_user mode)
-    {
-        if (user != null) Log.d("获得当前USER", user.getUsername());
-        AVRelation<AVObject> relation = user.getRelation(IGNMESG);
+        if (this != null) Log.d("获得当前USER", this.getUsername());
+        AVRelation<AVObject> relation = this.getRelation(IGNMESG);
         if (mode == relationMode_user.ADD)
         {
             relation.add(ignMesg);
@@ -261,10 +273,10 @@ public class User {
         }
     }
 
-    public static void changeLikeMesg(AVUser user, AVObject likeMesg, relationMode_user mode)
+    public void changeLikeMesg(AVObject likeMesg, relationMode_user mode)
     {
-        if (user != null) Log.d("获得当前USER", user.getUsername());
-        AVRelation<AVObject> relation = user.getRelation(LIKEMESG);
+        if (this != null) Log.d("获得当前USER", this.getUsername());
+        AVRelation<AVObject> relation = this.getRelation(LIKEMESG);
         if (mode == relationMode_user.ADD)
         {
             relation.add(likeMesg);
@@ -275,10 +287,10 @@ public class User {
         }
     }
 
-    public static void changeTryYueMesg(AVUser user, AVObject tryYueMesg, relationMode_user mode)
+    public void changeTryYueMesg(AVObject tryYueMesg, relationMode_user mode)
     {
-        if (user != null) Log.d("获得当前USER", user.getUsername());
-        AVRelation<AVObject> relation = user.getRelation(TRYYUEMESG);
+        if (this != null) Log.d("获得当前USER", this.getUsername());
+        AVRelation<AVObject> relation = this.getRelation(TRYYUEMESG);
         if (mode == relationMode_user.ADD)
         {
             relation.add(tryYueMesg);
@@ -289,10 +301,10 @@ public class User {
         }
     }
 
-    public static void changeSendMesg(AVUser user, AVObject sendMesg, relationMode_user mode)
+    public void changeSendMesg(AVObject sendMesg, relationMode_user mode)
     {
-        if (user != null) Log.d("获得当前USER", user.getUsername());
-        AVRelation<AVObject> relation = user.getRelation(SENDMESG);
+        if (this != null) Log.d("获得当前USER", this.getUsername());
+        AVRelation<AVObject> relation = this.getRelation(SENDMESG);
         if (mode == relationMode_user.ADD)
         {
             relation.add(sendMesg);
@@ -303,10 +315,10 @@ public class User {
         }
     }
 
-    public static void changeYueSuccessMesg(AVUser user, AVObject YueSuccessMesg, relationMode_user mode)
+    public void changeYueSuccessMesg(AVObject YueSuccessMesg, relationMode_user mode)
     {
-        if (user != null) Log.d("获得当前USER", user.getUsername());
-        AVRelation<AVObject> relation = user.getRelation(YUESUCCESSMESG);
+        if (this != null) Log.d("获得当前USER", this.getUsername());
+        AVRelation<AVObject> relation = this.getRelation(YUESUCCESSMESG);
         if (mode == relationMode_user.ADD)
         {
             relation.add(YueSuccessMesg);
@@ -317,10 +329,10 @@ public class User {
         }
     }
 
-    public static void changeLikeUser(AVUser user, AVUser likeUser, relationMode_user mode)
+    public void changeLikeUser(AVUser likeUser, relationMode_user mode)
     {
-        if (user != null) Log.d("获得当前USER", user.getUsername());
-        AVRelation<AVObject> relation = user.getRelation(LIKEUSER);
+        if (this != null) Log.d("获得当前USER", this.getUsername());
+        AVRelation<AVObject> relation = this.getRelation(LIKEUSER);
         if (mode == relationMode_user.ADD)
         {
             relation.add(likeUser);
@@ -331,10 +343,10 @@ public class User {
         }
     }
 
-    public static void changeHateUser(AVUser user, AVUser hateUser, relationMode_user mode)
+    public void changeHateUser(AVUser hateUser, relationMode_user mode)
     {
-        if (user != null) Log.d("获得当前USER", user.getUsername());
-        AVRelation<AVObject> relation = user.getRelation(HATEUSER);
+        if (this != null) Log.d("获得当前USER", this.getUsername());
+        AVRelation<AVObject> relation = this.getRelation(HATEUSER);
         if (mode == relationMode_user.ADD)
         {
             relation.add(hateUser);
@@ -345,10 +357,10 @@ public class User {
         }
     }
 
-    public static void changeFriends(AVUser user, AVUser friends, relationMode_user mode)
+    public void changeFriends(AVUser friends, relationMode_user mode)
     {
-        if (user != null) Log.d("获得当前USER", user.getUsername());
-        AVRelation<AVObject> relation = user.getRelation(FRIENDS);
+        if (this != null) Log.d("获得当前USER", this.getUsername());
+        AVRelation<AVObject> relation = this.getRelation(FRIENDS);
         if (mode == relationMode_user.ADD)
         {
             relation.add(friends);
