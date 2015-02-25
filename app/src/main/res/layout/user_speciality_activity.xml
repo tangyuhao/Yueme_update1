@@ -20,15 +20,33 @@
         android:layout_marginTop="190dp"
         android:id="@+id/linearLayout2">
 
+        <!--<EditText-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="180dp"-->
+        <!--android:ems="14"-->
+        <!--android:id="@+id/UserNickname"-->
+        <!--android:layout_gravity="center_horizontal"-->
+        <!--android:background="@drawable/login_edit_normal"-->
+        <!--android:layout_marginTop="10dp"-->
+        <!--android:layout_weight="13.30" />-->
         <EditText
-            android:layout_width="wrap_content"
-            android:layout_height="180dp"
-            android:ems="14"
             android:id="@+id/UserNickname"
-            android:layout_gravity="center_horizontal"
-            android:background="@drawable/login_edit_normal"
-            android:layout_marginTop="10dp"
-            android:layout_weight="13.30" />
+            android:layout_width="fill_parent"
+            android:padding="10dp"
+            android:layout_marginTop="0dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_height="250dp"
+            android:layout_below="@+id/tip6"
+            android:background="@drawable/edittext"
+            android:drawablePadding="25dip"
+            android:paddingLeft="15dip"
+            android:shadowDx="0.0"
+            android:shadowDy="1.0"
+            android:shadowRadius="1.0"
+            android:textColorHint="#ffdddddd"
+            android:hint="内容"
+            android:gravity="top"/>
 
     </LinearLayout>
 
@@ -43,6 +61,37 @@
         android:layout_alignParentBottom="true"
         android:layout_alignParentRight="true">
 
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/base_action_bar_height"
+            android:text="取消"
+            android:id="@+id/buttonquit"
+            android:layout_alignTop="@+id/linearLayout"
+            android:layout_alignRight="@+id/textView"
+            android:layout_alignEnd="@+id/textView"
+            android:background="@drawable/common_btn"
+            android:textColor="@color/base_color_text_white"
+            android:layout_marginTop="5dp"
+            android:layout_marginLeft="15dp"
+            android:textSize="@dimen/text_size_large"
+            android:layout_weight="1"/>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/base_action_bar_height"
+            android:text="确定"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:id="@+id/buttoncharacristics"
+            android:layout_alignTop="@+id/linearLayout"
+            android:layout_alignRight="@+id/textView"
+            android:layout_alignEnd="@+id/textView"
+            android:background="@drawable/common_btn"
+            android:textColor="@color/base_color_text_white"
+            android:textSize="@dimen/text_size_large"
+            android:layout_weight="1"/>
     </LinearLayout>
 
     <TextView
@@ -54,19 +103,7 @@
         android:layout_weight="0.04"
         android:layout_gravity="center_horizontal"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="86dp" />
-
-    <Button
-        android:layout_width="150dp"
-        android:layout_height="@dimen/base_action_bar_height"
-        android:text="确认"
-        android:id="@+id/buttoncharacristic"
-        android:background="@drawable/common_btn"
-        android:textColor="@color/base_color_text_white"
-        android:textSize="@dimen/text_size_large"
-        android:layout_weight="0.44"
-        android:layout_alignTop="@+id/linearLayout"
-        android:layout_centerHorizontal="true" />
+        android:layout_marginTop="105dp" />
 
 
 

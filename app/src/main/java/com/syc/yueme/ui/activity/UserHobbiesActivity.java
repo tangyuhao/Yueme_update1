@@ -16,7 +16,7 @@ public class UserHobbiesActivity extends BaseEntryActivity implements View.OnCli
 
     TextView Characristics;
     EditText CharacristicsEdit;
-    View DeletBtn;
+    View DeletBtn,QuitBtn;
     HeaderLayout headerLayout;
 
     @Override
@@ -30,9 +30,12 @@ public class UserHobbiesActivity extends BaseEntryActivity implements View.OnCli
     @Override
     public void onClick(View v) {
         int id = v.getId();
-        if (id == R.id.buttoncharacristic) {
+        if (id == R.id.buttoncharacristics) {
             change();
             Toast.makeText(getBaseContext(), "设置成功", Toast.LENGTH_SHORT).show();
+            finish();
+        }else if (id == R.id.buttonquit) {
+            Toast.makeText(getBaseContext(), "取消设置", Toast.LENGTH_SHORT).show();
             finish();
         }
     }
@@ -40,10 +43,12 @@ public class UserHobbiesActivity extends BaseEntryActivity implements View.OnCli
     private void findView(){
         Characristics=(TextView)findViewById(R.id.UserNicknameTitle);
         CharacristicsEdit=(EditText)findViewById(R.id.UserNickname);
-        DeletBtn=findViewById(R.id.buttoncharacristic);
+        DeletBtn=findViewById(R.id.buttoncharacristics);
         headerLayout = (HeaderLayout) findViewById(R.id.headerLayout);
         headerLayout.showTitle(R.string.userInfo);
         DeletBtn.setOnClickListener(this);
+        QuitBtn=findViewById(R.id.buttonquit);
+        QuitBtn.setOnClickListener(this);
     }
     private void change() {
         AVUser curUser = AVUser.getCurrentUser();

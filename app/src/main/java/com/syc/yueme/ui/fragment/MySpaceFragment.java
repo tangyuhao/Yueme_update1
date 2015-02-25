@@ -38,7 +38,7 @@ public class MySpaceFragment extends BaseFragment implements View.OnClickListene
     private static final int CROP_REQUEST = 2;
     TextView usernameView, schoolidView;
     ImageView avatarView,avatarBackgroundView;
-    View myyueLayout, avatarLayout,yingyueLayout,
+    View myyueLayout, avatarLayout,yingyueLayout,infoLayout,
             specialyueLayout, notifyLayout, passwordchangeLayout;
 
     @Override
@@ -67,6 +67,7 @@ public class MySpaceFragment extends BaseFragment implements View.OnClickListene
         avatarBackgroundView = (ImageView) fragmentView.findViewById(R.id.avatarbackground);
         avatarView = (ImageView) fragmentView.findViewById(R.id.avatar);
         myyueLayout = fragmentView.findViewById(R.id.myyueLayout);
+        infoLayout = fragmentView.findViewById(R.id.infoLayout);
         avatarLayout = fragmentView.findViewById(R.id.avatarLayout);
         yingyueLayout = fragmentView.findViewById(R.id.yingyueLayout);
         specialyueLayout = fragmentView.findViewById(R.id.specialyueLayout);
@@ -74,8 +75,9 @@ public class MySpaceFragment extends BaseFragment implements View.OnClickListene
         schoolidView = (TextView) fragmentView.findViewById(R.id.schoolnumber);
         passwordchangeLayout = fragmentView.findViewById(R.id.passwordchangeLayout);
 
-        avatarLayout.setOnClickListener(this);
+//        avatarLayout.setOnClickListener(this);
         myyueLayout.setOnClickListener(this);
+        infoLayout.setOnClickListener(this);
         yingyueLayout.setOnClickListener(this);
         specialyueLayout.setOnClickListener(this);
         passwordchangeLayout.setOnClickListener(this);
@@ -85,7 +87,7 @@ public class MySpaceFragment extends BaseFragment implements View.OnClickListene
     @Override
     public void onClick(View v) {
         int id = v.getId();
-        if (id == R.id.avatarLayout) {
+        if (id == R.id.infoLayout) {
             startActivity(new Intent(ctx,UserInfoActivity.class));
 //            Intent intent = new Intent(Intent.ACTION_PICK, null);
 //            intent.setDataAndType(MediaStore.Images.Media.EXTERNAL_CONTENT_URI, "image/*");

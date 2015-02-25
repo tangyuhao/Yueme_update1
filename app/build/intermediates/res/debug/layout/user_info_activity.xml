@@ -27,7 +27,7 @@
                 android:id="@+id/avatarLayout"
                 android:layout_width="match_parent"
                 android:layout_height="80dp"
-                android:background="@drawable/card_background_white"
+                android:background="@drawable/layoutpress"
                 android:padding="0dp">
 
                 <TextView
@@ -280,6 +280,32 @@
 
             </RelativeLayout>
             <RelativeLayout
+                android:id="@+id/signLayout"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:background="@drawable/layoutpress"
+                android:padding="10dp">
+
+                <TextView
+                    style="@style/myspace_left_text"
+                    android:text="@string/sign" />
+
+                <TextView
+                    android:id="@+id/sign"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:text="sign" />
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="10dp"
+                    android:drawablePadding="10dp"
+                    android:src="@drawable/register_bottom_arrow" />
+            </RelativeLayout>
+            <RelativeLayout
                 android:id="@+id/characristicsLayout"
                 android:layout_width="match_parent"
                 android:layout_height="40dp"
@@ -358,32 +384,7 @@
                     android:src="@drawable/register_bottom_arrow" />
             </RelativeLayout>
 
-            <RelativeLayout
-                android:id="@+id/signLayout"
-                android:layout_width="match_parent"
-                android:layout_height="40dp"
-                android:background="@drawable/layoutpress"
-                android:padding="10dp">
 
-                <TextView
-                    style="@style/myspace_left_text"
-                    android:text="@string/sign" />
-
-                <TextView
-                    android:id="@+id/sign"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_centerInParent="true"
-                    android:text="sign" />
-                <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignParentRight="true"
-                    android:layout_centerVertical="true"
-                    android:layout_marginRight="10dp"
-                    android:drawablePadding="10dp"
-                    android:src="@drawable/register_bottom_arrow" />
-            </RelativeLayout>
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="15dp"
@@ -395,4 +396,4 @@
     </ScrollView>
 
 
-</LinearLayout><!-- From: file:/D:/github/yueme/app/src/main/res/layout/user_info_activity.xml -->
+</LinearLayout><!-- From: file:/D:/git_master4/Yueme_update1/app/src/main/res/layout/user_info_activity.xml -->

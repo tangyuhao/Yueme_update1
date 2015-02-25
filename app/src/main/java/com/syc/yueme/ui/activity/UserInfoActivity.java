@@ -174,6 +174,7 @@ public class UserInfoActivity extends BaseEntryActivity implements OnClickListen
                                 AVUser user = AVUser.getCurrentUser();
                                 User.setNickname(user, nickname);
                                 user.saveInBackground();
+                                nicknameView.setText(nickname);
                                 dialog.dismiss();
                                 Toast.makeText(getBaseContext(), "设置成功", Toast.LENGTH_SHORT).show();
                             }
@@ -204,6 +205,7 @@ public class UserInfoActivity extends BaseEntryActivity implements OnClickListen
                                 AVUser user = AVUser.getCurrentUser();
                                 User.setHometown(user, hometown);
                                 user.saveInBackground();
+                                hometownView.setText(hometown);
                                 dialog.dismiss();
                                 Toast.makeText(getBaseContext(), "设置成功", Toast.LENGTH_SHORT).show();
                             }
@@ -234,6 +236,7 @@ public class UserInfoActivity extends BaseEntryActivity implements OnClickListen
                                 AVUser user = AVUser.getCurrentUser();
                                 User.setPeoples(user, peoples);
                                 user.saveInBackground();
+                                peoplesView.setText(peoples);
                                 dialog.dismiss();
                                 Toast.makeText(getBaseContext(), "设置成功", Toast.LENGTH_SHORT).show();
                             }
