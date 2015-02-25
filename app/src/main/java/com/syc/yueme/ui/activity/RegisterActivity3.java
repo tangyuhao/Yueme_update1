@@ -35,6 +35,7 @@ public class RegisterActivity3 extends BaseEntryActivity {
         LoginActivity.psw = v1.getText().toString();
         LoginActivity.psw_confirm = v2.getText().toString();
         Utils.goActivity(ctx, RegisterActivity2.class);
+        overridePendingTransition(android.R.anim.fade_in,android.R.anim.fade_out);
     }
 
     public void onClicktwo(View view)
@@ -59,5 +60,6 @@ public class RegisterActivity3 extends BaseEntryActivity {
         // 即将进入第四个注册界面
         Log.i("Test", "即将进入第四个注册界面");
         Utils.goActivity(ctx, RegisterActivity4.class);
+        overridePendingTransition(android.R.anim.fade_in,android.R.anim.fade_out);
     }
 }

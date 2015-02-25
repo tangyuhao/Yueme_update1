@@ -51,7 +51,7 @@ public class BaseActivity extends FragmentActivity {
       actionBar.setTitle(title);
     }
     actionBar.setDisplayUseLogoEnabled(false);
-   actionBar.setDisplayShowHomeEnabled(false);
+    actionBar.setDisplayShowHomeEnabled(false);
     actionBar.setDisplayHomeAsUpEnabled(true);
   }
 

@@ -68,6 +68,7 @@ public class RegisterActivity4 extends BaseEntryActivity {
         TextView v = (TextView)findViewById(R.id.editText1);
         LoginActivity.student_id = v.getText().toString();
         Utils.goActivity(ctx, RegisterActivity3.class);
+        overridePendingTransition(android.R.anim.fade_in,android.R.anim.fade_out);
     }
 
     public void onClicktwo(View view)
@@ -107,6 +108,7 @@ public class RegisterActivity4 extends BaseEntryActivity {
                         Utils.toast(R.string.registerSucceed);
                         UserService.updateUserLocation();
                         Utils.goActivity(ctx, LoginActivity.class);
+                        overridePendingTransition(android.R.anim.fade_in,android.R.anim.fade_out);
                     }
                 }
             }.execute();

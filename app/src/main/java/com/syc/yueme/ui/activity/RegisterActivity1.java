@@ -117,11 +117,11 @@ public class RegisterActivity1 extends BaseEntryActivity {
     public void onClickone(View view)
     {
         Utils.goActivity(ctx, LoginActivity.class);
-    }
+        overridePendingTransition(android.R.anim.fade_in,android.R.anim.fade_out);    }
 
     //    下一步
     public void onClicktwo(View view)
     {
         Utils.goActivity(ctx, RegisterActivity2.class);
-    }
+        overridePendingTransition(android.R.anim.fade_in,android.R.anim.fade_out);    }
 }

@@ -5,4 +5,4 @@
     <item android:drawable="@drawable/chat_voice_pressed" android:state_focused="true"/>
     <item android:drawable="@drawable/chat_voice_normal"/>
 
-</selector><!-- From: file:/D:/git_master4/Yueme_update1/app/src/main/res/drawable/btn_chat_voice_selector.xml -->
+</selector><!-- From: file:/Users/kawhi/AndroidStudioProjects/Yueme_update1/app/src/main/res/drawable/btn_chat_voice_selector.xml -->
