@@ -68,6 +68,7 @@ public class RegisterActivity2 extends BaseEntryActivity {
         TextView v = (TextView) findViewById(R.id.editText);
         LoginActivity.username = v.getText().toString();
         Utils.goActivity(ctx, RegisterActivity1.class);
+        overridePendingTransition(android.R.anim.fade_in,android.R.anim.fade_out);
     }
 
     public void onClicktwo(View view)
@@ -94,6 +95,7 @@ public class RegisterActivity2 extends BaseEntryActivity {
                         if(objects.size() == 0)
                         {
                             Utils.goActivity(ctx, RegisterActivity3.class);
+                            overridePendingTransition(android.R.anim.fade_in,android.R.anim.fade_out);
                         }
                         else
                         {

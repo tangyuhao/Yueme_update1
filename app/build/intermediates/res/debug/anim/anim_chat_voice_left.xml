@@ -13,4 +13,4 @@
     <item
         android:drawable="@drawable/voice_right3"
         android:duration="200" />
-</animation-list><!-- From: file:/D:/git_master4/Yueme_update1/app/src/main/res/anim/anim_chat_voice_left.xml -->
+</animation-list><!-- From: file:/Users/kawhi/AndroidStudioProjects/Yueme_update1/app/src/main/res/anim/anim_chat_voice_left.xml -->
