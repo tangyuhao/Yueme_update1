@@ -159,6 +159,26 @@
             android:name=".ui.activity.RegisterActivity4"
             android:label="@string/title_activity_register_activity4" >
         </activity>
+        <activity
+            android:name=".ui.activity.UserInfoActivity"
+            android:label="@string/title_activity_user_info" >
+        </activity>
+        <activity
+            android:name=".ui.activity.UserCharacristicsActivity"
+            android:label="@string/title_activity_user_characristics" >
+        </activity>
+        <activity
+            android:name=".ui.activity.UserHobbiesActivity"
+            android:label="@string/title_activity_user_hobbies" >
+        </activity>
+        <activity
+            android:name=".ui.activity.UserSignActivity"
+            android:label="@string/title_activity_user_sign" >
+        </activity>
+        <activity
+            android:name=".ui.activity.UserSpecialityActivity"
+            android:label="@string/title_activity_user_speciality" >
+        </activity>
     </application>
 
 </manifest>

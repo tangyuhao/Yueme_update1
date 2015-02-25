@@ -133,34 +133,46 @@
     <string name="title_activity_register_activity3">RegisterActivity3</string>
     <string name="title_activity_register_activity4">RegisterActivity4</string>
 
-    <!--entry_register1-->
+    <!-- entry_register1 -->
     <string name="school">学校</string>
-    
-    
-    <!--entry_register2-->
+
+    <!-- entry_register2 -->
 
 
-    <!--entry_register3-->
+    <!-- entry_register3 -->
 
-    <!--entry_register4-->
+
+    <!-- entry_register4 -->
     <string name="student_id">学号</string>
     <string name="note1">我们将发送一封邮件到您的学号邮箱，验证完成就能使用。</string>
-
     <string name="username_used">对不起，该用户名已被使用</string>
     <string name="student_id_empty">学号不能为空</string>
+    <string name="birthday">生日</string>
+    <string name="peoples">民族</string>
+    <string name="hometown">籍贯</string>
+    <string name="YPA">YPA</string>
+    <string name="characristics">性格</string>
+    <string name="hobbies">兴趣爱好</string>
+    <string name="sign">个性签名</string>
+    <string name="stuId">学号</string>
+    <string name="userInfo">个人信息</string>
+    <string name="speciality">特长</string>
 
     <string-array name="school_array">
         <item>复旦大学</item>
         <item>同济大学</item>
         <item>上海交通大学</item>
     </string-array>
-
     <string-array name="school_mail">
         <item>\@fudan.edu.cn</item>
         <item>\@tongji.edu.cn</item>
         <item>\@sjtu.edu.cn</item>
     </string-array>
 
-
+    <string name="title_activity_user_info">UserInfoActivity</string>
+    <string name="title_activity_user_characristics">UserCharacristicsActivity</string>
+    <string name="title_activity_user_hobbies">UserHobbiesActivity</string>
+    <string name="title_activity_user_sign">UserSignActivity</string>
+    <string name="title_activity_user_speciality">UserSpecialityActivity</string>
 
 </resources>

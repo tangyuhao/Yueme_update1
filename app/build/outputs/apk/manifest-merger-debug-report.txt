@@ -304,3 +304,33 @@ ADDED from AndroidManifest.xml:158:9
 		ADDED from AndroidManifest.xml:160:13
 	android:name
 		ADDED from AndroidManifest.xml:159:13
+activity#com.syc.yueme.ui.activity.UserInfoActivity
+ADDED from AndroidManifest.xml:162:9
+	android:label
+		ADDED from AndroidManifest.xml:164:13
+	android:name
+		ADDED from AndroidManifest.xml:163:13
+activity#com.syc.yueme.ui.activity.UserCharacristicsActivity
+ADDED from AndroidManifest.xml:166:9
+	android:label
+		ADDED from AndroidManifest.xml:168:13
+	android:name
+		ADDED from AndroidManifest.xml:167:13
+activity#com.syc.yueme.ui.activity.UserHobbiesActivity
+ADDED from AndroidManifest.xml:170:9
+	android:label
+		ADDED from AndroidManifest.xml:172:13
+	android:name
+		ADDED from AndroidManifest.xml:171:13
+activity#com.syc.yueme.ui.activity.UserSignActivity
+ADDED from AndroidManifest.xml:174:9
+	android:label
+		ADDED from AndroidManifest.xml:176:13
+	android:name
+		ADDED from AndroidManifest.xml:175:13
+activity#com.syc.yueme.ui.activity.UserSpecialityActivity
+ADDED from AndroidManifest.xml:178:9
+	android:label
+		ADDED from AndroidManifest.xml:180:13
+	android:name
+		ADDED from AndroidManifest.xml:179:13

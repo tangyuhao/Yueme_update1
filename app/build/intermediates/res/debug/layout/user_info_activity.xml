@@ -1,0 +1,398 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/base_bg">
+
+    <!--<include layout="@layout/base_header_layout" />-->
+
+    <com.syc.yueme.ui.view.HeaderLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/headerLayout"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:text="@string/userInfo"
+        android:layout_height="48dp" />
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:id="@+id/avatarLayout"
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:background="@drawable/card_background_white"
+                android:padding="0dp">
+
+                <TextView
+                    android:text="@string/avatar"
+                    style="@style/myspace_left_text"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginLeft="25dp" />
+
+                <ImageView
+                    android:id="@+id/myavatar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:src="@drawable/default_user_avatar" />
+
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="10dp"
+                    android:drawablePadding="10dp"
+                    android:src="@drawable/register_bottom_arrow" />
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="15dp"
+                android:background="@drawable/btn_selector"
+                android:padding="10dp">
+
+            </RelativeLayout>
+            <RelativeLayout
+                android:id="@+id/usernameLayout"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:background="@drawable/layoutpress"
+                android:padding="10dp">
+
+                <TextView
+                    style="@style/myspace_left_text"
+                    android:text="@string/username" />
+
+                <TextView
+                    android:id="@+id/myusername"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:text="username" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/schoolLayout"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:background="@drawable/layoutpress"
+                android:padding="10dp">
+
+                <TextView
+                    style="@style/myspace_left_text"
+                    android:text="@string/school" />
+
+                <TextView
+                    android:id="@+id/school"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:text="school" />
+            </RelativeLayout>
+            <RelativeLayout
+                android:id="@+id/stuIdLayout"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:background="@drawable/layoutpress"
+                android:padding="10dp">
+
+                <TextView
+                    style="@style/myspace_left_text"
+                    android:text="@string/stuId" />
+
+                <TextView
+                    android:id="@+id/stuId"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:text="stuId" />
+            </RelativeLayout>
+            <RelativeLayout
+                android:id="@+id/YPALayout"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:background="@drawable/layoutpress"
+                android:padding="10dp">
+
+                <TextView
+                    style="@style/myspace_left_text"
+                    android:text="@string/YPA" />
+
+                <TextView
+                    android:id="@+id/YPA"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:text="YPA" />
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="15dp"
+                android:background="@drawable/btn_selector"
+                android:padding="10dp">
+
+            </RelativeLayout>
+            <RelativeLayout
+                android:id="@+id/nicknameLayout"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:background="@drawable/layoutpress"
+                android:padding="10dp">
+
+                <TextView
+                    style="@style/myspace_left_text"
+                    android:text="@string/nickname" />
+
+                <TextView
+                    android:id="@+id/nickname"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:text="nickname" />
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="10dp"
+                    android:drawablePadding="10dp"
+                    android:src="@drawable/register_bottom_arrow" />
+            </RelativeLayout>
+            <RelativeLayout
+                android:id="@+id/sexLayout"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:background="@drawable/layoutpress"
+                android:padding="10dp">
+
+                <TextView
+                    style="@style/myspace_left_text"
+                    android:text="@string/sex" />
+
+                <TextView
+                    android:id="@+id/sex"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:text="sex" />
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="10dp"
+                    android:drawablePadding="10dp"
+                    android:src="@drawable/register_bottom_arrow" />
+            </RelativeLayout>
+            <RelativeLayout
+                android:id="@+id/birthdayLayout"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:background="@drawable/layoutpress"
+                android:padding="10dp">
+
+                <TextView
+                    style="@style/myspace_left_text"
+                    android:text="@string/birthday" />
+
+                <TextView
+                    android:id="@+id/birthday"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:text="birthday" />
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="10dp"
+                    android:drawablePadding="10dp"
+                    android:src="@drawable/register_bottom_arrow" />
+            </RelativeLayout>
+            <RelativeLayout
+                android:id="@+id/peoplesLayout"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:background="@drawable/layoutpress"
+                android:padding="10dp">
+
+                <TextView
+                    style="@style/myspace_left_text"
+                    android:text="@string/peoples" />
+
+                <TextView
+                    android:id="@+id/peoples"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:text="peoples" />
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="10dp"
+                    android:drawablePadding="10dp"
+                    android:src="@drawable/register_bottom_arrow" />
+            </RelativeLayout>
+            <RelativeLayout
+                android:id="@+id/hometownLayout"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:background="@drawable/layoutpress"
+                android:padding="10dp">
+
+                <TextView
+                    style="@style/myspace_left_text"
+                    android:text="@string/hometown" />
+
+                <TextView
+                    android:id="@+id/hometown"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:text="hometown" />
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="10dp"
+                    android:drawablePadding="10dp"
+                    android:src="@drawable/register_bottom_arrow" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="15dp"
+                android:background="@drawable/btn_selector"
+                android:padding="10dp">
+
+            </RelativeLayout>
+            <RelativeLayout
+                android:id="@+id/characristicsLayout"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:background="@drawable/layoutpress"
+                android:padding="10dp">
+
+                <TextView
+                    style="@style/myspace_left_text"
+                    android:text="@string/characristics" />
+
+                <TextView
+                    android:id="@+id/characristics"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:text="characristics" />
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="10dp"
+                    android:drawablePadding="10dp"
+                    android:src="@drawable/register_bottom_arrow" />
+            </RelativeLayout>
+            <RelativeLayout
+                android:id="@+id/hobbiesLayout"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:background="@drawable/layoutpress"
+                android:padding="10dp">
+
+                <TextView
+                    style="@style/myspace_left_text"
+                    android:text="@string/hobbies" />
+
+                <TextView
+                    android:id="@+id/hobbies"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:text="hobbies" />
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="10dp"
+                    android:drawablePadding="10dp"
+                    android:src="@drawable/register_bottom_arrow" />
+            </RelativeLayout>
+            <RelativeLayout
+                android:id="@+id/specialityLayout"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:background="@drawable/layoutpress"
+                android:padding="10dp">
+
+                <TextView
+                    style="@style/myspace_left_text"
+                    android:text="@string/speciality" />
+
+                <TextView
+                    android:id="@+id/speciality"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:text="speciality" />
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="10dp"
+                    android:drawablePadding="10dp"
+                    android:src="@drawable/register_bottom_arrow" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/signLayout"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:background="@drawable/layoutpress"
+                android:padding="10dp">
+
+                <TextView
+                    style="@style/myspace_left_text"
+                    android:text="@string/sign" />
+
+                <TextView
+                    android:id="@+id/sign"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:text="sign" />
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="10dp"
+                    android:drawablePadding="10dp"
+                    android:src="@drawable/register_bottom_arrow" />
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="15dp"
+                android:background="@drawable/btn_selector"
+                android:padding="10dp">
+
+            </RelativeLayout>
+        </LinearLayout>
+    </ScrollView>
+
+
+</LinearLayout><!-- From: file:/D:/git_master4/Yueme_update1/app/src/main/res/layout/user_info_activity.xml -->

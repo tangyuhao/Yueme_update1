@@ -11,4 +11,4 @@
         android:layout_height="match_parent"
         android:name="com.syc.yueme.ui.activity.YueUpdateFragment" />
 
-</LinearLayout><!-- From: file:/D:/github/yueme/app/src/main/res/layout/yue_update_layout.xml -->
+</LinearLayout><!-- From: file:/D:/git_master4/Yueme_update1/app/src/main/res/layout/yue_update_layout.xml -->

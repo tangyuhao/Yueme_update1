@@ -23,6 +23,7 @@ import com.syc.yueme.service.UpdateService;
 import com.syc.yueme.service.UserService;
 import com.syc.yueme.ui.activity.NotifySettingActivity;
 import com.syc.yueme.ui.activity.PasswordChangeActivity;
+import com.syc.yueme.ui.activity.UserInfoActivity;
 import com.syc.yueme.util.*;
 
 import java.io.File;
@@ -85,9 +86,10 @@ public class MySpaceFragment extends BaseFragment implements View.OnClickListene
     public void onClick(View v) {
         int id = v.getId();
         if (id == R.id.avatarLayout) {
-            Intent intent = new Intent(Intent.ACTION_PICK, null);
-            intent.setDataAndType(MediaStore.Images.Media.EXTERNAL_CONTENT_URI, "image/*");
-            startActivityForResult(intent, IMAGE_PICK_REQUEST);
+            startActivity(new Intent(ctx,UserInfoActivity.class));
+//            Intent intent = new Intent(Intent.ACTION_PICK, null);
+//            intent.setDataAndType(MediaStore.Images.Media.EXTERNAL_CONTENT_URI, "image/*");
+//            startActivityForResult(intent, IMAGE_PICK_REQUEST);
         } else if (id == R.id.yingyueLayout) {
             showSexChooseDialog();
 //      ChatService.closeSession();
