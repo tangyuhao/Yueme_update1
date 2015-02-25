@@ -177,7 +177,7 @@
     <string name="refreshing">正在刷新…</string>
     <string name="register">注册</string>
     <string name="registerFailed">注册失败。</string>
-    <string name="registerSucceed">注册成功</string>
+    <string name="registerSucceed">注册成功，尽快验证您的学号邮箱即可登入</string>
     <string name="register_rightnow">立即注册 ></string>
     <string name="releaseToCancel">松开手指，取消录音</string>
     <string name="release_to_refresh">释放立即刷新</string>
