@@ -111,7 +111,7 @@
     <string name="emotion">表情</string>
     <string name="emptyStr"/>
     <string name="ensurePassword">确认密码 </string>
-    <string name="ensurePasswordHint">请在此输入密码</string>
+    <string name="ensurePasswordHint">请再次输入密码</string>
     <string name="failed">失败</string>
     <string name="failedToGetData">获取数据失败</string>
     <string name="female">女</string>
@@ -140,7 +140,9 @@
     <string name="location">位置</string>
     <string name="login">登录</string>
     <string name="loginTime">登录时间</string>
+    <string name="login_nickname_hint">请输入昵称</string>
     <string name="login_password_hint">请输入密码</string>
+    <string name="login_student_id_hint">请输入您的学号</string>
     <string name="login_username_hint">请输入用户名</string>
     <string name="male">男</string>
     <string name="mapKeyErrorTips">key 验证出错! 请在 AndroidManifest.xml 文件中检查 key 设置</string>
