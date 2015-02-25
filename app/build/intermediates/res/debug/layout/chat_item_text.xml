@@ -7,4 +7,4 @@
     android:maxWidth="@dimen/chatContentMaxWidth"
     android:gravity="left"
     android:textColor="@color/chatLeftText" />
-<!-- From: file:/Users/kawhi/AndroidStudioProjects/Yueme_update1/app/src/main/res/layout/chat_item_text.xml -->
+<!-- From: file:/D:/github/yueme/app/src/main/res/layout/chat_item_text.xml -->

@@ -23,8 +23,8 @@
             android:layout_centerInParent="true"
             android:text="@string/xlistview_footer_hint_normal"
             android:textSize="20sp"
-            android:textStyle="bold" />
+            android:textStyle="normal" />
 
     </RelativeLayout>
 
-</LinearLayout><!-- From: file:/Users/kawhi/AndroidStudioProjects/Yueme_update1/app/src/main/res/layout/xlistview_footer.xml -->
+</LinearLayout><!-- From: file:/D:/github/yueme/app/src/main/res/layout/xlistview_footer.xml -->

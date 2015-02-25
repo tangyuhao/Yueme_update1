@@ -8,16 +8,17 @@
         android:id="@+id/alpha"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="#ffe9e9e9"
-        android:padding="2dp"
-        android:textSize="18sp"
-        android:textColor="@color/guide_color" />
+        android:padding="1dp"
+        android:textSize="10sp"
+        android:textColor="@color/guide_color"
+        android:height="14dp" />
 
     <RelativeLayout
+        android:background="@drawable/layoutpress"
         android:layout_width="match_parent"
         android:layout_height="@dimen/common_list_item_height"
         android:layout_below="@id/alpha"
-        android:layout_margin="5dp">
+        android:layout_margin="0dp">
 
         <ImageView
             android:id="@+id/img_friend_avatar"
@@ -39,4 +40,4 @@
     </RelativeLayout>
 
 
-</RelativeLayout><!-- From: file:/Users/kawhi/AndroidStudioProjects/Yueme_update1/app/src/main/res/layout/item_user_friend.xml -->
+</RelativeLayout><!-- From: file:/D:/github/yueme/app/src/main/res/layout/item_user_friend.xml -->

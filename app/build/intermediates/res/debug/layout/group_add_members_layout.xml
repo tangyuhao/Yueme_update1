@@ -9,4 +9,4 @@
         android:id="@+id/userList"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
-</LinearLayout><!-- From: file:/Users/kawhi/AndroidStudioProjects/Yueme_update1/app/src/main/res/layout/group_add_members_layout.xml -->
+</LinearLayout><!-- From: file:/D:/github/yueme/app/src/main/res/layout/group_add_members_layout.xml -->
