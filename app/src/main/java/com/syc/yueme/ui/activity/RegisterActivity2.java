@@ -41,6 +41,9 @@ public class RegisterActivity2 extends BaseEntryActivity {
 
         TextView v = (TextView) findViewById(R.id.editText);
         v.setText(LoginActivity.username);
+
+        TextView v_nick = (TextView) findViewById(R.id.editText_nickname);
+        v_nick.setText(LoginActivity.nickname);
     }
 
     public void onRadioButtonClicked(View view)
@@ -67,6 +70,8 @@ public class RegisterActivity2 extends BaseEntryActivity {
     {
         TextView v = (TextView) findViewById(R.id.editText);
         LoginActivity.username = v.getText().toString();
+        TextView v_nick = (TextView) findViewById(R.id.editText_nickname);
+        LoginActivity.nickname = v_nick.getText().toString();
         Utils.goActivity(ctx, RegisterActivity1.class);
         overridePendingTransition(android.R.anim.fade_in,android.R.anim.fade_out);
     }
@@ -75,10 +80,17 @@ public class RegisterActivity2 extends BaseEntryActivity {
     {
         TextView v = (TextView) findViewById(R.id.editText);
         LoginActivity.username = v.getText().toString();
+        TextView v_nick = (TextView) findViewById(R.id.editText_nickname);
+        LoginActivity.nickname = v_nick.getText().toString();
 
         if(LoginActivity.username.equals(""))
         {
             Utils.toast(R.string.username_cannot_null);
+            return;
+        }
+        else if(LoginActivity.nickname.equals(""))
+        {
+            Utils.toast(R.string.nickname_cannot_null);
             return;
         }
         else

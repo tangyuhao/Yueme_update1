@@ -39,6 +39,7 @@ public class RegisterActivity1 extends BaseEntryActivity {
         schoolSpinner = (Spinner)findViewById(R.id.spin_school);
         schoolAdapter = new SpinnerAdapter(this,
                 android.R.layout.simple_spinner_item, schools);
+        schoolAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         schoolSpinner.setAdapter(schoolAdapter);
         schoolSpinner.setSelection(LoginActivity.posi,true);
         setSpinner();
@@ -53,6 +54,7 @@ public class RegisterActivity1 extends BaseEntryActivity {
             super(context, textViewResourceId, objects);
             this.items = objects;
             this.context = context;
+
         }
 
         @Override
@@ -71,7 +73,8 @@ public class RegisterActivity1 extends BaseEntryActivity {
             tv.setGravity(Gravity.CENTER);
             tv.setBackgroundColor(Color.rgb(0x46,0x99,0xf5));//蓝色
             tv.setTextColor(Color.rgb(0xff,0xff,0xff));//白色
-            tv.setTextSize(20);
+            tv.setTextSize(25);
+
             return convertView;
         }
 
@@ -91,7 +94,8 @@ public class RegisterActivity1 extends BaseEntryActivity {
             tv.setText(items[position]);
             tv.setGravity(Gravity.CENTER);
             tv.setTextColor(Color.rgb(0x46,0x99,0xf5));
-            tv.setTextSize(20);
+
+            tv.setTextSize(25);
             return convertView;
         }
     }

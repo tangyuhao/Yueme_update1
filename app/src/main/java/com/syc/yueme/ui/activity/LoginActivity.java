@@ -24,6 +24,7 @@ public class LoginActivity extends BaseEntryActivity implements OnClickListener 
     static int posi; // for the school choice
     static User.Gender gender; // for the gender choice
     static String username;
+    static String nickname;
     static String student_id;
     static String psw;
     static String psw_confirm;
@@ -37,6 +38,7 @@ public class LoginActivity extends BaseEntryActivity implements OnClickListener 
         posi = 0;
         gender = User.Gender.Male;
         username = "";
+        nickname = "";
         student_id = "";
         psw = "";
         psw_confirm = "";

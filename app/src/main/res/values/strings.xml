@@ -63,6 +63,7 @@
     <string name="register">注册</string>
     <string name="password_can_not_null">密码不能为空</string>
     <string name="username_cannot_null">用户名不能为空</string>
+    <string name="nickname_cannot_null">昵称不能为空</string>
     <string name="password_not_consistent">输入的两次密码不一致</string>
     <string name="registerSucceed">注册成功</string>
     <string name="registerFailed">注册失败。</string>

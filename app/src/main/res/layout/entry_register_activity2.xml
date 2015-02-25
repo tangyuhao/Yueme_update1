@@ -29,19 +29,43 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="性   别"
+        android:text="昵  称"
         android:id="@+id/textView2"
-        android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
         android:layout_below="@+id/editText"
-        android:layout_marginTop="210dp" />
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:layout_marginTop="30dp" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:id="@+id/editText_nickname"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:background="@drawable/login_edit_normal"
+        android:layout_below="@+id/textView2"
+        android:layout_marginTop="10dp"
+        android:layout_alignLeft="@+id/editText" />
+
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="性  别"
+        android:id="@+id/textView3"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/editText_nickname"
+        android:layout_marginTop="30dp" />
 
     <RadioGroup
         android:id="@+id/radioGroup"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:layout_below="@+id/textView2"
+        android:layout_below="@+id/textView3"
         android:layout_marginTop="10dp"
         android:layout_centerHorizontal="true"
         >

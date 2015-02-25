@@ -94,6 +94,7 @@ public class RegisterActivity4 extends BaseEntryActivity {
                     user.setEmail(email);
                     User.setGender(user, LoginActivity.gender);
                     User.setStuId(user,LoginActivity.student_id);
+                    User.setNickname(user,LoginActivity.nickname);
                     String school = getResources().getStringArray(R.array.school_array)[LoginActivity.posi];
                     User.setSchool(user, school);
                     user.setFetchWhenSave(true);
