@@ -178,4 +178,12 @@
     <string name="title_activity_user_sign">UserSignActivity</string>
     <string name="title_activity_user_speciality">UserSpecialityActivity</string>
 
+    <string name="oldPassword">旧密码</string>
+    <string name="newPassword">新密码</string>
+    <string name="confirm_newPassword">确认新密码</string>
+    <string name="change_password_old">请输入旧密码</string>
+    <string name="change_password_new">请输入新密码</string>
+    <string name="change_password_new_confirm">请再次输入新密码</string>
+
+
 </resources>

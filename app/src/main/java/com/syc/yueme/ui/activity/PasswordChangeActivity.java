@@ -17,62 +17,44 @@ import com.syc.yueme.service.UserService;
 import com.syc.yueme.util.NetAsyncTask;
 import com.syc.yueme.util.Utils;
 
-public class PasswordChangeActivity extends BaseEntryActivity implements OnClickListener {
-    View changeButton;
-    EditText passwordEdit, emailEdit,oldpasswordEdit;
-    TextView usernameView;
+public class PasswordChangeActivity extends BaseEntryActivity implements View.OnClickListener {
 
+    EditText oldPassword, newPassword, newPasswordConfirm;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         // TODO Auto-generated method stub
         super.onCreate(savedInstanceState);
         setContentView(R.layout.password_change_activity);
-       // initActionBar(App.ctx.getString(R.string.changePassword));
-
+        initActionBar(R.string.changepassword);
         findView();
-        AVUser curUser = AVUser.getCurrentUser();
-        usernameView.setText(curUser.getUsername());
-
     }
 
     private void findView() {
-       // initActionBar(App.ctx.getString(R.string.changePassword));
-
-        passwordEdit = (EditText) findViewById(R.id.passwordEdit);
-        oldpasswordEdit=(EditText) findViewById(R.id.oldpasswordEdit);
-        emailEdit = (EditText) findViewById(R.id.ensurePasswordEdit);
-        changeButton = findViewById(R.id.btn_change);
-        usernameView = (TextView)findViewById(R.id.username);
-        changeButton.setOnClickListener(this);
+        oldPassword = (EditText) findViewById(R.id.editText1);
+        newPassword = (EditText) findViewById(R.id.editText2);
+        newPasswordConfirm = (EditText) findViewById(R.id.editText3);
     }
     @Override
     public void onClick(View v) {
-        changeButton.setOnClickListener(new OnClickListener() {
-
-            @Override
-            public void onClick(View arg0) {
-                // TODO Auto-generated method stub
-                change();
-            }
-        });
+        change();
     }
 
     private void change(){
-        final String oldpassword = oldpasswordEdit.getText().toString();
-        final String password = passwordEdit.getText().toString();
-        String againPassword = emailEdit.getText().toString();
+        final String old_password = oldPassword.getText().toString();
+        final String new_password = newPassword.getText().toString();
+        String again_new_password = newPasswordConfirm.getText().toString();
 
-        if (TextUtils.isEmpty(oldpassword)) {
+        if (TextUtils.isEmpty(old_password)) {
             Utils.toast(R.string.password_can_not_null);
             return;
         }
-        if (TextUtils.isEmpty(password)) {
+        if (TextUtils.isEmpty(new_password)) {
             Utils.toast(R.string.password_can_not_null);
             return;
         }
 
-        if (!againPassword.equals(password)) {
+        if (!again_new_password.equals(new_password)) {
             Utils.toast(R.string.password_not_consistent);
             return;
         }
@@ -81,7 +63,7 @@ public class PasswordChangeActivity extends BaseEntryActivity implements OnClick
             @Override
             protected void doInBack() throws Exception {
                 AVUser user =AVUser.getCurrentUser();
-                user.updatePassword(oldpassword,password);
+                user.updatePassword(old_password,new_password);
             }
 
             @Override

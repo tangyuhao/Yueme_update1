@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <!-- From: file:/D:/git_master3/Yueme_update1/app/src/main/res/values/strings.xml -->
+    <!-- From: file:/Users/kawhi/AndroidStudioProjects/Yueme_update1/app/src/main/res/values/strings.xml -->
     <eat-comment/>
     <string-array name="school_array">
         <item>复旦大学</item>
@@ -12,12 +12,12 @@
         <item>\@tongji.edu.cn</item>
         <item>\@sjtu.edu.cn</item>
     </string-array>
-    <!-- From: file:/D:/git_master3/Yueme_update1/app/src/main/res/values/bools.xml -->
+    <!-- From: file:/Users/kawhi/AndroidStudioProjects/Yueme_update1/app/src/main/res/values/bools.xml -->
     <eat-comment/>
     <bool name="defaultNotifyWhenNews">true</bool>
     <bool name="defaultVibrateNotify">true</bool>
     <bool name="defaultVoiceNotify">true</bool>
-    <!-- From: file:/D:/git_master3/Yueme_update1/app/src/main/res/values/colors.xml -->
+    <!-- From: file:/Users/kawhi/AndroidStudioProjects/Yueme_update1/app/src/main/res/values/colors.xml -->
     <eat-comment/>
     <color name="base_actionbar_bg">#f5f5f5</color>
     <color name="base_bg">#f4f6f6</color>
@@ -42,7 +42,7 @@
     <color name="tree_green">#5CB98D</color>
     <color name="white">#fff</color>
     <declare-styleable name="PlayBtn"><attr format="boolean" name="left"/></declare-styleable>
-    <!-- From: file:/D:/git_master3/Yueme_update1/app/src/main/res/values/dimens.xml -->
+    <!-- From: file:/Users/kawhi/AndroidStudioProjects/Yueme_update1/app/src/main/res/values/dimens.xml -->
     <eat-comment/>
     <dimen name="ActionBarMenuSize">16sp</dimen>
     <dimen name="activity_horizontal_margin">16dp</dimen>
@@ -73,7 +73,7 @@
     <dimen name="tip_icon_size">10dp</dimen>
     <dimen name="titlebar_text_size">18sp</dimen>
     <dimen name="userHead">45dp</dimen>
-    <!-- From: file:/D:/git_master3/Yueme_update1/app/src/main/res/values/strings.xml -->
+    <!-- From: file:/Users/kawhi/AndroidStudioProjects/Yueme_update1/app/src/main/res/values/strings.xml -->
     <eat-comment/>
     <string name="YPA">YPA</string>
     <string name="account">账号 </string>
@@ -94,11 +94,15 @@
     <string name="changeFailed">改密失败</string>
     <string name="changePassword">修改密码</string>
     <string name="changeSucceed">改密成功</string>
+    <string name="change_password_new">请输入新密码</string>
+    <string name="change_password_new_confirm">请再次输入新密码</string>
+    <string name="change_password_old">请输入旧密码</string>
     <string name="change_title">{0}</string>
     <string name="changepassword">修改密码</string>
     <string name="characristics">性格</string>
     <string name="chat">发起会话</string>
     <string name="checkUpdate">检查更新</string>
+    <string name="confirm_newPassword">确认新密码</string>
     <string name="contact">联系人</string>
     <string name="create">创建</string>
     <string name="dataLoadFinish">数据加载完成</string>
@@ -150,6 +154,7 @@
     <string name="messages">会话</string>
     <string name="metres">米</string>
     <string name="newMessage">新的消息</string>
+    <string name="newPassword">新密码</string>
     <string name="new_friends">新朋友</string>
     <string name="nickname">昵称</string>
     <string name="nickname_cannot_null">昵称不能为空</string>
@@ -160,6 +165,7 @@
     <string name="note1">我们将发送一封邮件到您的学号邮箱，验证完成就能使用。</string>
     <string name="notifySetting">提醒设置</string>
     <string name="notifyWhenNews">接收新消息通知</string>
+    <string name="oldPassword">旧密码</string>
     <string name="password">密码</string>
     <string name="password_can_not_null">密码不能为空</string>
     <string name="password_not_consistent">输入的两次密码不一致</string>
@@ -229,7 +235,7 @@
     <string name="xlistview_footer_hint_normal">查看更多</string>
     <string name="xlistview_footer_hint_ready">松开载入更多</string>
     <string name="yue">约！</string>
-    <!-- From: file:/D:/git_master3/Yueme_update1/app/src/main/res/values/styles.xml -->
+    <!-- From: file:/Users/kawhi/AndroidStudioProjects/Yueme_update1/app/src/main/res/values/styles.xml -->
     <eat-comment/>
     <style name="ActionBar">
         <item name="android:orientation">horizontal</item>

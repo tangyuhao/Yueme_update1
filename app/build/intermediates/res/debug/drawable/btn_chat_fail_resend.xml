@@ -4,4 +4,4 @@
     <item android:state_pressed="true" android:drawable="@drawable/chat_fail_resend_press" />
     <item android:state_selected="true" android:drawable="@drawable/chat_fail_resend_press" />
     <item android:drawable="@drawable/chat_fail_resend_normal" />
-</selector><!-- From: file:/D:/git_master3/Yueme_update1/app/src/main/res/drawable/btn_chat_fail_resend.xml -->
+</selector><!-- From: file:/Users/kawhi/AndroidStudioProjects/Yueme_update1/app/src/main/res/drawable/btn_chat_fail_resend.xml -->
