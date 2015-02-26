@@ -96,6 +96,32 @@ public class MessageService {
 
         return message;
     }
+
+    public static List<AVObject> findMessage(AVUser user, int skip, int limit) throws AVException {
+        AVRelation relation = user.getRelation("sendMesg");
+        relation.setTargetClass("Message");
+        AVQuery<AVObject> query = relation.getQuery();
+        query.skip(skip);
+        query.limit(limit);
+        query.setCachePolicy(AVQuery.CachePolicy.NETWORK_ELSE_CACHE);
+        List<AVObject> msgs = query.find();
+        //AVQuery<Message> q = AVObject.getQuery(Message.class);
+
+        return msgs;
+    }
+    public static List<AVObject> findYingMessage(AVUser user, int skip, int limit) throws AVException {
+        AVRelation relation = user.getRelation("tryYueMesg");
+        relation.setTargetClass("Message");
+        AVQuery<AVObject> query = relation.getQuery();
+        query.skip(skip);
+        query.limit(limit);
+        query.setCachePolicy(AVQuery.CachePolicy.NETWORK_ELSE_CACHE);
+        List<AVObject> msgs = query.find();
+        //AVQuery<Message> q = AVObject.getQuery(Message.class);
+
+        return msgs;
+    }
+
     public static List<AVObject> findComments(int skip, int limit) throws AVException {
         AVQuery<AVObject> q = new AVQuery<AVObject>("Comments");
         q.skip(skip);
@@ -104,29 +130,30 @@ public class MessageService {
         List<AVObject> comments = q.find();
         return comments;
     }
-    public static List<AVObject> findCommentsByMsg(AVObject msg)throws AVException {
+
+    public static List<AVObject> findCommentsByMsg(AVObject msg) throws AVException {
         AVRelation relation = msg.getRelation("comments");
         relation.setTargetClass("Comments");
         AVQuery<AVObject> query = relation.getQuery();
         List<AVObject> comments = query.find();
         CommentUpdateActivity.users = new ArrayList<AVUser>();
-        for(AVObject com : comments){
-            CommentUpdateActivity.users.add((AVUser)com.getAVObject("userSend").fetch());
+        for (AVObject com : comments) {
+            CommentUpdateActivity.users.add((AVUser) com.getAVObject("userSend").fetch());
         }
         return comments;
     }
+
     public static List<AVObject> findMsg(int skip, int limit) throws AVException {
         AVQuery<AVObject> q = new AVQuery<AVObject>("Message");
         q.skip(skip);
         q.limit(limit);
         q.setCachePolicy(AVQuery.CachePolicy.NETWORK_ELSE_CACHE);
         List<AVObject> message = q.find();
-        for(AVObject msg : message){
+        for (AVObject msg : message) {
             msg.getAVObject("sendUser").fetch();
         }
         return message;
     }
-
 
 
     public static void cacheUserIfNone(String userId) throws AVException {

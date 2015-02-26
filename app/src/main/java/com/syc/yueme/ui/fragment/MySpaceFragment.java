@@ -21,9 +21,12 @@ import com.syc.yueme.avobject.User;
 import com.syc.yueme.service.ChatService;
 import com.syc.yueme.service.UpdateService;
 import com.syc.yueme.service.UserService;
+import com.syc.yueme.ui.activity.CommentUpdateActivity;
+import com.syc.yueme.ui.activity.MyMessageActivity;
 import com.syc.yueme.ui.activity.NotifySettingActivity;
 import com.syc.yueme.ui.activity.PasswordChangeActivity;
 import com.syc.yueme.ui.activity.UserInfoActivity;
+import com.syc.yueme.ui.activity.YingYueActivity;
 import com.syc.yueme.util.*;
 
 import java.io.File;
@@ -93,12 +96,13 @@ public class MySpaceFragment extends BaseFragment implements View.OnClickListene
 //            intent.setDataAndType(MediaStore.Images.Media.EXTERNAL_CONTENT_URI, "image/*");
 //            startActivityForResult(intent, IMAGE_PICK_REQUEST);
         } else if (id == R.id.yingyueLayout) {
-            showSexChooseDialog();
+            Utils.goActivity(ctx, YingYueActivity.class);
 //      ChatService.closeSession();
 //      AVUser.logOut();
 //      getActivity().finish();
         } else if (id == R.id.myyueLayout) {
-            showSexChooseDialog();
+            //showSexChooseDialog();
+            Utils.goActivity(ctx, MyMessageActivity.class);
         } else if (id == R.id.notifyLayout) {
             Utils.goActivity(ctx, NotifySettingActivity.class);
         } else if (id == R.id.specialyueLayout) {
