@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#f2f2f2">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:id="@+id/comment_layout"
+        android:visibility="visible">
+
+        <EditText
+            android:id="@+id/comment_text_edit"
+            android:layout_width="300dp"
+            android:layout_height="match_parent"
+            android:background="@color/transparent"
+            android:drawableLeft="@drawable/login_icon_account"
+            android:drawablePadding="25dip"
+            android:paddingLeft="15dip"
+            android:shadowDx="0.0"
+            android:shadowDy="1.0"
+            android:shadowRadius="1.0"
+            android:textColorHint="#ffdddddd"
+            android:enabled="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentBottom="true" />
+        <Button
+            android:id="@+id/commentBtn"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:enabled="true"
+            android:text="发送"
+            android:textSize="15dp"
+            android:layout_alignTop="@+id/comment_text_edit"
+            android:layout_toRightOf="@+id/comment_text_edit"
+            android:layout_gravity="right"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true" />
+    </RelativeLayout>
+    <com.syc.yueme.ui.view.BaseListView
+        android:id="@+id/list_near"
+        android:layout_width="373dp"
+        android:layout_height="531dp"
+        android:cacheColorHint="@android:color/transparent"
+        android:divider="@drawable/base_horizontal_line"
+        android:dividerHeight="1dp"
+        android:fadingEdgeLength="0dp"
+        android:fastScrollEnabled="true"
+        android:paddingBottom="10dp" />
+
+
+
+
+
+</LinearLayout>

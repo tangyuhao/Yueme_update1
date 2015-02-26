@@ -102,6 +102,9 @@
             android:name=".ui.activity.YueUpdateActivity"
             android:theme="@style/MainTheme" />
         <activity
+            android:name=".ui.activity.CommentUpdateActivity"
+            android:theme="@style/MainTheme" />
+        <activity
             android:name=".ui.activity.PersonInfoActivity"
             android:theme="@style/MainTheme" />
         <activity
@@ -141,7 +144,6 @@
 
         <activity
             android:name=".ui.activity.PasswordChangeActivity"
-            android:theme="@style/MainTheme"
             android:label="@string/title_activity_password_change" >
         </activity>
         <activity

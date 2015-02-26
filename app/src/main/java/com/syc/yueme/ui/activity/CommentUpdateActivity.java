@@ -1,0 +1,86 @@
+package com.syc.yueme.ui.activity;
+
+import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
+import android.widget.EditText;
+
+import com.avos.avoscloud.AVObject;
+import com.avos.avoscloud.AVUser;
+import com.syc.yueme.R;
+import com.syc.yueme.adapter.CommentAdapter;
+import com.syc.yueme.adapter.NearPeopleAdapter;
+import com.syc.yueme.service.MessageService;
+import com.syc.yueme.ui.view.BaseListView;
+import com.syc.yueme.util.Utils;
+
+import java.util.ArrayList;
+import java.util.List;
+
+/**
+ * Created by wangweijia on 2015/2/23.
+ */
+public class CommentUpdateActivity extends BaseActivity implements View.OnClickListener {
+    BaseListView<AVObject> listView;
+
+    CommentAdapter adapter;
+    List<AVObject> nears = new ArrayList<AVObject>();
+    public static List<AVUser> users;
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.comment_activity);
+        initActionBar("评论");
+        Button yueUpdate = (Button) findViewById(R.id.commentBtn);
+        yueUpdate.setOnClickListener(this);
+        initXListView();
+    }
+
+    @Override
+    public void onClick(View v) {
+        int id = v.getId();
+        if (id == R.id.commentBtn) {
+
+            String content = "";
+            String location = "";
+            String time = "";
+
+            EditText contenttmp = (EditText) findViewById(R.id.comment_text_edit);
+            content = contenttmp.getText().toString();
+            AVObject comment = new AVObject("Comments");
+            comment.put("userSend", AVUser.getCurrentUser());
+            comment.put("contents", content);
+            if (content != null && !content.equals("")) {
+                NearPeopleAdapter.which_msg.getRelation("comments").add(comment);
+                NearPeopleAdapter.which_msg.saveEventually();
+                NearPeopleAdapter.which_msg.saveInBackground();
+                Utils.toast("success!");
+            }
+            //MainActivity.goMainActivity(CommentUpdateActivity.this);
+            contenttmp.setText("");
+            //listView.onRefresh();
+
+        }
+    }
+
+    private void initXListView() {
+        adapter = new CommentAdapter(ctx, nears);
+        listView = (BaseListView<AVObject>) findViewById(R.id.list_near);
+        listView.init(new BaseListView.DataInterface<AVObject>() {
+            @Override
+            public List<AVObject> getDatas(int skip, int limit, List<AVObject> currentDatas) throws Exception {
+                return MessageService.findCommentsByMsg(NearPeopleAdapter.which_msg);
+            }
+
+            @Override
+            public void onItemSelected(AVObject item) {
+            }
+        }, adapter);
+        listView.onRefresh();
+//        PauseOnScrollListener listener = new PauseOnScrollListener(MessageService.imageLoader,
+//                true, true);
+//        listView.setOnScrollListener(listener);
+    }
+
+}

@@ -1,103 +1,127 @@
 package com.syc.yueme.adapter;
 
+import android.app.AlertDialog;
 import android.content.Context;
+import android.util.Log;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
+import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
-import com.avos.avoscloud.AVGeoPoint;
-import com.avos.avoscloud.AVUser;
+
+import com.avos.avoscloud.*;
+import com.nostra13.universalimageloader.core.listener.PauseOnScrollListener;
 import com.syc.yueme.R;
+import com.syc.yueme.avobject.Message;
 import com.syc.yueme.avobject.User;
 import com.syc.yueme.base.App;
+import com.syc.yueme.service.MessageService;
 import com.syc.yueme.service.PreferenceMap;
 import com.syc.yueme.service.UserService;
+import com.syc.yueme.ui.activity.CommentUpdateActivity;
+import com.syc.yueme.ui.activity.YueUpdateActivity;
+import com.syc.yueme.ui.fragment.DiscoverFragment;
+import com.syc.yueme.ui.view.BaseListView;
 import com.syc.yueme.ui.view.ViewHolder;
 import com.syc.yueme.util.Utils;
+import com.syc.yueme.avobject.Message;
+
 import org.ocpsoft.prettytime.PrettyTime;
 
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
-public class NearPeopleAdapter extends BaseListAdapter<AVUser> {
-  PrettyTime prettyTime;
-  AVGeoPoint location;
+import butterknife.InjectView;
 
-  public NearPeopleAdapter(Context ctx) {
-    super(ctx);
-    init();
-  }
+public class NearPeopleAdapter extends BaseListAdapter<AVObject> {
+    PrettyTime prettyTime;
+    AVGeoPoint location;
+    BaseListView<AVObject> listView;
+    CommentAdapter adapter;
+    List<AVObject> nears = new ArrayList<AVObject>();
+    TextView nameView;
+    ImageView avatarView;
+    AVUser user;
+    public static AVObject which_msg;
 
-  private void init() {
-    prettyTime = new PrettyTime();
-    PreferenceMap preferenceMap = PreferenceMap.getCurUserPrefDao(ctx);
-    location = preferenceMap.getLocation();
-  }
-
-  public NearPeopleAdapter(Context ctx, List<AVUser> datas) {
-    super(ctx, datas);
-    init();
-  }
-
-  @Override
-  public View getView(int position, View convertView, ViewGroup parent) {
-    if (convertView == null) {
-      convertView = inflater.inflate(R.layout.discover_near_people_item, null, false);
+    public NearPeopleAdapter(Context ctx) {
+        super(ctx);
+        init();
     }
-    final AVUser user = datas.get(position);
-    TextView nameView = ViewHolder.findViewById(convertView, R.id.name_text);
-    TextView distanceView = ViewHolder.findViewById(convertView, R.id.distance_text);
-    TextView loginTimeView = ViewHolder.findViewById(convertView, R.id.login_time_text);
-    ImageView avatarView = ViewHolder.findViewById(convertView, R.id.avatar_view);
-    String avatarUrl = User.getAvatarUrl(user);
 
-    UserService.displayAvatar(avatarUrl, avatarView);
-
-    AVGeoPoint geoPoint = user.getAVGeoPoint(User.LOCATION);
-    String currentLat = String.valueOf(location.getLatitude());
-    String currentLong = String.valueOf(location.getLongitude());
-    if (geoPoint != null && !currentLat.equals("") && !currentLong.equals("")) {
-      double distance = DistanceOfTwoPoints(Double.parseDouble(currentLat), Double.parseDouble(currentLong),
-          user.getAVGeoPoint(User.LOCATION).getLatitude(),
-          user.getAVGeoPoint(User.LOCATION).getLongitude());
-      distanceView.setText(Utils.getPrettyDistance(distance));
-    } else {
-      distanceView.setText(App.ctx.getString(R.string.unknown));
+    private void init() {
+        prettyTime = new PrettyTime();
     }
-    nameView.setText(user.getUsername());
-    Date updatedAt = user.getUpdatedAt();
-    String prettyTimeStr = this.prettyTime.format(updatedAt);
-    loginTimeView.setText(App.ctx.getString(R.string.recent_login_time) + prettyTimeStr);
-    return convertView;
-  }
 
-  private static final double EARTH_RADIUS = 6378137;
+    public NearPeopleAdapter(Context ctx, List<AVObject> datas) {
+        super(ctx, datas);
+        init();
+    }
 
-  private static double rad(double d) {
-    return d * Math.PI / 180.0;
-  }
+    @Override
+    public View getView(int position, View convertView, ViewGroup parent) {
+        if (convertView == null) {
+            convertView = inflater.inflate(R.layout.discover_near_people_item, null, false);
+        }
+        final AVObject message = datas.get(position);
+        // get and set the name, content, time, publish_time, location
+        nameView = ViewHolder.findViewById(convertView, R.id.name_text);
+        TextView publishTimeView = ViewHolder.findViewById(convertView, R.id.publish_time_text);
+        TextView locationView = ViewHolder.findViewById(convertView, R.id.location_text);
+        TextView yueTimeView = ViewHolder.findViewById(convertView, R.id.login_text);
+        final TextView yueContentView = ViewHolder.findViewById(convertView, R.id.yue_text);
+        avatarView = ViewHolder.findViewById(convertView, R.id.avatar_view);
+        final Button commentBtn = ViewHolder.findViewById(convertView, R.id.commentBtn);
+        commentBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                which_msg = message;
+                Utils.goActivity(ctx, CommentUpdateActivity.class);
+            }
+        });
+        final Button likeButton = ViewHolder.findViewById(convertView, R.id.likeBtn);
+        likeButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                //message.getRelation("likeUser").add(AVUser.getCurrentUser());
+                message.saveInBackground();
+            }
+        });
+        final Button talkButton = ViewHolder.findViewById(convertView, R.id.talkBtn);
+        talkButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+            }
+        });
 
-  /**
-   * 根据两点间经纬度坐标（double值），计算两点间距离，
-   *
-   * @param lat1
-   * @param lng1
-   * @param lat2
-   * @param lng2
-   * @return 距离：单位为米
-   */
-  public static double DistanceOfTwoPoints(double lat1, double lng1,
-                                           double lat2, double lng2) {
-    double radLat1 = rad(lat1);
-    double radLat2 = rad(lat2);
-    double a = radLat1 - radLat2;
-    double b = rad(lng1) - rad(lng2);
-    double s = 2 * Math.asin(Math.sqrt(Math.pow(Math.sin(a / 2), 2)
-        + Math.cos(radLat1) * Math.cos(radLat2)
-        * Math.pow(Math.sin(b / 2), 2)));
-    s = s * EARTH_RADIUS;
-    s = Math.round(s * 10000) / 10000;
-    return s;
-  }
+        final Button yueButton = ViewHolder.findViewById(convertView, R.id.yueBtn);
+        yueButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                message.getRelation("yueUser").add(AVUser.getCurrentUser());
+                message.saveInBackground();
+            }
+        });
+
+
+        AVUser u = (AVUser) message.getAVObject("sendUser");
+        nameView.setText(u.getString("username"));
+        String avatarUrl = User.getAvatarUrl(u);
+        UserService.displayAvatar(avatarUrl, avatarView);
+        Date updatedAt = message.getUpdatedAt();
+        // get the content
+        String yueTime = (String) message.get("time");
+        String prettyTimeStr = this.prettyTime.format(updatedAt);
+        String contents = (String) message.get("contents");
+        String where = (String) message.get("location");
+        yueContentView.setText(contents);
+        publishTimeView.setText("发布:" + prettyTimeStr);
+        yueTimeView.setText("时间:" + yueTime);
+        locationView.setText("地点:" + where);
+
+        return convertView;
+    }
 
 }
