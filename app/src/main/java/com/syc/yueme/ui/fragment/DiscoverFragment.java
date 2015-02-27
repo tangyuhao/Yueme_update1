@@ -52,12 +52,6 @@ public class DiscoverFragment extends BaseFragment {
 
     NearPeopleAdapter adapter;
     List<AVObject> nears = new ArrayList<AVObject>();
-    public static List<List<AVObject>> coms;
-    int orderType;
-    public static RelativeLayout commentLayout;
-    public static EditText commentEdit;
-    public static Button commentBtn;
-    PreferenceMap preferenceMap;
 
     private final SortDialogListener distanceListener = new SortDialogListener(UserService.ORDER_DISTANCE);
     private final SortDialogListener updatedAtListener = new SortDialogListener(UserService.ORDER_UPDATED_AT);
@@ -105,9 +99,6 @@ public class DiscoverFragment extends BaseFragment {
     @Override
     public void onActivityCreated(Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
-        commentLayout = (RelativeLayout) getView().findViewById(R.id.comment_layout);
-        commentEdit = (EditText) getView().findViewById(R.id.comment_text_edit);
-        commentBtn = (Button) getView().findViewById(R.id.commentBtn);
         headerLayout.showTitle(R.string.discover);
 //        headerLayout.showRightImageButton(R.drawable.nearby_order, new View.OnClickListener() {
 //            @Override
@@ -141,7 +132,6 @@ public class DiscoverFragment extends BaseFragment {
     private void initXListView() {
         adapter = new NearPeopleAdapter(ctx, nears);
         listView = (BaseListView<AVObject>) getView().findViewById(R.id.list_near);
-        coms = new ArrayList<List<AVObject>>();
         listView.init(new BaseListView.DataInterface<AVObject>() {
             @Override
             public List<AVObject> getDatas(int skip, int limit, List<AVObject> currentDatas) throws Exception {

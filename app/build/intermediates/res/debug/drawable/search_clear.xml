@@ -3,4 +3,4 @@
   xmlns:android="http://schemas.android.com/apk/res/android">
     <item android:state_pressed="true" android:drawable="@drawable/search_clear_pressed" />
     <item android:drawable="@drawable/search_clear_normal" />
-</selector><!-- From: file:/Users/kawhi/AndroidStudioProjects/Yueme_update1/app/src/main/res/drawable/search_clear.xml -->
+</selector><!-- From: file:/Users/lemon/AndroidStudioProjects/new-git/app/src/main/res/drawable/search_clear.xml -->

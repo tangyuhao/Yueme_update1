@@ -81,7 +81,11 @@
       <excludeFolder url="file://$MODULE_DIR$/build/outputs" />
       <excludeFolder url="file://$MODULE_DIR$/build/tmp" />
     </content>
+<<<<<<< Updated upstream
     <orderEntry type="jdk" jdkName="Android API 21 Platform" jdkType="Android SDK" />
+=======
+    <orderEntry type="inheritedJdk" />
+>>>>>>> Stashed changes
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="library" exported="" name="avoscloud-v2.6.9.1" level="project" />
     <orderEntry type="library" exported="" name="fastjson" level="project" />

@@ -4,4 +4,4 @@
     <item android:id="@+id/action_settings" android:title="@string/action_settings"
         android:orderInCategory="100" android:showAsAction="never" />
 </menu>
-<!-- From: file:/Users/kawhi/AndroidStudioProjects/Yueme_update1/app/src/main/res/menu/menu_user_sign.xml -->
+<!-- From: file:/Users/lemon/AndroidStudioProjects/new-git/app/src/main/res/menu/menu_user_sign.xml -->

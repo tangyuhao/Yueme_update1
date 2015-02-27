@@ -5,4 +5,4 @@
     <item android:drawable="@drawable/base_action_bar_add_bg_pressed" android:state_focused="true"/>
     <item android:drawable="@drawable/base_action_bar_add_bg_normal"/>
 
-</selector><!-- From: file:/Users/kawhi/AndroidStudioProjects/Yueme_update1/app/src/main/res/drawable/base_action_bar_add_bg_selector.xml -->
+</selector><!-- From: file:/Users/lemon/AndroidStudioProjects/new-git/app/src/main/res/drawable/base_action_bar_add_bg_selector.xml -->

@@ -107,12 +107,12 @@ public class NearPeopleAdapter extends BaseListAdapter<AVObject> {
             }
         });
 
-
-        AVUser u = (AVUser) message.getAVObject("sendUser");
-        nameView.setText(u.getString("username"));
-        String avatarUrl = User.getAvatarUrl(u);
+        //AVUser u = (AVUser) message.getAVObject("sendUser");
+        //nameView.setText(u.getString("username"));
+        nameView.setText(message.getString("username"));
+        String avatarUrl = message.getString("avatarUrl");
         UserService.displayAvatar(avatarUrl, avatarView);
-        Date updatedAt = message.getUpdatedAt();
+        Date updatedAt = message.getCreatedAt();
         // get the content
         String yueTime = (String) message.get("time");
         String prettyTimeStr = this.prettyTime.format(updatedAt);
