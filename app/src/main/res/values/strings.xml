@@ -177,7 +177,6 @@
     <string name="title_activity_user_hobbies">UserHobbiesActivity</string>
     <string name="title_activity_user_sign">UserSignActivity</string>
     <string name="title_activity_user_speciality">UserSpecialityActivity</string>
-
     <string name="oldPassword">旧密码</string>
     <string name="newPassword">新密码</string>
     <string name="confirm_newPassword">确认新密码</string>
@@ -186,6 +185,10 @@
     <string name="change_password_new_confirm">请再次输入新密码</string>
     <string name="forget_password">忘记密码</string>
     <string name="focus">特别关注</string>
+    <string name="title_activity_password_reset">PasswordResetActivity</string>
 
+
+    <string name="email_input">请输入学号邮箱</string>
+    <string name="passwordResetNotice">请在下面输入您的用户名和学号邮箱，验证正确之后，我们将发送一份重置密码的指令到您的邮箱</string>
 
 </resources>

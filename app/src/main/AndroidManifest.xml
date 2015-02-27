@@ -104,14 +104,12 @@
         <activity
             android:name=".ui.activity.MyMessageActivity"
             android:theme="@style/MainTheme" />
-
         <activity
             android:name=".ui.activity.YingYueActivity"
             android:theme="@style/MainTheme" />
         <activity
             android:name=".ui.activity.CommentUpdateActivity"
             android:theme="@style/MainTheme" />
-
         <activity
             android:name=".ui.activity.PersonInfoActivity"
             android:theme="@style/MainTheme" />
@@ -152,8 +150,8 @@
 
         <activity
             android:name=".ui.activity.PasswordChangeActivity"
-            android:theme="@style/MainTheme"
-            android:label="@string/title_activity_password_change" >
+            android:label="@string/title_activity_password_change"
+            android:theme="@style/MainTheme" >
         </activity>
         <activity
             android:name=".ui.activity.RegisterActivity2"
@@ -190,6 +188,11 @@
         <activity
             android:name=".ui.activity.UserSpecialityActivity"
             android:label="@string/title_activity_user_speciality" >
+        </activity>
+        <activity
+            android:name=".ui.activity.PasswordResetActivity"
+            android:theme="@android:style/Theme.Light.NoTitleBar.Fullscreen"
+            android:label="@string/title_activity_password_reset" >
         </activity>
     </application>
 

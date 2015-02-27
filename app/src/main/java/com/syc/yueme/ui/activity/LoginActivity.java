@@ -18,7 +18,7 @@ import com.syc.yueme.util.Utils;
 public class LoginActivity extends BaseEntryActivity implements OnClickListener {
   EditText usernameEdit, passwordEdit;
   Button loginBtn;
-  TextView registerBtn;
+  TextView registerBtn,pswChange;
 
 
     static int posi; // for the school choice
@@ -50,6 +50,8 @@ public class LoginActivity extends BaseEntryActivity implements OnClickListener 
     passwordEdit = (EditText) findViewById(R.id.et_password);
     loginBtn = (Button) findViewById(R.id.btn_login);
     registerBtn = (TextView) findViewById(R.id.btn_register);
+      pswChange = (TextView) findViewById(R.id.psw_change);
+      pswChange.setOnClickListener(this);
     loginBtn.setOnClickListener(this);
     registerBtn.setOnClickListener(this);
   }
@@ -58,7 +60,10 @@ public class LoginActivity extends BaseEntryActivity implements OnClickListener 
   public void onClick(View v) {
     if (v == registerBtn) {
       Utils.goActivity(ctx, RegisterActivity1.class);
-    } else {
+    }else if(v == pswChange){
+        Utils.goActivity(ctx,PasswordResetActivity.class);
+    }
+    else {
       login();
     }
   }

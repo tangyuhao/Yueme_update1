@@ -191,6 +191,11 @@
             android:name="com.syc.yueme.ui.activity.UserSpecialityActivity"
             android:label="@string/title_activity_user_speciality" >
         </activity>
+        <activity
+            android:name="com.syc.yueme.ui.activity.PasswordResetActivity"
+            android:label="@string/title_activity_password_reset"
+            android:theme="@android:style/Theme.Light.NoTitleBar.Fullscreen" >
+        </activity>
     </application>
 
 </manifest>
