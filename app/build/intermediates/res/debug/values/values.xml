@@ -120,6 +120,7 @@
     <string name="failedToGetData">获取数据失败</string>
     <string name="female">女</string>
     <string name="findFriends">查找好友</string>
+    <string name="forget_password">忘记密码</string>
     <string name="geoIsSame">获取坐标相同</string>
     <string name="getGeoInfoFailed">获取地理位置信息失败!</string>
     <string name="group">群组</string>
@@ -186,7 +187,7 @@
     <string name="register">注册</string>
     <string name="registerFailed">注册失败。</string>
     <string name="registerSucceed">注册成功，尽快验证您的学号邮箱即可登入</string>
-    <string name="register_rightnow">立即注册 ></string>
+    <string name="register_rightnow">立即注册</string>
     <string name="releaseToCancel">松开手指，取消录音</string>
     <string name="release_to_refresh">释放立即刷新</string>
     <string name="reverseGeoCodeResultIs">反编码得到的地址：</string>

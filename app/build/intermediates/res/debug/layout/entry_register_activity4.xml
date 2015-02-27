@@ -23,6 +23,7 @@
         android:id="@+id/editText1"
         android:background="@drawable/login_edit_normal"
         android:hint="@string/login_student_id_hint"
+        android:textColorHint="#ffdddddd"
         android:layout_below="@+id/textView1"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="10dp" />
