@@ -7,4 +7,4 @@
     <item android:drawable="@drawable/chat_send_pressed" android:state_enabled="false" />
 
 
-</selector><!-- From: file:/Users/lemon/AndroidStudioProjects/new-git/app/src/main/res/drawable/btn_chat_send_selector.xml -->
+</selector><!-- From: file:/D:/github/yueme/app/src/main/res/drawable/btn_chat_send_selector.xml -->

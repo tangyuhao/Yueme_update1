@@ -11,4 +11,4 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:src="@drawable/default_user_avatar" />
-</LinearLayout><!-- From: file:/Users/lemon/AndroidStudioProjects/new-git/app/src/main/res/layout/chat_image_brower_layout.xml -->
+</LinearLayout><!-- From: file:/D:/github/yueme/app/src/main/res/layout/chat_image_brower_layout.xml -->
