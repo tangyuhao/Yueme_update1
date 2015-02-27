@@ -228,119 +228,131 @@ ADDED from AndroidManifest.xml:101:9
 		ADDED from AndroidManifest.xml:103:13
 	android:name
 		ADDED from AndroidManifest.xml:102:13
-activity#com.syc.yueme.ui.activity.CommentUpdateActivity
+activity#com.syc.yueme.ui.activity.MyMessageActivity
 ADDED from AndroidManifest.xml:104:9
 	android:theme
 		ADDED from AndroidManifest.xml:106:13
 	android:name
 		ADDED from AndroidManifest.xml:105:13
-activity#com.syc.yueme.ui.activity.PersonInfoActivity
-ADDED from AndroidManifest.xml:107:9
+activity#com.syc.yueme.ui.activity.YingYueActivity
+ADDED from AndroidManifest.xml:108:9
 	android:theme
+		ADDED from AndroidManifest.xml:110:13
+	android:name
 		ADDED from AndroidManifest.xml:109:13
-	android:name
-		ADDED from AndroidManifest.xml:108:13
-activity#com.syc.yueme.ui.activity.NotifySettingActivity
-ADDED from AndroidManifest.xml:110:9
+activity#com.syc.yueme.ui.activity.CommentUpdateActivity
+ADDED from AndroidManifest.xml:111:9
 	android:theme
+		ADDED from AndroidManifest.xml:113:13
+	android:name
 		ADDED from AndroidManifest.xml:112:13
-	android:name
-		ADDED from AndroidManifest.xml:111:13
-activity#com.syc.yueme.ui.activity.GroupListActivity
-ADDED from AndroidManifest.xml:113:9
-	android:label
-		ADDED from AndroidManifest.xml:115:13
+activity#com.syc.yueme.ui.activity.PersonInfoActivity
+ADDED from AndroidManifest.xml:115:9
 	android:theme
+		ADDED from AndroidManifest.xml:117:13
+	android:name
 		ADDED from AndroidManifest.xml:116:13
-	android:name
-		ADDED from AndroidManifest.xml:114:13
-activity#com.syc.yueme.ui.activity.GroupDetailActivity
-ADDED from AndroidManifest.xml:117:9
+activity#com.syc.yueme.ui.activity.NotifySettingActivity
+ADDED from AndroidManifest.xml:118:9
 	android:theme
+		ADDED from AndroidManifest.xml:120:13
+	android:name
 		ADDED from AndroidManifest.xml:119:13
-	android:name
-		ADDED from AndroidManifest.xml:118:13
-activity#com.syc.yueme.ui.activity.GroupAddMembersActivity
-ADDED from AndroidManifest.xml:120:9
+activity#com.syc.yueme.ui.activity.GroupListActivity
+ADDED from AndroidManifest.xml:121:9
 	android:label
-		ADDED from AndroidManifest.xml:122:13
-	android:theme
 		ADDED from AndroidManifest.xml:123:13
+	android:theme
+		ADDED from AndroidManifest.xml:124:13
 	android:name
-		ADDED from AndroidManifest.xml:121:13
-service#com.baidu.location.f
+		ADDED from AndroidManifest.xml:122:13
+activity#com.syc.yueme.ui.activity.GroupDetailActivity
 ADDED from AndroidManifest.xml:125:9
-	android:enabled
+	android:theme
 		ADDED from AndroidManifest.xml:127:13
-	android:process
-		ADDED from AndroidManifest.xml:128:13
 	android:name
 		ADDED from AndroidManifest.xml:126:13
-meta-data#com.baidu.lbsapi.API_KEY
-ADDED from AndroidManifest.xml:141:9
-	android:value
-		ADDED from AndroidManifest.xml:143:13
-	android:name
-		ADDED from AndroidManifest.xml:142:13
-activity#com.syc.yueme.ui.activity.PasswordChangeActivity
-ADDED from AndroidManifest.xml:145:9
+activity#com.syc.yueme.ui.activity.GroupAddMembersActivity
+ADDED from AndroidManifest.xml:128:9
 	android:label
-		ADDED from AndroidManifest.xml:148:13
+		ADDED from AndroidManifest.xml:130:13
 	android:theme
-		ADDED from AndroidManifest.xml:147:13
+		ADDED from AndroidManifest.xml:131:13
 	android:name
-		ADDED from AndroidManifest.xml:146:13
-activity#com.syc.yueme.ui.activity.RegisterActivity2
-ADDED from AndroidManifest.xml:150:9
-	android:label
-		ADDED from AndroidManifest.xml:152:13
+		ADDED from AndroidManifest.xml:129:13
+service#com.baidu.location.f
+ADDED from AndroidManifest.xml:133:9
+	android:enabled
+		ADDED from AndroidManifest.xml:135:13
+	android:process
+		ADDED from AndroidManifest.xml:136:13
 	android:name
+		ADDED from AndroidManifest.xml:134:13
+meta-data#com.baidu.lbsapi.API_KEY
+ADDED from AndroidManifest.xml:149:9
+	android:value
 		ADDED from AndroidManifest.xml:151:13
-activity#com.syc.yueme.ui.activity.RegisterActivity1
-ADDED from AndroidManifest.xml:154:9
+	android:name
+		ADDED from AndroidManifest.xml:150:13
+activity#com.syc.yueme.ui.activity.PasswordChangeActivity
+ADDED from AndroidManifest.xml:153:9
 	android:label
 		ADDED from AndroidManifest.xml:156:13
-	android:name
+	android:theme
 		ADDED from AndroidManifest.xml:155:13
-activity#com.syc.yueme.ui.activity.RegisterActivity3
+	android:name
+		ADDED from AndroidManifest.xml:154:13
+activity#com.syc.yueme.ui.activity.RegisterActivity2
 ADDED from AndroidManifest.xml:158:9
 	android:label
 		ADDED from AndroidManifest.xml:160:13
 	android:name
 		ADDED from AndroidManifest.xml:159:13
-activity#com.syc.yueme.ui.activity.RegisterActivity4
+activity#com.syc.yueme.ui.activity.RegisterActivity1
 ADDED from AndroidManifest.xml:162:9
 	android:label
 		ADDED from AndroidManifest.xml:164:13
 	android:name
 		ADDED from AndroidManifest.xml:163:13
-activity#com.syc.yueme.ui.activity.UserInfoActivity
+activity#com.syc.yueme.ui.activity.RegisterActivity3
 ADDED from AndroidManifest.xml:166:9
 	android:label
 		ADDED from AndroidManifest.xml:168:13
 	android:name
 		ADDED from AndroidManifest.xml:167:13
-activity#com.syc.yueme.ui.activity.UserCharacristicsActivity
+activity#com.syc.yueme.ui.activity.RegisterActivity4
 ADDED from AndroidManifest.xml:170:9
 	android:label
 		ADDED from AndroidManifest.xml:172:13
 	android:name
 		ADDED from AndroidManifest.xml:171:13
-activity#com.syc.yueme.ui.activity.UserHobbiesActivity
+activity#com.syc.yueme.ui.activity.UserInfoActivity
 ADDED from AndroidManifest.xml:174:9
 	android:label
 		ADDED from AndroidManifest.xml:176:13
 	android:name
 		ADDED from AndroidManifest.xml:175:13
-activity#com.syc.yueme.ui.activity.UserSignActivity
+activity#com.syc.yueme.ui.activity.UserCharacristicsActivity
 ADDED from AndroidManifest.xml:178:9
 	android:label
 		ADDED from AndroidManifest.xml:180:13
 	android:name
 		ADDED from AndroidManifest.xml:179:13
-activity#com.syc.yueme.ui.activity.UserSpecialityActivity
+activity#com.syc.yueme.ui.activity.UserHobbiesActivity
 ADDED from AndroidManifest.xml:182:9
 	android:label
 		ADDED from AndroidManifest.xml:184:13
 	android:name
 		ADDED from AndroidManifest.xml:183:13
+activity#com.syc.yueme.ui.activity.UserSignActivity
+ADDED from AndroidManifest.xml:186:9
+	android:label
+		ADDED from AndroidManifest.xml:188:13
+	android:name
+		ADDED from AndroidManifest.xml:187:13
+activity#com.syc.yueme.ui.activity.UserSpecialityActivity
+ADDED from AndroidManifest.xml:190:9
+	android:label
+		ADDED from AndroidManifest.xml:192:13
+	android:name
+		ADDED from AndroidManifest.xml:191:13

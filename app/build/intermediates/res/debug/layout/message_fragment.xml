@@ -14,4 +14,4 @@
         android:layout_height="match_parent"
         android:cacheColorHint="#00000000"
         android:divider="@null" />
-</LinearLayout><!-- From: file:/D:/github/yueme/app/src/main/res/layout/message_fragment.xml -->
+</LinearLayout><!-- From: file:/Users/lemon/AndroidStudioProjects/new-git/app/src/main/res/layout/message_fragment.xml -->

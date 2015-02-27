@@ -25,7 +25,6 @@ public class CommentUpdateActivity extends BaseActivity implements View.OnClickL
 
     CommentAdapter adapter;
     List<AVObject> nears = new ArrayList<AVObject>();
-    public static List<AVUser> users;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -48,18 +47,18 @@ public class CommentUpdateActivity extends BaseActivity implements View.OnClickL
 
             EditText contenttmp = (EditText) findViewById(R.id.comment_text_edit);
             content = contenttmp.getText().toString();
-            AVObject comment = new AVObject("Comments");
-            comment.put("userSend", AVUser.getCurrentUser());
-            comment.put("contents", content);
             if (content != null && !content.equals("")) {
-                NearPeopleAdapter.which_msg.getRelation("comments").add(comment);
-                NearPeopleAdapter.which_msg.saveEventually();
-                NearPeopleAdapter.which_msg.saveInBackground();
+                AVObject msg = NearPeopleAdapter.which_msg;
+                AVObject comment = new AVObject("Comments");
+                comment.put("userSend", AVUser.getCurrentUser());
+                comment.put("contents", content);
+                comment.put("BelongMsg", msg);
+                comment.saveInBackground();
                 Utils.toast("success!");
             }
             //MainActivity.goMainActivity(CommentUpdateActivity.this);
             contenttmp.setText("");
-            //listView.onRefresh();
+            listView.onRefresh();
 
         }
     }
@@ -70,7 +69,8 @@ public class CommentUpdateActivity extends BaseActivity implements View.OnClickL
         listView.init(new BaseListView.DataInterface<AVObject>() {
             @Override
             public List<AVObject> getDatas(int skip, int limit, List<AVObject> currentDatas) throws Exception {
-                return MessageService.findCommentsByMsg(NearPeopleAdapter.which_msg);
+                List<AVObject> comments = MessageService.findCommentsByMsg2(NearPeopleAdapter.which_msg, skip, limit);
+                return comments;
             }
 
             @Override

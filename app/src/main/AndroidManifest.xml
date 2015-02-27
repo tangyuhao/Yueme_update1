@@ -102,8 +102,16 @@
             android:name=".ui.activity.YueUpdateActivity"
             android:theme="@style/MainTheme" />
         <activity
+            android:name=".ui.activity.MyMessageActivity"
+            android:theme="@style/MainTheme" />
+
+        <activity
+            android:name=".ui.activity.YingYueActivity"
+            android:theme="@style/MainTheme" />
+        <activity
             android:name=".ui.activity.CommentUpdateActivity"
             android:theme="@style/MainTheme" />
+
         <activity
             android:name=".ui.activity.PersonInfoActivity"
             android:theme="@style/MainTheme" />

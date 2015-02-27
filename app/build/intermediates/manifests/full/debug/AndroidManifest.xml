@@ -104,6 +104,12 @@
             android:name="com.syc.yueme.ui.activity.YueUpdateActivity"
             android:theme="@style/MainTheme" />
         <activity
+            android:name="com.syc.yueme.ui.activity.MyMessageActivity"
+            android:theme="@style/MainTheme" />
+        <activity
+            android:name="com.syc.yueme.ui.activity.YingYueActivity"
+            android:theme="@style/MainTheme" />
+        <activity
             android:name="com.syc.yueme.ui.activity.CommentUpdateActivity"
             android:theme="@style/MainTheme" />
         <activity

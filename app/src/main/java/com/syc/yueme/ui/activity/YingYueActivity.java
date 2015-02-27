@@ -6,7 +6,7 @@ import android.view.View;
 import com.avos.avoscloud.AVObject;
 import com.avos.avoscloud.AVUser;
 import com.syc.yueme.R;
-import com.syc.yueme.adapter.CommentAdapter;
+import com.syc.yueme.adapter.MyMessageAdapter;
 import com.syc.yueme.service.MessageService;
 import com.syc.yueme.ui.view.BaseListView;
 
@@ -19,7 +19,7 @@ import java.util.List;
 public class YingYueActivity extends BaseActivity implements View.OnClickListener {
     BaseListView<AVObject> listView;
 
-    CommentAdapter adapter;
+    MyMessageAdapter adapter;
     List<AVObject> nears = new ArrayList<AVObject>();
     public static List<AVUser> users;
 
@@ -38,7 +38,7 @@ public class YingYueActivity extends BaseActivity implements View.OnClickListene
     }
 
     private void initXListView() {
-        adapter = new CommentAdapter(ctx, nears);
+        adapter = new MyMessageAdapter(ctx, nears);
         listView = (BaseListView<AVObject>) findViewById(R.id.list_near);
         listView.init(new BaseListView.DataInterface<AVObject>() {
             @Override

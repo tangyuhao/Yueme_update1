@@ -87,7 +87,7 @@ public class NearPeopleAdapter extends BaseListAdapter<AVObject> {
         likeButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                //message.getRelation("likeUser").add(AVUser.getCurrentUser());
+                message.getRelation("likeUser").add(AVUser.getCurrentUser());
                 message.saveInBackground();
             }
         });

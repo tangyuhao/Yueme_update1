@@ -13,7 +13,6 @@ import com.syc.yueme.R;
 import com.syc.yueme.avobject.User;
 import com.syc.yueme.service.PreferenceMap;
 import com.syc.yueme.service.UserService;
-import com.syc.yueme.ui.activity.CommentUpdateActivity;
 import com.syc.yueme.ui.view.ViewHolder;
 
 import org.ocpsoft.prettytime.PrettyTime;
@@ -48,19 +47,17 @@ public class CommentAdapter extends BaseListAdapter<AVObject> {
             convertView = inflater.inflate(R.layout.comment_fragment, null, false);
         }
         final AVObject comment = datas.get(position);
-        if(position < CommentUpdateActivity.users.size()) {
-            nameView = ViewHolder.findViewById(convertView, R.id.commenter_name_text);
-            TextView contentView = ViewHolder.findViewById(convertView, R.id.comment_content_text);
-            avatarView = ViewHolder.findViewById(convertView, R.id.avatar_view);
-            String content = (String) comment.get("contents");
-            contentView.setText(content);
-            AVUser u = (AVUser)comment.getAVObject("userSend");
-            String title = u.getString("username");
-            String avatarUrl = User.getAvatarUrl(u);
-            UserService.displayAvatar(avatarUrl, avatarView);
-            nameView.setText(title);
+        nameView = ViewHolder.findViewById(convertView, R.id.commenter_name_text);
+        TextView contentView = ViewHolder.findViewById(convertView, R.id.comment_content_text);
+        avatarView = ViewHolder.findViewById(convertView, R.id.avatar_view);
+        String content = (String) comment.get("contents");
+        contentView.setText(content);
+        AVUser u = (AVUser) comment.getAVObject("userSend");
+        String title = u.getString("username");
+        String avatarUrl = User.getAvatarUrl(u);
+        UserService.displayAvatar(avatarUrl, avatarView);
+        nameView.setText(title);
 
-        }
         return convertView;
     }
 
