@@ -185,6 +185,7 @@
     <string name="change_password_new">请输入新密码</string>
     <string name="change_password_new_confirm">请再次输入新密码</string>
     <string name="forget_password">忘记密码</string>
+    <string name="focus">特别关注</string>
 
 
 </resources>

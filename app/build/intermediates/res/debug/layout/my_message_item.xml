@@ -11,7 +11,9 @@
         android:src="@drawable/default_user_avatar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_gravity="top" />
+        android:layout_gravity="top|left"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp" />
 
     <RelativeLayout
         android:layout_width="299dp"
@@ -44,8 +46,8 @@
             android:singleLine="true" />
         <TextView
             android:id="@+id/publish_time_text"
-            style="@style/My.TextView._Black"
-            android:textSize="15sp"
+            style="@style/My.TextView._GraySmall"
+            android:textSize="12sp"
             android:text="发布于"
             android:layout_below="@+id/location_text"
             android:layout_alignParentLeft="true"
@@ -64,7 +66,7 @@
 
         <TextView
             android:id="@+id/yue_text"
-            style="@style/My.TextView._Gray"
+            style="@style/My.TextView._Black"
             android:layout_below="@id/name_text"
             android:text="据说，羊年是属于白羊座的领头年，白羊座的人要钱财有钱财，要桃花有桃花，要走运立马走运，要啥得啥，红红火火，年头一直旺到年底！！不信你转发试试！！！"
             android:singleLine="false"
@@ -84,4 +86,4 @@
 
 </LinearLayout>
 
-<!-- From: file:/Users/kawhi/AndroidStudioProjects/Yueme_update1/app/src/main/res/layout/my_message_item.xml -->
+<!-- From: file:/D:/github/yueme/app/src/main/res/layout/my_message_item.xml -->

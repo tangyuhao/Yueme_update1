@@ -29,7 +29,7 @@
                 android:layout_marginTop="6.0dip"
                 android:contentDescription="@string/action_settings"
                 android:padding="5dp"
-                android:src="@drawable/new_friends_icon" />
+                android:src="@drawable/newfriend_icon" />
 
             <ImageView
                 android:id="@+id/iv_msg_tips"
@@ -84,7 +84,7 @@
                 android:layout_marginTop="6.0dip"
                 android:contentDescription="@string/action_settings"
                 android:padding="5dp"
-                android:src="@drawable/group_icon" />
+                android:src="@drawable/focus_icon" />
         </FrameLayout>
 
         <TextView
@@ -95,7 +95,7 @@
             android:layout_weight="1.0"
             android:padding="5dp"
             android:singleLine="true"
-            android:text="@string/group"
+            android:text="@string/focus"
             android:textSize="20sp" />
     </LinearLayout>
 

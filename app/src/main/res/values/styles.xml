@@ -244,6 +244,11 @@
         <item name="android:textColor">@color/base_color_text_gray</item>
     </style>
 
+    <style name="My.TextView._GraySmall">
+        <item name="android:textColor">@color/base_color_text_gray</item>
+        <item name="android:textSize">10sp</item>
+    </style>
+
     <style name="like_toast_dialog_style">
         <item name="android:windowFrame">@null</item>
         <item name="android:windowIsFloating">true</item>

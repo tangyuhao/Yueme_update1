@@ -26,19 +26,24 @@
             android:textColorHint="#ffdddddd"
             android:enabled="true"
             android:layout_alignParentLeft="true"
-            android:layout_alignParentBottom="true" />
+            android:layout_alignParentBottom="true"
+            android:layout_margin="1dp" />
         <Button
             android:id="@+id/commentBtn"
-            android:layout_width="30dp"
-            android:layout_height="30dp"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
             android:enabled="true"
             android:text="发送"
             android:textSize="15dp"
+            android:textColor="@color/white"
             android:layout_alignTop="@+id/comment_text_edit"
             android:layout_toRightOf="@+id/comment_text_edit"
             android:layout_gravity="right"
+            android:background="@drawable/common_btn"
+
             android:layout_alignParentBottom="true"
-            android:layout_alignParentRight="true" />
+            android:layout_alignParentRight="true"
+            android:layout_margin="3dp" />
     </RelativeLayout>
     <com.syc.yueme.ui.view.BaseListView
         android:id="@+id/list_near"

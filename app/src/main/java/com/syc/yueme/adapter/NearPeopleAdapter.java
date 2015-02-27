@@ -33,7 +33,9 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
+import at.markushi.ui.CircleButton;
 import butterknife.InjectView;
+
 
 public class NearPeopleAdapter extends BaseListAdapter<AVObject> {
     PrettyTime prettyTime;
@@ -73,7 +75,7 @@ public class NearPeopleAdapter extends BaseListAdapter<AVObject> {
         TextView yueTimeView = ViewHolder.findViewById(convertView, R.id.login_text);
         final TextView yueContentView = ViewHolder.findViewById(convertView, R.id.yue_text);
         avatarView = ViewHolder.findViewById(convertView, R.id.avatar_view);
-        final Button commentBtn = ViewHolder.findViewById(convertView, R.id.commentBtn);
+        final CircleButton commentBtn = ViewHolder.findViewById(convertView, R.id.commentBtn);
         commentBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -81,7 +83,7 @@ public class NearPeopleAdapter extends BaseListAdapter<AVObject> {
                 Utils.goActivity(ctx, CommentUpdateActivity.class);
             }
         });
-        final Button likeButton = ViewHolder.findViewById(convertView, R.id.likeBtn);
+        final CircleButton likeButton = ViewHolder.findViewById(convertView, R.id.likeBtn);
         likeButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -89,14 +91,14 @@ public class NearPeopleAdapter extends BaseListAdapter<AVObject> {
                 message.saveInBackground();
             }
         });
-        final Button talkButton = ViewHolder.findViewById(convertView, R.id.talkBtn);
+        final CircleButton talkButton = ViewHolder.findViewById(convertView, R.id.talkBtn);
         talkButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
             }
         });
 
-        final Button yueButton = ViewHolder.findViewById(convertView, R.id.yueBtn);
+        final CircleButton yueButton = ViewHolder.findViewById(convertView, R.id.yueBtn);
         yueButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

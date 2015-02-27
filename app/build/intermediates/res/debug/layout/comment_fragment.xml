@@ -1,12 +1,12 @@
 <LinearLayout
     android:layout_height="wrap_content"
-    android:layout_width="match_parent"
+    android:layout_width="wrap_content"
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:weightSum="1"
     android:orientation="horizontal">
 
     <LinearLayout
-        android:layout_width="283dp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:gravity="center_vertical"
         android:layout_margin="5dp"
@@ -17,15 +17,18 @@
             style="@style/My.ImageView.Photo_Avatar"
             android:src="@drawable/default_user_avatar"
             android:layout_width="32dp"
-            android:layout_height="27dp"
+            android:layout_height="32dp"
             android:layout_gravity="top" />
 
         <RelativeLayout
             android:layout_width="wrap_content"
-            android:layout_height="39dp"
+            android:layout_height="wrap_content"
             android:layout_marginLeft="10dp">
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
 
-            <TextView
+                <TextView
                 android:id="@+id/commenter_name_text"
                 style="@style/My.TextView._Black"
                 android:textSize="14sp"
@@ -35,26 +38,34 @@
 
             <TextView
                 android:id="@+id/comment_time_text"
-                style="@style/My.TextView._Black"
+                style="@style/My.TextView._Gray"
                 android:textSize="12sp"
                 android:text="2015/01/31"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_alignBottom="@+id/name_text"
-                android:layout_toRightOf="@+id/comment_content_text"
                 android:layout_gravity="right"
-                android:layout_alignParentTop="true" />
+                android:gravity="top|right"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="10dp" />
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/comment_time_text"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginTop="5dp">
+                <TextView
+                    android:id="@+id/comment_content_text"
+                    style="@style/My.TextView._Black"
+                    android:textSize="15sp"
+                    android:text="叔我们不约不约不约叔叔我们不约我们不约约不顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶的顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶约"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentLeft="true" />
+                </RelativeLayout>
 
-            <TextView
-                android:id="@+id/comment_content_text"
-                style="@style/My.TextView._Black"
-                android:textSize="15sp"
-                android:text="不约不约叔叔我们不约不约不约叔叔我们不约不约不约叔叔我们不约不约不约叔叔我们不约不约不约叔叔我们不约不约不约叔叔我们不约不约不约叔叔我们不约不约不约叔叔我们不约不约不约叔叔我们不约不约不约叔叔我们不约不约不约叔叔我们不约不约不约叔叔我们不约不约不约叔叔我们不约不约不约叔叔我们不约不约不约叔叔我们不约不约不约叔叔我们不约不约不约叔叔我们不约不约不约叔叔我们不约"
-                android:layout_below="@+id/commenter_name_text"
-                android:layout_alignParentLeft="true"
-                android:layout_alignParentStart="true"
-                android:layout_height="wrap_content"
-                android:layout_alignParentRight="true" />
+            </RelativeLayout>
 
         </RelativeLayout>
 
@@ -62,4 +73,4 @@
     </LinearLayout>
 </LinearLayout>
 
-<!-- From: file:/Users/kawhi/AndroidStudioProjects/Yueme_update1/app/src/main/res/layout/comment_fragment.xml -->
+<!-- From: file:/D:/github/yueme/app/src/main/res/layout/comment_fragment.xml -->
