@@ -144,6 +144,7 @@
 
         <activity
             android:name=".ui.activity.PasswordChangeActivity"
+            android:theme="@style/MainTheme"
             android:label="@string/title_activity_password_change" >
         </activity>
         <activity

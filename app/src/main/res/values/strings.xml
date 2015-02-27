@@ -70,7 +70,7 @@
     <string name="registerSucceed">注册成功，尽快验证您的学号邮箱即可登入</string>
     <string name="registerFailed">注册失败。</string>
     <string name="not_have_account">还没有账号？</string>
-    <string name="register_rightnow">立即注册 ></string>
+    <string name="register_rightnow">立即注册</string>
     <string name="metres">米</string>
     <string name="unknown">未知</string>
     <string name="recent_login_time">最近登录时间:</string>
@@ -184,6 +184,7 @@
     <string name="change_password_old">请输入旧密码</string>
     <string name="change_password_new">请输入新密码</string>
     <string name="change_password_new_confirm">请再次输入新密码</string>
+    <string name="forget_password">忘记密码</string>
 
 
 </resources>
