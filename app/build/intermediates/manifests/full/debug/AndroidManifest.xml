@@ -181,7 +181,8 @@
         </activity>
         <activity
             android:name="com.syc.yueme.ui.activity.UserHobbiesActivity"
-            android:label="@string/title_activity_user_hobbies" >
+            android:label="@string/title_activity_user_hobbies"
+            android:theme="@style/MainTheme" >
         </activity>
         <activity
             android:name="com.syc.yueme.ui.activity.UserSignActivity"

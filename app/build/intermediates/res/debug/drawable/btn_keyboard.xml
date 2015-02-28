@@ -4,4 +4,4 @@
 
     <item android:state_pressed="true" android:drawable="@drawable/chatting_setmode_keyboard_btn_pressed" />
     <item android:drawable="@drawable/chatting_setmode_keyboard_btn_normal" />
-</selector><!-- From: file:/Users/lemon/AndroidStudioProjects/new-git/app/src/main/res/drawable/btn_keyboard.xml -->
+</selector><!-- From: file:/Users/kawhi/AndroidStudioProjects/Yueme_update1/app/src/main/res/drawable/btn_keyboard.xml -->

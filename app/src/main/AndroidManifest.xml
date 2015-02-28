@@ -179,6 +179,7 @@
         </activity>
         <activity
             android:name=".ui.activity.UserHobbiesActivity"
+            android:theme="@style/MainTheme"
             android:label="@string/title_activity_user_hobbies" >
         </activity>
         <activity

@@ -4,4 +4,4 @@
     <item android:drawable="@drawable/btn_logout_normal"  android:state_pressed="false"/>
     <item android:drawable="@drawable/btn_logout_pressed"  android:state_pressed="true"/>
 
-</selector><!-- From: file:/Users/lemon/AndroidStudioProjects/new-git/app/src/main/res/drawable/btn_logout_selector.xml -->
+</selector><!-- From: file:/Users/kawhi/AndroidStudioProjects/Yueme_update1/app/src/main/res/drawable/btn_logout_selector.xml -->

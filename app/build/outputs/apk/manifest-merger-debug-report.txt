@@ -341,26 +341,28 @@ ADDED from AndroidManifest.xml:176:9
 activity#com.syc.yueme.ui.activity.UserHobbiesActivity
 ADDED from AndroidManifest.xml:180:9
 	android:label
+		ADDED from AndroidManifest.xml:183:13
+	android:theme
 		ADDED from AndroidManifest.xml:182:13
 	android:name
 		ADDED from AndroidManifest.xml:181:13
 activity#com.syc.yueme.ui.activity.UserSignActivity
-ADDED from AndroidManifest.xml:184:9
+ADDED from AndroidManifest.xml:185:9
 	android:label
+		ADDED from AndroidManifest.xml:187:13
+	android:name
 		ADDED from AndroidManifest.xml:186:13
-	android:name
-		ADDED from AndroidManifest.xml:185:13
 activity#com.syc.yueme.ui.activity.UserSpecialityActivity
-ADDED from AndroidManifest.xml:188:9
+ADDED from AndroidManifest.xml:189:9
 	android:label
+		ADDED from AndroidManifest.xml:191:13
+	android:name
 		ADDED from AndroidManifest.xml:190:13
-	android:name
-		ADDED from AndroidManifest.xml:189:13
 activity#com.syc.yueme.ui.activity.PasswordResetActivity
-ADDED from AndroidManifest.xml:192:9
+ADDED from AndroidManifest.xml:193:9
 	android:label
-		ADDED from AndroidManifest.xml:195:13
+		ADDED from AndroidManifest.xml:196:13
 	android:theme
-		ADDED from AndroidManifest.xml:194:13
+		ADDED from AndroidManifest.xml:195:13
 	android:name
-		ADDED from AndroidManifest.xml:193:13
+		ADDED from AndroidManifest.xml:194:13

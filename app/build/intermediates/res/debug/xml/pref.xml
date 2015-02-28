@@ -18,4 +18,4 @@
         android:title="@string/vibrate"
         android:key="vibrateNotify"
         android:defaultValue="@bool/defaultVibrateNotify" />
-</PreferenceScreen><!-- From: file:/Users/lemon/AndroidStudioProjects/new-git/app/src/main/res/xml/pref.xml -->
+</PreferenceScreen><!-- From: file:/Users/kawhi/AndroidStudioProjects/Yueme_update1/app/src/main/res/xml/pref.xml -->

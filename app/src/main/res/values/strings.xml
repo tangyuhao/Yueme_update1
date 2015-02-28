@@ -191,4 +191,6 @@
     <string name="email_input">请输入学号邮箱</string>
     <string name="passwordResetNotice">请在下面输入您的用户名和学号邮箱，验证正确之后，我们将发送一份重置密码的指令到您的邮箱</string>
 
+    <string name="save">保存</string>
+    <string name="saveSuccess">保存成功</string>
 </resources>

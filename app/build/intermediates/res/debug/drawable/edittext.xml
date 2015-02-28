@@ -2,4 +2,4 @@
 <selector xmlns:android="http://schemas.android.com/apk/res/android">
     <item android:state_window_focused="false" android:drawable="@drawable/edittext_normal" />
     <item android:state_focused="true" android:drawable="@drawable/edittext_focused" />
-</selector> <!-- From: file:/Users/lemon/AndroidStudioProjects/new-git/app/src/main/res/drawable/edittext.xml -->
+</selector> <!-- From: file:/Users/kawhi/AndroidStudioProjects/Yueme_update1/app/src/main/res/drawable/edittext.xml -->

@@ -2,110 +2,38 @@
     xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="com.syc.yueme.ui.activity.RegisterActivity3">
-    <com.syc.yueme.ui.view.HeaderLayout xmlns:android="http://schemas.android.com/apk/res/android"
-        android:id="@+id/headerLayout"
-        android:orientation="vertical"
+
+    <EditText
+        android:id="@+id/userHobby"
+        android:layout_width="fill_parent"
+        android:padding="10dp"
+        android:layout_margin="10dp"
+        android:layout_height="250dp"
+        android:background="@drawable/edittext"
+        android:drawablePadding="25dip"
+        android:paddingLeft="15dip"
+        android:shadowDx="0.0"
+        android:shadowDy="1.0"
+        android:shadowRadius="1.0"
+        android:textColorHint="#ffdddddd"
+        android:hint="@string/hobbies"
+        android:gravity="top"/>
+
+    <Button
         android:layout_width="match_parent"
-        android:text="@string/userInfo"
-        android:layout_height="48dp" />
-
-    <LinearLayout
-        android:orientation="vertical"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:weightSum="1"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true"
-        android:layout_marginTop="190dp"
-        android:id="@+id/linearLayout2">
-
-        <!--<EditText-->
-        <!--android:layout_width="wrap_content"-->
-        <!--android:layout_height="180dp"-->
-        <!--android:ems="14"-->
-        <!--android:id="@+id/UserNickname"-->
-        <!--android:layout_gravity="center_horizontal"-->
-        <!--android:background="@drawable/login_edit_normal"-->
-        <!--android:layout_marginTop="10dp"-->
-        <!--android:layout_weight="13.30" />-->
-        <EditText
-            android:id="@+id/UserNickname"
-            android:layout_width="fill_parent"
-            android:padding="10dp"
-            android:layout_marginTop="0dp"
-            android:layout_marginLeft="20dp"
-            android:layout_marginRight="20dp"
-            android:layout_height="250dp"
-            android:layout_below="@+id/tip6"
-            android:background="@drawable/edittext"
-            android:drawablePadding="25dip"
-            android:paddingLeft="15dip"
-            android:shadowDx="0.0"
-            android:shadowDy="1.0"
-            android:shadowRadius="1.0"
-            android:textColorHint="#ffdddddd"
-            android:hint="内容"
-            android:gravity="top"/>
-
-    </LinearLayout>
-
-
-    <LinearLayout
-        android:orientation="horizontal"
-        android:layout_width="fill_parent"
-        android:layout_height="60dp"
-        android:id="@+id/linearLayout"
-        android:weightSum="2"
-        android:background="@color/blue"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentRight="true">
-
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="@dimen/base_action_bar_height"
-            android:text="取消"
-            android:id="@+id/buttonquit"
-            android:layout_alignTop="@+id/linearLayout"
-            android:layout_alignRight="@+id/textView"
-            android:layout_alignEnd="@+id/textView"
-            android:background="@drawable/common_btn"
-            android:textColor="@color/base_color_text_white"
-            android:layout_marginTop="5dp"
-            android:layout_marginLeft="15dp"
-            android:textSize="@dimen/text_size_large"
-            android:layout_weight="1"/>
-
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="@dimen/base_action_bar_height"
-            android:text="确定"
-            android:layout_marginLeft="30dp"
-            android:layout_marginRight="15dp"
-            android:layout_marginTop="5dp"
-            android:layout_marginBottom="5dp"
-            android:id="@+id/buttoncharacristics"
-            android:layout_alignTop="@+id/linearLayout"
-            android:layout_alignRight="@+id/textView"
-            android:layout_alignEnd="@+id/textView"
-            android:background="@drawable/common_btn"
-            android:textColor="@color/base_color_text_white"
-            android:textSize="@dimen/text_size_large"
-            android:layout_weight="1"/>
-    </LinearLayout>
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="爱好"
-        android:id="@+id/UserNicknameTitle"
-        android:layout_weight="0.04"
-        android:layout_gravity="center_horizontal"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="105dp" />
+        android:layout_height="@dimen/base_action_bar_height"
+        android:text="@string/save"
+        android:layout_margin="10dp"
+        android:id="@+id/save_btn"
+        android:layout_alignTop="@+id/linearLayout"
+        android:layout_alignRight="@+id/textView"
+        android:layout_alignEnd="@+id/textView"
+        android:layout_below="@+id/userHobby"
+        android:background="@drawable/common_btn"
+        android:textColor="@color/base_color_text_white"
+        android:textSize="@dimen/text_size_large"
+        android:layout_weight="1"/>
 
 
 
-</RelativeLayout>
-    <!-- From: file:/D:/github/yueme/app/src/main/res/layout/entry_register_activity3.xml --><!-- From: file:/Users/lemon/AndroidStudioProjects/new-git/app/src/main/res/layout/user_hobbies_activity.xml -->
+</RelativeLayout><!-- From: file:/Users/kawhi/AndroidStudioProjects/Yueme_update1/app/src/main/res/layout/user_hobbies_activity.xml -->
