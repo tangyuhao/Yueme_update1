@@ -97,7 +97,7 @@
     <string name="female">女</string>
     <string name="noResult">无相关结果</string>
     <string name="loadMessagesFinish">聊天记录加载完毕</string>
-    <string name="notifySetting">提醒设置</string>
+    <string name="notifySetting">相关设置</string>
     <string name="notifyWhenNews">接收新消息通知</string>
     <string name="group">群组</string>
     <string name="groupName">群组名</string>

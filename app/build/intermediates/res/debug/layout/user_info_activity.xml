@@ -63,17 +63,12 @@
 
                 <TextView
                     style="@style/myspace_left_text"
-                    android:id="@+id/myusername1"
                     android:text="@string/username" />
 
                 <TextView
                     android:id="@+id/myusername"
-                    android:layout_alignLeft="@+id/myusername1"
-                    android:layout_marginLeft="60dp"
-                    android:layout_width="250dp"
-                    android:layout_height="20dp"
-                    android:gravity="center"
-                    android:textSize="14sp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
                     android:layout_centerInParent="true"
                     android:text="username" />
             </RelativeLayout>
@@ -87,17 +82,12 @@
 
                 <TextView
                     style="@style/myspace_left_text"
-                    android:id="@+id/school1"
                     android:text="@string/school" />
 
                 <TextView
                     android:id="@+id/school"
-                    android:layout_alignLeft="@+id/school1"
-                    android:layout_marginLeft="60dp"
-                    android:layout_width="250dp"
-                    android:layout_height="20dp"
-                    android:gravity="center"
-                    android:textSize="14sp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
                     android:layout_centerInParent="true"
                     android:text="school" />
             </RelativeLayout>
@@ -110,17 +100,12 @@
 
                 <TextView
                     style="@style/myspace_left_text"
-                    android:id="@+id/stuId1"
                     android:text="@string/stuId" />
 
                 <TextView
                     android:id="@+id/stuId"
-                    android:layout_alignLeft="@+id/stuId1"
-                    android:layout_marginLeft="60dp"
-                    android:layout_width="250dp"
-                    android:layout_height="20dp"
-                    android:gravity="center"
-                    android:textSize="14sp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
                     android:layout_centerInParent="true"
                     android:text="stuId" />
             </RelativeLayout>
@@ -133,17 +118,12 @@
 
                 <TextView
                     style="@style/myspace_left_text"
-                    android:id="@+id/YPA1"
                     android:text="@string/YPA" />
 
                 <TextView
                     android:id="@+id/YPA"
-                    android:layout_alignLeft="@+id/YPA1"
-                    android:layout_marginLeft="60dp"
-                    android:layout_width="250dp"
-                    android:layout_height="20dp"
-                    android:gravity="center"
-                    android:textSize="14sp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
                     android:layout_centerInParent="true"
                     android:text="YPA" />
             </RelativeLayout>
@@ -168,12 +148,8 @@
 
                 <TextView
                     android:id="@+id/nickname"
-                    android:layout_alignLeft="@+id/nickname1"
-                    android:layout_marginLeft="60dp"
-                    android:layout_width="250dp"
-                    android:layout_height="20dp"
-                    android:gravity="center"
-                    android:textSize="14sp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
                     android:layout_centerInParent="true"
                     android:text="nickname" />
                 <ImageView
@@ -199,12 +175,8 @@
 
                 <TextView
                     android:id="@+id/sex"
-                    android:layout_alignLeft="@+id/sex1"
-                    android:layout_marginLeft="60dp"
-                    android:layout_width="250dp"
-                    android:layout_height="20dp"
-                    android:gravity="center"
-                    android:textSize="14sp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
                     android:layout_centerInParent="true"
                     android:text="sex" />
                 <ImageView
@@ -282,12 +254,8 @@
 
                 <TextView
                     android:id="@+id/hometown"
-                    android:layout_alignLeft="@+id/hometown1"
-                    android:layout_marginLeft="60dp"
-                    android:layout_width="250dp"
-                    android:layout_height="20dp"
-                    android:gravity="center"
-                    android:textSize="14sp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
                     android:layout_centerInParent="true"
                     android:text="hometown" />
                 <ImageView
@@ -321,12 +289,8 @@
 
                 <TextView
                     android:id="@+id/sign"
-                    android:layout_alignLeft="@+id/sign1"
-                    android:layout_marginLeft="60dp"
-                    android:layout_width="250dp"
-                    android:layout_height="20dp"
-                    android:gravity="center"
-                    android:textSize="14sp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
                     android:layout_centerInParent="true"
                     android:text="" />
                 <ImageView
@@ -352,12 +316,8 @@
 
                 <TextView
                     android:id="@+id/characristics"
-                    android:layout_alignLeft="@+id/cha1"
-                    android:layout_marginLeft="60dp"
-                    android:layout_width="250dp"
-                    android:layout_height="20dp"
-                    android:gravity="center"
-                    android:textSize="14sp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
                     android:layout_centerInParent="true"
                     android:text="" />
                 <ImageView
@@ -384,12 +344,8 @@
 
                 <TextView
                     android:id="@+id/hobbies"
-                    android:layout_alignLeft="@+id/hobbies1"
-                    android:layout_marginLeft="60dp"
-                    android:layout_width="250dp"
-                    android:layout_height="20dp"
-                    android:gravity="center"
-                    android:textSize="14sp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
                     android:layout_centerInParent="true"
                     android:text="" />
                 <ImageView
@@ -415,12 +371,8 @@
 
                 <TextView
                     android:id="@+id/speciality"
-                    android:layout_alignLeft="@+id/spe1"
-                    android:layout_marginLeft="60dp"
-                    android:layout_width="250dp"
-                    android:layout_height="20dp"
-                    android:gravity="center"
-                    android:textSize="14sp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
                     android:layout_centerInParent="true"
                     android:text="" />
                 <ImageView
@@ -445,4 +397,4 @@
     </ScrollView>
 
 
-</LinearLayout><!-- From: file:/Users/kawhi/AndroidStudioProjects/Yueme_update1/app/src/main/res/layout/user_info_activity.xml -->
+</LinearLayout><!-- From: file:/D:/git_masterend/Yueme_update1/app/src/main/res/layout/user_info_activity.xml -->

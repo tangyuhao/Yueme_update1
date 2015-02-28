@@ -1,6 +1,7 @@
 <LinearLayout
     android:layout_height="wrap_content"
     android:layout_width="match_parent"
+    android:background="@drawable/layoutpress"
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:weightSum="1">
@@ -17,34 +18,37 @@
         android:layout_marginLeft="10dp" />
 
     <RelativeLayout
-        android:layout_width="299dp"
+        android:layout_width="230dp"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="10dp"
-        android:id="@+id/_34"
-        android:layout_weight="0.17">
+        android:layout_marginLeft="0dp"
+        android:id="@+id/_34">
 
         <TextView
             android:id="@+id/name_text"
-            style="@style/My.TextView._Black"
-            android:textSize="15sp"
-            android:text="" />
+            style="@style/My.TextView._Blue"
+            android:textSize="14sp"
+            android:text=""
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:layout_marginTop="10dp" />
         <TextView
             android:id="@+id/login_text"
-            style="@style/My.TextView._Black"
-            android:textSize="15sp"
+            style="@style/My.TextView._Gray"
+            android:textSize="12sp"
             android:text="时间：2015年1月31日晚上"
             android:layout_below="@+id/distance_text"
             android:layout_alignParentLeft="true"
-            android:singleLine="true" />
+            android:singleLine="false" />
         <TextView
             android:id="@+id/location_text"
-            style="@style/My.TextView._Black"
-            android:textSize="15sp"
+            style="@style/My.TextView._Gray"
+            android:textSize="12sp"
             android:text="地点：复旦附近"
             android:layout_below="@+id/login_text"
             android:layout_alignParentLeft="true"
             android:layout_width="wrap_content"
-            android:singleLine="true" />
+            android:singleLine="false"
+            android:layout_marginTop="5dp" />
         <TextView
             android:id="@+id/publish_time_text"
             style="@style/My.TextView._Gray"
@@ -53,14 +57,15 @@
             android:layout_below="@+id/location_text"
             android:layout_alignParentLeft="true"
             android:layout_width="wrap_content"
-            android:singleLine="true"
-            android:textIsSelectable="true" />
+            android:singleLine="false"
+            android:textIsSelectable="true"
+            android:layout_marginTop="5dp" />
         <TextView
             android:id="@+id/distance_text"
             style="@style/My.TextView._Gray"
             android:text=" "
             android:singleLine="true"
-            android:textSize="15sp"
+            android:textSize="12sp"
             android:layout_gravity="left"
             android:layout_toRightOf="@+id/login_text"
             android:layout_below="@+id/yue_text"
@@ -72,11 +77,12 @@
             android:layout_below="@id/name_text"
             android:text="据说，羊年是属于白羊座的领头年，白羊座的人要钱财有钱财，要桃花有桃花，要走运立马走运，要啥得啥，红红火火，年头一直旺到年底！！不信你转发试试！！！"
             android:singleLine="false"
-            android:textSize="16sp"
+            android:textSize="14sp"
             android:layout_alignParentLeft="true"
             android:layout_height="wrap_content"
             android:layout_width="wrap_content"
-            android:layout_marginTop="20dp" />
+            android:layout_marginTop="10dp"
+            android:layout_alignParentRight="true" />
 
 
 
@@ -90,59 +96,63 @@
 
             <at.markushi.ui.CircleButton
                 android:id="@+id/deleteBtn"
-                android:layout_width="40dp"
-                android:layout_height="40dp"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
                 android:src="@drawable/delete_btn"
                 app:cb_color="@color/common_blue"
                 app:cb_pressedRingWidth="3dip"
                 android:layout_below="@+id/publish_time_text"
                 android:layout_toRightOf="@+id/location_text"
-                android:layout_marginRight="5dp" />
+                android:layout_marginRight="5dp"
+                android:layout_marginTop="10dp" />
             <at.markushi.ui.CircleButton
                 android:id="@+id/talkBtn"
-                android:layout_width="40dp"
-                android:layout_height="40dp"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
                 android:src="@drawable/chat_btn"
                 app:cb_color="@color/common_blue"
                 app:cb_pressedRingWidth="3dip"
                 android:layout_alignTop="@+id/deleteBtn"
                 android:layout_toRightOf="@+id/deleteBtn"
-                android:layout_gravity="right"
-                android:layout_marginRight="5dp" />
+                android:layout_marginRight="5dp"
+                android:layout_marginTop="10dp" />
 
             <at.markushi.ui.CircleButton
                 android:id="@+id/commentBtn"
-                android:layout_width="40dp"
-                android:layout_height="40dp"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
                 android:src="@drawable/comments_btn"
                 app:cb_color="@color/common_blue"
                 app:cb_pressedRingWidth="3dip"
                 android:layout_alignTop="@+id/yueBtn"
                 android:layout_toRightOf="@+id/yueBtn"
                 android:layout_alignBottom="@+id/yueBtn"
-                android:layout_marginRight="5dp" />
+                android:layout_marginRight="5dp"
+                android:layout_marginTop="10dp" />
 
             <at.markushi.ui.CircleButton
                 android:id="@+id/likeBtn"
-                android:layout_width="40dp"
-                android:layout_height="40dp"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
                 android:src="@drawable/like_btn"
                 app:cb_color="@color/common_blue"
                 app:cb_pressedRingWidth="3dip"
                 android:layout_below="@+id/publish_time_text"
                 android:layout_toRightOf="@+id/commentBtn"
-                android:layout_marginRight="5dp" />
+                android:layout_marginRight="5dp"
+                android:layout_marginTop="10dp" />
 
             <at.markushi.ui.CircleButton
                 android:id="@+id/yueBtn"
-                android:layout_width="40dp"
-                android:layout_height="40dp"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
                 android:src="@drawable/yue_btn"
                 app:cb_color="@color/common_blue"
                 app:cb_pressedRingWidth="3dip"
                 android:layout_alignTop="@+id/talkBtn"
                 android:layout_toRightOf="@+id/talkBtn"
-                android:layout_marginRight="5dp" />
+                android:layout_marginRight="5dp"
+                android:layout_marginTop="10dp" />
         </LinearLayout>
 
 

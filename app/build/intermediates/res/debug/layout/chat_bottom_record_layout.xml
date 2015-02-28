@@ -23,4 +23,4 @@
         android:layout_margin="@dimen/chatBottomBtnMargin"
         android:layout_gravity="center_vertical"
         android:background="@drawable/btn_keyboard" />
-</LinearLayout><!-- From: file:/Users/kawhi/AndroidStudioProjects/Yueme_update1/app/src/main/res/layout/chat_bottom_record_layout.xml -->
+</LinearLayout><!-- From: file:/D:/git_masterend/Yueme_update1/app/src/main/res/layout/chat_bottom_record_layout.xml -->

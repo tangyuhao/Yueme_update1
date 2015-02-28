@@ -2,6 +2,7 @@ package com.syc.yueme.adapter;
 
 import android.app.AlertDialog;
 import android.content.Context;
+import android.content.Intent;
 import android.util.Log;
 import android.view.View;
 import android.view.ViewGroup;
@@ -35,6 +36,8 @@ import java.util.List;
 
 import at.markushi.ui.CircleButton;
 import butterknife.InjectView;
+
+import static com.syc.yueme.ui.activity.ChatActivity.getUserChatIntent;
 
 
 public class NearPeopleAdapter extends BaseListAdapter<AVObject> {
@@ -95,6 +98,8 @@ public class NearPeopleAdapter extends BaseListAdapter<AVObject> {
         talkButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                Intent intent = getUserChatIntent(ctx,((AVUser)message.getAVObject("sendUser")).getObjectId());
+                ctx.startActivity(intent);
             }
         });
 

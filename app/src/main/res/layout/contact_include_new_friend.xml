@@ -51,7 +51,8 @@
             android:padding="5dp"
             android:singleLine="true"
             android:text="@string/new_friends"
-            android:textSize="20sp" />
+            android:textSize="15sp"
+            android:layout_marginTop="5dp" />
     </LinearLayout>
 
     <View
@@ -96,7 +97,8 @@
             android:padding="5dp"
             android:singleLine="true"
             android:text="@string/focus"
-            android:textSize="20sp" />
+            android:textSize="15sp"
+            android:layout_marginTop="5dp" />
     </LinearLayout>
 
     <View

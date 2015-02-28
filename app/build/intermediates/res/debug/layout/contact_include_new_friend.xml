@@ -51,7 +51,8 @@
             android:padding="5dp"
             android:singleLine="true"
             android:text="@string/new_friends"
-            android:textSize="20sp" />
+            android:textSize="15sp"
+            android:layout_marginTop="5dp" />
     </LinearLayout>
 
     <View
@@ -96,7 +97,8 @@
             android:padding="5dp"
             android:singleLine="true"
             android:text="@string/focus"
-            android:textSize="20sp" />
+            android:textSize="15sp"
+            android:layout_marginTop="5dp" />
     </LinearLayout>
 
     <View
@@ -106,4 +108,4 @@
         android:layout_below="@id/layout_group"
         android:background="@drawable/base_horizontal_line"></View>
 
-</RelativeLayout><!-- From: file:/Users/kawhi/AndroidStudioProjects/Yueme_update1/app/src/main/res/layout/contact_include_new_friend.xml -->
+</RelativeLayout><!-- From: file:/D:/git_masterend/Yueme_update1/app/src/main/res/layout/contact_include_new_friend.xml -->
