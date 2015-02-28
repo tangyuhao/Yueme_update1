@@ -173,11 +173,13 @@
         </activity>
         <activity
             android:name="com.syc.yueme.ui.activity.UserInfoActivity"
-            android:label="@string/title_activity_user_info" >
+            android:label="@string/title_activity_user_info"
+            android:theme="@style/MainTheme" >
         </activity>
         <activity
             android:name="com.syc.yueme.ui.activity.UserCharacristicsActivity"
-            android:label="@string/title_activity_user_characristics" >
+            android:label="@string/title_activity_user_characristics"
+            android:theme="@style/MainTheme" >
         </activity>
         <activity
             android:name="com.syc.yueme.ui.activity.UserHobbiesActivity"
@@ -186,11 +188,13 @@
         </activity>
         <activity
             android:name="com.syc.yueme.ui.activity.UserSignActivity"
-            android:label="@string/title_activity_user_sign" >
+            android:label="@string/title_activity_user_sign"
+            android:theme="@style/MainTheme" >
         </activity>
         <activity
             android:name="com.syc.yueme.ui.activity.UserSpecialityActivity"
-            android:label="@string/title_activity_user_speciality" >
+            android:label="@string/title_activity_user_speciality"
+            android:theme="@style/MainTheme" >
         </activity>
         <activity
             android:name="com.syc.yueme.ui.activity.PasswordResetActivity"

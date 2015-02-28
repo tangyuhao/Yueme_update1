@@ -306,12 +306,10 @@ containing a value of this type.
         public static final int yue_btn=0x7f0200c1;
     }
     public static final class id {
-        public static final int UserNickname=0x7f0d00cb;
-        public static final int UserNicknameTitle=0x7f0d00cf;
         public static final int YPA=0x7f0d0052;
         public static final int YPALayout=0x7f0d0051;
         public static final int _34=0x7f0d006c;
-        public static final int action_settings=0x7f0d00e3;
+        public static final int action_settings=0x7f0d00e2;
         public static final int add=0x7f0d0038;
         public static final int addCameraBtn=0x7f0d0009;
         public static final int addFriendBtn=0x7f0d0066;
@@ -338,12 +336,10 @@ containing a value of this type.
         public static final int btn_message=0x7f0d00a3;
         public static final int btn_my_space=0x7f0d00a4;
         public static final int btn_register=0x7f0d007c;
-        public static final int btn_yue_update=0x7f0d00e0;
+        public static final int btn_yue_update=0x7f0d00df;
         public static final int button1=0x7f0d0081;
         public static final int button2=0x7f0d0083;
         public static final int button_layout=0x7f0d0073;
-        public static final int buttoncharacristics=0x7f0d00ce;
-        public static final int buttonquit=0x7f0d00cd;
         public static final int characristics=0x7f0d0060;
         public static final int characristicsLayout=0x7f0d005f;
         public static final int chatAddLayout=0x7f0d0007;
@@ -364,7 +360,7 @@ containing a value of this type.
         public static final int confirm=0x7f0d00c3;
         public static final int contentLayout=0x7f0d001b;
         public static final int convList=0x7f0d00a6;
-        public static final int create=0x7f0d00e2;
+        public static final int create=0x7f0d00e1;
         public static final int deleteBtn=0x7f0d0074;
         public static final int dialog=0x7f0d003d;
         public static final int distance_text=0x7f0d006f;
@@ -430,8 +426,8 @@ containing a value of this type.
         public static final int mainLayout=0x7f0d009d;
         public static final int main_bottom=0x7f0d009e;
         public static final int male=0x7f0d0088;
-        public static final int myavatar=0x7f0d00d2;
-        public static final int myusername=0x7f0d00d4;
+        public static final int myavatar=0x7f0d00ce;
+        public static final int myusername=0x7f0d00d0;
         public static final int myyueLayout=0x7f0d00ae;
         public static final int myyue_cd=0x7f0d00af;
         public static final int name=0x7f0d002b;
@@ -445,7 +441,7 @@ containing a value of this type.
         public static final int passwordEdit=0x7f0d0085;
         public static final int passwordchangeLayout=0x7f0d00bd;
         public static final int passwordchange_cd=0x7f0d00be;
-        public static final int people=0x7f0d00e1;
+        public static final int people=0x7f0d00e0;
         public static final int peoples=0x7f0d005a;
         public static final int peoplesLayout=0x7f0d0059;
         public static final int picture_friend=0x7f0d00bf;
@@ -467,7 +463,7 @@ containing a value of this type.
         public static final int recordBtn=0x7f0d000f;
         public static final int rightContainer=0x7f0d0003;
         public static final int right_letter=0x7f0d003b;
-        public static final int save_btn=0x7f0d00d1;
+        public static final int save_btn=0x7f0d00cc;
         public static final int school=0x7f0d004e;
         public static final int schoolLayout=0x7f0d004d;
         public static final int schoolnumber=0x7f0d00a9;
@@ -476,8 +472,8 @@ containing a value of this type.
         public static final int searchNameEdit=0x7f0d0035;
         public static final int sendBtn=0x7f0d0014;
         public static final int sendTimeView=0x7f0d0021;
-        public static final int sex=0x7f0d00d6;
-        public static final int sexLayout=0x7f0d00d5;
+        public static final int sex=0x7f0d00d2;
+        public static final int sexLayout=0x7f0d00d1;
         public static final int sexRadio=0x7f0d0087;
         public static final int sexView=0x7f0d0056;
         public static final int sex_layout=0x7f0d0055;
@@ -496,7 +492,7 @@ containing a value of this type.
         public static final int status_send_succeed=0x7f0d001f;
         public static final int stuId=0x7f0d0050;
         public static final int stuIdLayout=0x7f0d004f;
-        public static final int sure=0x7f0d00e4;
+        public static final int sure=0x7f0d00e3;
         public static final int talkBtn=0x7f0d0075;
         public static final int textBtn=0x7f0d0004;
         public static final int textContent=0x7f0d0023;
@@ -506,7 +502,7 @@ containing a value of this type.
         public static final int textView2=0x7f0d008d;
         public static final int textView3=0x7f0d008f;
         public static final int textView4=0x7f0d007e;
-        public static final int tip6=0x7f0d00cc;
+        public static final int tip6=0x7f0d00dc;
         public static final int tips=0x7f0d00c8;
         public static final int titleView=0x7f0d0002;
         public static final int turnToAudioBtn=0x7f0d0015;
@@ -514,27 +510,30 @@ containing a value of this type.
         public static final int tv_friend_name=0x7f0d009c;
         public static final int tv_new_name=0x7f0d0041;
         public static final int userAvatar=0x7f0d002a;
-        public static final int userHobby=0x7f0d00d0;
+        public static final int userCha=0x7f0d00cb;
+        public static final int userHobby=0x7f0d00cd;
         public static final int userList=0x7f0d0097;
+        public static final int userSign=0x7f0d00d3;
+        public static final int userSpe=0x7f0d00d4;
         public static final int username=0x7f0d001c;
         public static final int usernameEdit=0x7f0d0084;
-        public static final int usernameLayout=0x7f0d00d3;
+        public static final int usernameLayout=0x7f0d00cf;
         public static final int username_view=0x7f0d004c;
         public static final int usersGrid=0x7f0d0098;
         public static final int valueEdit=0x7f0d00ca;
-        public static final int xlistview_footer_content=0x7f0d00d7;
-        public static final int xlistview_footer_hint_textview=0x7f0d00d9;
-        public static final int xlistview_footer_progressbar=0x7f0d00d8;
-        public static final int xlistview_header_arrow=0x7f0d00db;
-        public static final int xlistview_header_content=0x7f0d00da;
-        public static final int xlistview_header_progressbar=0x7f0d00dc;
+        public static final int xlistview_footer_content=0x7f0d00d5;
+        public static final int xlistview_footer_hint_textview=0x7f0d00d7;
+        public static final int xlistview_footer_progressbar=0x7f0d00d6;
+        public static final int xlistview_header_arrow=0x7f0d00d9;
+        public static final int xlistview_header_content=0x7f0d00d8;
+        public static final int xlistview_header_progressbar=0x7f0d00da;
         public static final int yingyueLayout=0x7f0d00b2;
         public static final int yingyue_cd=0x7f0d00b3;
         public static final int yueBtn=0x7f0d0076;
-        public static final int yue_content=0x7f0d00dd;
-        public static final int yue_location=0x7f0d00df;
+        public static final int yue_content=0x7f0d00db;
+        public static final int yue_location=0x7f0d00de;
         public static final int yue_text=0x7f0d0072;
-        public static final int yue_time=0x7f0d00de;
+        public static final int yue_time=0x7f0d00dd;
     }
     public static final class layout {
         public static final int base_common_header=0x7f030000;

@@ -25,14 +25,11 @@
         android:text="@string/save"
         android:layout_margin="10dp"
         android:id="@+id/save_btn"
-        android:layout_alignTop="@+id/linearLayout"
-        android:layout_alignRight="@+id/textView"
-        android:layout_alignEnd="@+id/textView"
         android:layout_below="@+id/userHobby"
         android:background="@drawable/common_btn"
         android:textColor="@color/base_color_text_white"
         android:textSize="@dimen/text_size_large"
-        android:layout_weight="1"/>
+        />
 
 
 
