@@ -28,11 +28,13 @@ import com.syc.yueme.R;
 import com.syc.yueme.avobject.User;
 import com.syc.yueme.base.App;
 import com.syc.yueme.service.UserService;
+import com.syc.yueme.ui.fragment.MySpaceFragment;
 import com.syc.yueme.ui.view.HeaderLayout;
 import com.syc.yueme.util.Logger;
 import com.syc.yueme.util.PathUtils;
 import com.syc.yueme.util.PhotoUtils;
 import com.syc.yueme.util.SimpleNetTask;
+import com.syc.yueme.util.Utils;
 
 import java.io.File;
 import java.text.SimpleDateFormat;
@@ -41,13 +43,15 @@ import java.util.Date;
 public class UserInfoActivity extends BaseEntryActivity implements OnClickListener {
     private static final int IMAGE_PICK_REQUEST = 1;
     private static final int CROP_REQUEST = 2;
-    static ImageView avatarView;
+    ImageView avatarView;
     static TextView usernameView, genderView, stuidView, birthdayView,
             peoplesView, hometownView, YPAView, schoolView, nicknameView,
             characristicsView, hobbyView, signView, specialityView;
-    View usernameLayout, avatarLayout, stuidLayout, birthdayLayout,specialityLayout,
+    View    usernameLayout, avatarLayout, stuidLayout, birthdayLayout,specialityLayout,
             peoplesLayout, YPALayout, genderLayout, hometownLayout,
             characristicsLayout, hobbyLayout, signLayout, nicknameLayout;
+
+    static String nickname,hometown,sign,characteristic,hobby,speciality;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -67,8 +71,8 @@ public class UserInfoActivity extends BaseEntryActivity implements OnClickListen
         genderView = (TextView) findViewById(R.id.sex);
         stuidView = (TextView) findViewById(R.id.stuId);
         nicknameView = (TextView) findViewById(R.id.nickname);
-        birthdayView = (TextView) findViewById(R.id.birthday);
-        peoplesView = (TextView) findViewById(R.id.peoples);
+//        birthdayView = (TextView) findViewById(R.id.birthday);
+//        peoplesView = (TextView) findViewById(R.id.peoples);
         hometownView = (TextView) findViewById(R.id.hometown);
         YPAView = (TextView) findViewById(R.id.YPA);
         signView = (TextView) findViewById(R.id.sign);
@@ -80,9 +84,9 @@ public class UserInfoActivity extends BaseEntryActivity implements OnClickListen
         usernameLayout = findViewById(R.id.usernameLayout);
         avatarLayout = findViewById(R.id.avatarLayout);
         genderLayout = findViewById(R.id.sexLayout);
-        birthdayLayout = findViewById(R.id.birthdayLayout);
+//        birthdayLayout = findViewById(R.id.birthdayLayout);
         nicknameLayout = findViewById(R.id.nicknameLayout);
-        peoplesLayout = findViewById(R.id.peoplesLayout);
+//        peoplesLayout = findViewById(R.id.peoplesLayout);
         hometownLayout = findViewById(R.id.hometownLayout);
         characristicsLayout=findViewById(R.id.characristicsLayout);
         hobbyLayout=findViewById(R.id.hobbiesLayout);
@@ -92,10 +96,10 @@ public class UserInfoActivity extends BaseEntryActivity implements OnClickListen
 
         avatarLayout.setOnClickListener(this);
         genderLayout.setOnClickListener(this);
-        birthdayLayout.setOnClickListener(this);
+//        birthdayLayout.setOnClickListener(this);
         nicknameLayout.setOnClickListener(this);
         hometownLayout.setOnClickListener(this);
-        peoplesLayout.setOnClickListener(this);
+//        peoplesLayout.setOnClickListener(this);
         specialityLayout.setOnClickListener(this);
         signLayout.setOnClickListener(this);
         hobbyLayout.setOnClickListener(this);
@@ -105,18 +109,27 @@ public class UserInfoActivity extends BaseEntryActivity implements OnClickListen
     private void setView() {
         AVUser curUser = AVUser.getCurrentUser();
         usernameView.setText(curUser.getUsername());
-        nicknameView.setText(User.getNickname(curUser));
         genderView.setText(User.getGenderDesc(curUser));
-        birthdayView.setText(User.getBirthday(curUser));
-        peoplesView.setText(User.getPeoples(curUser));
-        hometownView.setText(User.getHometown(curUser));
-        YPAView.setText(User.getYPA(curUser));
-        signView.setText(User.getSign(curUser));
-        characristicsView.setText(User.getCharacristics(curUser));
-        stuidView.setText(User.getStuId(curUser));
-        specialityView.setText(User.getSpeciality(curUser));
-        hobbyView.setText(User.getHobbies(curUser));
         schoolView.setText(User.getSchool(curUser));
+        YPAView.setText(User.getYPA(curUser));
+        stuidView.setText(User.getStuId(curUser));
+//        birthdayView.setText(User.getBirthday(curUser));
+//        peoplesView.setText(User.getPeoples(curUser));
+
+        nickname = User.getNickname(curUser);
+        hometown =User.getHometown(curUser);
+        characteristic = User.getCharacristics(curUser);
+        sign = User.getSign(curUser);
+        speciality = User.getSpeciality(curUser);
+        hobby = User.getHobbies(curUser);
+
+        nicknameView.setText(nickname.length() > 12 ? nickname.substring(0,12)+"..." : nickname);
+        hometownView.setText(hometown.length() > 12 ? hometown.substring(0,12)+"..." : hometown);
+        signView.setText(sign.length() > 12 ? sign.substring(0,12)+"..." : sign);
+        characristicsView.setText(characteristic.length() > 12 ? characteristic.substring(0,12)+"..." : characteristic);
+        hobbyView.setText(hobby.length() > 12 ? hobby.substring(0,12)+"..." : hobby);
+        specialityView.setText(speciality.length() > 12 ? speciality.substring(0,12)+"..." : speciality);
+
         UserService.displayAvatar(User.getAvatarUrl(curUser), avatarView);
     }
 
@@ -126,17 +139,19 @@ public class UserInfoActivity extends BaseEntryActivity implements OnClickListen
             Intent intent = new Intent(Intent.ACTION_PICK, null);
             intent.setDataAndType(MediaStore.Images.Media.EXTERNAL_CONTENT_URI, "image/*");
             startActivityForResult(intent, IMAGE_PICK_REQUEST);
+
         } else if (id == R.id.sexLayout) {
             showSexChooseDialog();
-        } else if (id == R.id.birthdayLayout) {
-//            startActivity(new Intent(ctx,UserBirthdayActivity.class));
-            showBirthdayChooseDialog();
+//        } else if (id == R.id.birthdayLayout) {
+//            showBirthdayChooseDialog();
         } else if (id == R.id.nicknameLayout) {
-            showNicknameDialog();
-        } else if (id == R.id.peoplesLayout) {
-            showPeoplesDialog();
+//            showNicknameDialog();
+            Utils.goActivity(ctx,UserNicknameActivity.class);
+//        } else if (id == R.id.peoplesLayout) {
+//            showPeoplesDialog();
         } else if (id == R.id.hometownLayout) {
-            showHometownDialog();
+//            showHometownDialog();
+            Utils.goActivity(ctx,UserHometownActivity.class);
         }else if (id == R.id.characristicsLayout) {
             startActivity(new Intent(ctx, UserCharacristicsActivity.class));
         }else if (id == R.id.hobbiesLayout) {
@@ -156,113 +171,113 @@ public class UserInfoActivity extends BaseEntryActivity implements OnClickListen
         }
     };
 
-    public Dialog showNicknameDialog() {
-        final EditText Nick = new EditText(this);
-        return new AlertDialog.Builder(this)
-                .setTitle("请输入昵称")
-                .setView(Nick)
-                .setPositiveButton("确定",
-                        new DialogInterface.OnClickListener() {
-
-                            @Override
-                            public void onClick(DialogInterface dialog, int which) {
-//                                String nickname = texta.getText();
-                                String nickname = Nick.getText().toString();
-                                AVUser user = AVUser.getCurrentUser();
-                                User.setNickname(user, nickname);
-                                user.saveInBackground();
-                                nicknameView.setText(nickname);
-                                dialog.dismiss();
-                                Toast.makeText(getBaseContext(), "设置成功", Toast.LENGTH_SHORT).show();
-                            }
-                        }
-                )
-                .setNegativeButton("取消",
-                        new DialogInterface.OnClickListener() {
-
-                            @Override
-                            public void onClick(DialogInterface dialog, int which) {
-                                Toast.makeText(getBaseContext(), "设置取消", Toast.LENGTH_SHORT).show();
-                            }
-                        }
-                ).show();
-    }
-    public Dialog showHometownDialog() {
-        final EditText Nick = new EditText(this);
-        return new AlertDialog.Builder(this)
-                .setTitle("请输入籍贯")
-                .setView(Nick)
-                .setPositiveButton("确定",
-                        new DialogInterface.OnClickListener() {
-
-                            @Override
-                            public void onClick(DialogInterface dialog, int which) {
-//                                String nickname = texta.getText();
-                                String hometown = Nick.getText().toString();
-                                AVUser user = AVUser.getCurrentUser();
-                                User.setHometown(user, hometown);
-                                user.saveInBackground();
-                                hometownView.setText(hometown);
-                                dialog.dismiss();
-                                Toast.makeText(getBaseContext(), "设置成功", Toast.LENGTH_SHORT).show();
-                            }
-                        }
-                )
-                .setNegativeButton("取消",
-                        new DialogInterface.OnClickListener() {
-
-                            @Override
-                            public void onClick(DialogInterface dialog, int which) {
-                                Toast.makeText(getBaseContext(), "设置取消", Toast.LENGTH_SHORT).show();
-                            }
-                        }
-                ).show();
-    }
-    public Dialog showPeoplesDialog() {
-        final EditText Nick = new EditText(this);
-        return new AlertDialog.Builder(this)
-                .setTitle("请输入民族")
-                .setView(Nick)
-                .setPositiveButton("确定",
-                        new DialogInterface.OnClickListener() {
-
-                            @Override
-                            public void onClick(DialogInterface dialog, int which) {
-//                                String nickname = texta.getText();
-                                String peoples = Nick.getText().toString();
-                                AVUser user = AVUser.getCurrentUser();
-                                User.setPeoples(user, peoples);
-                                user.saveInBackground();
-                                peoplesView.setText(peoples);
-                                dialog.dismiss();
-                                Toast.makeText(getBaseContext(), "设置成功", Toast.LENGTH_SHORT).show();
-                            }
-                        }
-                )
-                .setNegativeButton("取消",
-                        new DialogInterface.OnClickListener() {
-
-                            @Override
-                            public void onClick(DialogInterface dialog, int which) {
-                                Toast.makeText(getBaseContext(), "设置取消", Toast.LENGTH_SHORT).show();
-                            }
-                        }
-                ).show();
-    }
-    public void showBirthdayChooseDialog(){
-        DatePickerDialog datePicker = new DatePickerDialog(UserInfoActivity.this, new DatePickerDialog.OnDateSetListener() {
-            @Override
-            public void onDateSet(DatePicker view, int year, int monthOfYear,int dayOfMonth) {
-                // TODO Auto-generated method stub
-                AVUser user = AVUser.getCurrentUser();
-                String birth =year + "-" + (monthOfYear + 1) + "-" + dayOfMonth ;
-                User.setBirthday(user,birth);
-                user.saveInBackground();
-                Toast.makeText(UserInfoActivity.this, year + "year " + (monthOfYear + 1) + "month " + dayOfMonth + "day", Toast.LENGTH_SHORT).show();
-            }
-        }, 2000, 1, 1);
-        datePicker.show();
-    }
+//    public Dialog showNicknameDialog() {
+//        final EditText Nick = new EditText(this);
+//        return new AlertDialog.Builder(this)
+//                .setTitle("请输入昵称")
+//                .setView(Nick)
+//                .setPositiveButton("确定",
+//                        new DialogInterface.OnClickListener() {
+//
+//                            @Override
+//                            public void onClick(DialogInterface dialog, int which) {
+////                                String nickname = texta.getText();
+//                                String nickname = Nick.getText().toString();
+//                                AVUser user = AVUser.getCurrentUser();
+//                                User.setNickname(user, nickname);
+//                                user.saveInBackground();
+//                                nicknameView.setText(nickname);
+//                                dialog.dismiss();
+//                                Toast.makeText(getBaseContext(), "设置成功", Toast.LENGTH_SHORT).show();
+//                            }
+//                        }
+//                )
+//                .setNegativeButton("取消",
+//                        new DialogInterface.OnClickListener() {
+//
+//                            @Override
+//                            public void onClick(DialogInterface dialog, int which) {
+//                                Toast.makeText(getBaseContext(), "设置取消", Toast.LENGTH_SHORT).show();
+//                            }
+//                        }
+//                ).show();
+//    }
+//    public Dialog showHometownDialog() {
+//        final EditText Nick = new EditText(this);
+//        return new AlertDialog.Builder(this)
+//                .setTitle("请输入地区")
+//                .setView(Nick)
+//                .setPositiveButton("确定",
+//                        new DialogInterface.OnClickListener() {
+//
+//                            @Override
+//                            public void onClick(DialogInterface dialog, int which) {
+////                                String nickname = texta.getText();
+//                                String hometown = Nick.getText().toString();
+//                                AVUser user = AVUser.getCurrentUser();
+//                                User.setHometown(user, hometown);
+//                                user.saveInBackground();
+//                                hometownView.setText(hometown);
+//                                dialog.dismiss();
+//                                Toast.makeText(getBaseContext(), "设置成功", Toast.LENGTH_SHORT).show();
+//                            }
+//                        }
+//                )
+//                .setNegativeButton("取消",
+//                        new DialogInterface.OnClickListener() {
+//
+//                            @Override
+//                            public void onClick(DialogInterface dialog, int which) {
+//                                Toast.makeText(getBaseContext(), "设置取消", Toast.LENGTH_SHORT).show();
+//                            }
+//                        }
+//                ).show();
+//    }
+//    public Dialog showPeoplesDialog() {
+//        final EditText Nick = new EditText(this);
+//        return new AlertDialog.Builder(this)
+//                .setTitle("请输入民族")
+//                .setView(Nick)
+//                .setPositiveButton("确定",
+//                        new DialogInterface.OnClickListener() {
+//
+//                            @Override
+//                            public void onClick(DialogInterface dialog, int which) {
+////                                String nickname = texta.getText();
+//                                String peoples = Nick.getText().toString();
+//                                AVUser user = AVUser.getCurrentUser();
+//                                User.setPeoples(user, peoples);
+//                                user.saveInBackground();
+//                                peoplesView.setText(peoples);
+//                                dialog.dismiss();
+//                                Toast.makeText(getBaseContext(), "设置成功", Toast.LENGTH_SHORT).show();
+//                            }
+//                        }
+//                )
+//                .setNegativeButton("取消",
+//                        new DialogInterface.OnClickListener() {
+//
+//                            @Override
+//                            public void onClick(DialogInterface dialog, int which) {
+//                                Toast.makeText(getBaseContext(), "设置取消", Toast.LENGTH_SHORT).show();
+//                            }
+//                        }
+//                ).show();
+//    }
+//    public void showBirthdayChooseDialog(){
+//        DatePickerDialog datePicker = new DatePickerDialog(UserInfoActivity.this, new DatePickerDialog.OnDateSetListener() {
+//            @Override
+//            public void onDateSet(DatePicker view, int year, int monthOfYear,int dayOfMonth) {
+//                // TODO Auto-generated method stub
+//                AVUser user = AVUser.getCurrentUser();
+//                String birth =year + "-" + (monthOfYear + 1) + "-" + dayOfMonth ;
+//                User.setBirthday(user,birth);
+//                user.saveInBackground();
+//                Toast.makeText(UserInfoActivity.this, year + "year " + (monthOfYear + 1) + "month " + dayOfMonth + "day", Toast.LENGTH_SHORT).show();
+//            }
+//        }, 2000, 1, 1);
+//        datePicker.show();
+//    }
     private void showSexChooseDialog() {
         AVUser user = AVUser.getCurrentUser();
         int checkItem = User.getGender(user) == User.Gender.Male ? 0 : 1;

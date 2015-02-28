@@ -136,7 +136,7 @@
     <string name="haveRead">已阅读</string>
     <string name="hello_world">Hello world!</string>
     <string name="hobbies">兴趣爱好</string>
-    <string name="hometown">籍贯</string>
+    <string name="hometown">地区</string>
     <string name="image">图片</string>
     <string name="installNewVersion">安装新版本</string>
     <string name="invite">邀请</string>
@@ -232,7 +232,9 @@
     <string name="title_activity_register_activity4">RegisterActivity4</string>
     <string name="title_activity_user_characristics">UserCharacristicsActivity</string>
     <string name="title_activity_user_hobbies">UserHobbiesActivity</string>
+    <string name="title_activity_user_hometown">UserHometownActivity</string>
     <string name="title_activity_user_info">UserInfoActivity</string>
+    <string name="title_activity_user_nickname">UserNickname</string>
     <string name="title_activity_user_sign">UserSignActivity</string>
     <string name="title_activity_user_speciality">UserSpecialityActivity</string>
     <string name="unknown">未知</string>

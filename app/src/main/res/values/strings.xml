@@ -152,7 +152,7 @@
     <string name="student_id_empty">学号不能为空</string>
     <string name="birthday">生日</string>
     <string name="peoples">民族</string>
-    <string name="hometown">籍贯</string>
+    <string name="hometown">地区</string>
     <string name="YPA">YPA</string>
     <string name="characristics">性格</string>
     <string name="hobbies">兴趣爱好</string>
@@ -190,11 +190,11 @@
     <string name="forget_password">忘记密码</string>
     <string name="focus">特别关注</string>
     <string name="title_activity_password_reset">PasswordResetActivity</string>
-
-
     <string name="email_input">请输入学号邮箱</string>
     <string name="passwordResetNotice">请在下面输入您的用户名和学号邮箱，验证正确之后，我们将发送一份重置密码的指令到您的邮箱</string>
-
     <string name="save">保存</string>
     <string name="saveSuccess">保存成功</string>
+    <string name="title_activity_user_hometown">UserHometownActivity</string>
+    <string name="title_activity_user_nickname">UserNickname</string>
+
 </resources>

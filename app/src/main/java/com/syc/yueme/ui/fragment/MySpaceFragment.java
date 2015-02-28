@@ -40,7 +40,7 @@ public class MySpaceFragment extends BaseFragment implements View.OnClickListene
     private static final int IMAGE_PICK_REQUEST = 1;
     private static final int CROP_REQUEST = 2;
     TextView usernameView, schoolidView;
-    ImageView avatarView,avatarBackgroundView;
+    static ImageView avatarView,avatarBackgroundView;
     View myyueLayout, avatarLayout,yingyueLayout,infoLayout,
             specialyueLayout, notifyLayout, passwordchangeLayout;
 
