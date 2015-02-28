@@ -50,6 +50,8 @@ public class UserInfoActivity extends BaseEntryActivity implements OnClickListen
             peoplesLayout, YPALayout, genderLayout, hometownLayout,
             characristicsLayout, hobbyLayout, signLayout, nicknameLayout;
 
+    static String nickname,hometown,sign,characteristic,hobby,speciality;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         // TODO Auto-generated method stub
@@ -106,18 +108,27 @@ public class UserInfoActivity extends BaseEntryActivity implements OnClickListen
     private void setView() {
         AVUser curUser = AVUser.getCurrentUser();
         usernameView.setText(curUser.getUsername());
-        nicknameView.setText(User.getNickname(curUser));
         genderView.setText(User.getGenderDesc(curUser));
+        schoolView.setText(User.getSchool(curUser));
+        YPAView.setText(User.getYPA(curUser));
+        stuidView.setText(User.getStuId(curUser));
 //        birthdayView.setText(User.getBirthday(curUser));
 //        peoplesView.setText(User.getPeoples(curUser));
-        hometownView.setText(User.getHometown(curUser));
-        YPAView.setText(User.getYPA(curUser));
-        signView.setText(User.getSign(curUser));
-        characristicsView.setText(User.getCharacristics(curUser));
-        stuidView.setText(User.getStuId(curUser));
-        specialityView.setText(User.getSpeciality(curUser));
-        hobbyView.setText(User.getHobbies(curUser));
-        schoolView.setText(User.getSchool(curUser));
+
+        nickname = User.getNickname(curUser);
+        hometown =User.getHometown(curUser);
+        characteristic = User.getCharacristics(curUser);
+        sign = User.getSign(curUser);
+        speciality = User.getSpeciality(curUser);
+        hobby = User.getHobbies(curUser);
+
+        nicknameView.setText(nickname.length() > 12 ? nickname.substring(0,12)+"..." : nickname);
+        hometownView.setText(hometown.length() > 12 ? hometown.substring(0,12)+"..." : hometown);
+        signView.setText(sign.length() > 12 ? sign.substring(0,12)+"..." : sign);
+        characristicsView.setText(characteristic.length() > 12 ? characteristic.substring(0,12)+"..." : characteristic);
+        hobbyView.setText(hobby.length() > 12 ? hobby.substring(0,12)+"..." : hobby);
+        specialityView.setText(speciality.length() > 12 ? speciality.substring(0,12)+"..." : speciality);
+
         UserService.displayAvatar(User.getAvatarUrl(curUser), avatarView);
     }
 

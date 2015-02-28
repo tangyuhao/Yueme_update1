@@ -316,12 +316,17 @@
 
                 <TextView
                     style="@style/myspace_left_text"
+                    android:id="@+id/sign1"
                     android:text="@string/sign" />
 
                 <TextView
                     android:id="@+id/sign"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@+id/sign1"
+                    android:layout_marginLeft="60dp"
+                    android:layout_width="250dp"
+                    android:layout_height="20dp"
+                    android:gravity="center"
+                    android:textSize="14sp"
                     android:layout_centerInParent="true"
                     android:text="" />
                 <ImageView
@@ -342,12 +347,17 @@
 
                 <TextView
                     style="@style/myspace_left_text"
+                    android:id="@+id/cha1"
                     android:text="@string/characristics" />
 
                 <TextView
                     android:id="@+id/characristics"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@+id/cha1"
+                    android:layout_marginLeft="60dp"
+                    android:layout_width="250dp"
+                    android:layout_height="20dp"
+                    android:gravity="center"
+                    android:textSize="14sp"
                     android:layout_centerInParent="true"
                     android:text="" />
                 <ImageView
@@ -368,12 +378,18 @@
 
                 <TextView
                     style="@style/myspace_left_text"
+                    android:id="@+id/hobbies1"
                     android:text="@string/hobbies" />
+
 
                 <TextView
                     android:id="@+id/hobbies"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@+id/hobbies1"
+                    android:layout_marginLeft="60dp"
+                    android:layout_width="250dp"
+                    android:layout_height="20dp"
+                    android:gravity="center"
+                    android:textSize="14sp"
                     android:layout_centerInParent="true"
                     android:text="" />
                 <ImageView
@@ -394,12 +410,17 @@
 
                 <TextView
                     style="@style/myspace_left_text"
+                    android:id="@+id/spe1"
                     android:text="@string/speciality" />
 
                 <TextView
                     android:id="@+id/speciality"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@+id/spe1"
+                    android:layout_marginLeft="60dp"
+                    android:layout_width="250dp"
+                    android:layout_height="20dp"
+                    android:gravity="center"
+                    android:textSize="14sp"
                     android:layout_centerInParent="true"
                     android:text="" />
                 <ImageView
