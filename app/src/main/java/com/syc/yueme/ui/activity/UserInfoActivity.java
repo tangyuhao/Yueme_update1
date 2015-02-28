@@ -28,6 +28,7 @@ import com.syc.yueme.R;
 import com.syc.yueme.avobject.User;
 import com.syc.yueme.base.App;
 import com.syc.yueme.service.UserService;
+import com.syc.yueme.ui.fragment.MySpaceFragment;
 import com.syc.yueme.ui.view.HeaderLayout;
 import com.syc.yueme.util.Logger;
 import com.syc.yueme.util.PathUtils;
@@ -42,7 +43,7 @@ import java.util.Date;
 public class UserInfoActivity extends BaseEntryActivity implements OnClickListener {
     private static final int IMAGE_PICK_REQUEST = 1;
     private static final int CROP_REQUEST = 2;
-    static ImageView avatarView;
+    ImageView avatarView;
     static TextView usernameView, genderView, stuidView, birthdayView,
             peoplesView, hometownView, YPAView, schoolView, nicknameView,
             characristicsView, hobbyView, signView, specialityView;
@@ -138,6 +139,7 @@ public class UserInfoActivity extends BaseEntryActivity implements OnClickListen
             Intent intent = new Intent(Intent.ACTION_PICK, null);
             intent.setDataAndType(MediaStore.Images.Media.EXTERNAL_CONTENT_URI, "image/*");
             startActivityForResult(intent, IMAGE_PICK_REQUEST);
+
         } else if (id == R.id.sexLayout) {
             showSexChooseDialog();
 //        } else if (id == R.id.birthdayLayout) {
