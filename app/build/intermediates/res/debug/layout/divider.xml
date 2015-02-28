@@ -3,4 +3,4 @@
 <View xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_height="1px"
     android:layout_width="match_parent"
-    android:background="#aaa" /><!-- From: file:/Users/kawhi/AndroidStudioProjects/Yueme_update1/app/src/main/res/layout/divider.xml -->
+    android:background="#aaa" /><!-- From: file:/D:/git_master3/Yueme_update1/app/src/main/res/layout/divider.xml -->

@@ -1,188 +1,118 @@
 package com.syc.yueme.ui.activity;
 
-import android.content.Intent;
 import android.os.Bundle;
-import android.view.Menu;
-import android.view.MenuInflater;
-import android.view.MenuItem;
 import android.view.View;
+import android.view.View.OnClickListener;
 import android.widget.AdapterView;
-import com.avos.avoscloud.Group;
-import com.avos.avoscloud.Session;
-import com.syc.yueme.adapter.GroupAdapter;
-import com.syc.yueme.avobject.ChatGroup;
-import com.syc.yueme.service.CacheService;
-import com.syc.yueme.service.ChatService;
-import com.syc.yueme.service.listener.GroupEventListener;
-import com.syc.yueme.ui.view.xlist.XListView;
+import android.widget.AdapterView.OnItemClickListener;
+import android.widget.Button;
+import android.widget.EditText;
+import com.avos.avoscloud.AVUser;
 import com.syc.yueme.R;
+import com.syc.yueme.adapter.AddFriendAdapter;
+import com.syc.yueme.adapter.SpecialAttentionAdapter;
 import com.syc.yueme.base.App;
-import com.syc.yueme.service.receiver.GroupMsgReceiver;
-import com.syc.yueme.service.GroupService;
+import com.syc.yueme.service.UserService;
+import com.syc.yueme.ui.view.xlist.XListView;
+import com.syc.yueme.util.ChatUtils;
 import com.syc.yueme.util.NetAsyncTask;
 import com.syc.yueme.util.Utils;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 
-/**
- * Created by lzw on 14-10-7.
- */
-public class GroupListActivity extends BaseActivity implements GroupEventListener, AdapterView.OnItemClickListener, XListView.IXListViewListener {
-  public static final int GROUP_NAME_REQUEST = 0;
-  XListView groupListView;
-  List<ChatGroup> chatGroups = new ArrayList<ChatGroup>();
-  GroupAdapter groupAdapter;
-  String newGroupName;
+public class GroupListActivity extends BaseActivity implements OnClickListener, XListView.IXListViewListener, OnItemClickListener {
+    EditText searchNameEdit;
+    Button searchBtn;
+    List<AVUser> users = new ArrayList<AVUser>();//change it first , then adapter
+    XListView listView;
+    SpecialAttentionAdapter adapter;
+    String searchName = "";
 
-  @Override
-  protected void onCreate(Bundle savedInstanceState) {
-    super.onCreate(savedInstanceState);
-    setContentView(R.layout.group_list_activity);
-    findView();
-    initList();
-    onRefresh();
-    initActionBar(App.ctx.getString(R.string.group));
-    GroupMsgReceiver.addListener(this);
-  }
-
-  @Override
-  public boolean onCreateOptionsMenu(Menu menu) {
-    MenuInflater menuInflater = getMenuInflater();
-    menuInflater.inflate(R.menu.group_list_menu, menu);
-    return super.onCreateOptionsMenu(menu);
-  }
-
-  @Override
-  public boolean onMenuItemSelected(int featureId, MenuItem item) {
-    int id = item.getItemId();
-    if (id == R.id.create) {
-      UpdateContentActivity.goActivityForResult(this, App.ctx.getString(R.string.groupName), GROUP_NAME_REQUEST);
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        // TODO Auto-generated method stub
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.contact_add_friend_activity);
+        initView();
+        search(searchName);
     }
-    return super.onMenuItemSelected(featureId, item);
-  }
 
-  private void initList() {
-    groupAdapter = new GroupAdapter(ctx, chatGroups);
-    groupListView.setPullRefreshEnable(true);
-    groupListView.setPullLoadEnable(false);
-    groupListView.setXListViewListener(this);
-    groupListView.setAdapter(groupAdapter);
-    groupListView.setOnItemClickListener(this);
-  }
-
-  private void findView() {
-    groupListView = (XListView) findViewById(R.id.groupList);
-  }
-
-  @Override
-  protected void onActivityResult(int requestCode, int resultCode, Intent data) {
-    if (resultCode == RESULT_OK) {
-      if (requestCode == GROUP_NAME_REQUEST) {
-        newGroupName = UpdateContentActivity.getResultValue(data);
-        Session session = ChatService.getSession();
-        Group group = session.getGroup();
-        group.join();
-      }
+    private void initView() {
+        initActionBar(App.ctx.getString(R.string.specialattention));
+        searchNameEdit = (EditText) findViewById(R.id.searchNameEdit);
+        searchBtn = (Button) findViewById(R.id.searchBtn);
+        searchBtn.setOnClickListener(this);
+        initXListView();
     }
-    super.onActivityResult(requestCode, resultCode, data);
-  }
 
+    private void initXListView() {
+        listView = (XListView) findViewById(R.id.searchList);
+        listView.setPullLoadEnable(false);
+        listView.setPullRefreshEnable(false);
+        listView.setXListViewListener(this);
 
-  @Override
-  public void onJoined(final Group group) {
-    //new Group
-    if (newGroupName != null) {
-      new NetAsyncTask(ctx) {
-        ChatGroup chatGroup;
+        adapter = new SpecialAttentionAdapter(this, users);
+        listView.setAdapter(adapter);
+        listView.setOnItemClickListener(this);
+    }
 
-        @Override
-        protected void doInBack() throws Exception {
-          chatGroup = GroupService.setNewChatGroupData(group.getGroupId(), newGroupName);
+    @Override
+    public void onItemClick(AdapterView<?> arg0, View arg1, int position, long arg3) {
+        // TODO Auto-generated method stub
+    }
+
+    @Override
+    public void onClick(View view) {
+        switch (view.getId()) {
+            case R.id.searchBtn:
+                searchName = searchNameEdit.getText().toString();
+                if (searchName != null) {
+                    adapter.clear();
+                    search(searchName);
+                }
+                break;
         }
-
-        @Override
-        protected void onPost(Exception e) {
-          newGroupName = null;
-          if (e != null) {
-            Utils.toast(e.getMessage());
-            Utils.printException(e);
-          } else {
-            chatGroups.add(0, chatGroup);
-            CacheService.registerChatGroupsCache(Arrays.asList(chatGroup));
-            groupAdapter.notifyDataSetChanged();
-          }
-        }
-      }.execute();
-    } else {
-      ChatGroup _chatGroup = findChatGroup(group.getGroupId());
-      if (_chatGroup == null) {
-        throw new RuntimeException("chat group is null");
-      }
-      ChatActivity.goGroupChat(this, _chatGroup.getObjectId());
     }
-  }
 
-  @Override
-  public void onMemberUpdate(Group group) {
-    groupAdapter.notifyDataSetChanged();
-  }
+    private void search(final String searchName) {
+        new NetAsyncTask(ctx, false) {
+            List<AVUser> users;
 
-  @Override
-  public void onQuit(Group group) {
-    onRefresh();
-  }
+            @Override
+            protected void doInBack() throws Exception {
+                users = UserService.searchUser(searchName, adapter.getCount());
+            }
 
-  private ChatGroup findChatGroup(String groupId) {
-    for (ChatGroup chatGroup : chatGroups) {
-      if (chatGroup.getObjectId().equals(groupId)) {
-        return chatGroup;
-      }
+            @Override
+            protected void onPost(Exception e) {
+                stopLoadMore();
+                if (e != null) {
+                    e.printStackTrace();
+                    Utils.toast(ctx, R.string.pleaseCheckNetwork);
+                } else {
+                    ChatUtils.handleListResult(listView, adapter, users);
+                }
+            }
+        }.execute();
+
     }
-    return null;
-  }
 
-  @Override
-  protected void onDestroy() {
-    super.onDestroy();
-    GroupMsgReceiver.removeListener(this);
-  }
 
-  @Override
-  public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-    ChatGroup chatGroup = (ChatGroup) parent.getAdapter().getItem(position);
-    Group group = ChatService.getGroupById(chatGroup.getObjectId());
-    group.join();
-  }
+    @Override
+    public void onRefresh() {
+        // TODO Auto-generated method stub
+    }
 
-  @Override
-  public void onRefresh() {
-    new NetAsyncTask(ctx, false) {
-      List<ChatGroup> subChatGroups;
+    @Override
+    public void onLoadMore() {
+        // TODO Auto-generated method stub
+        search(searchName);
+    }
 
-      @Override
-      protected void doInBack() throws Exception {
-        subChatGroups = GroupService.findGroups();
-      }
-
-      @Override
-      protected void onPost(Exception e) {
-        groupListView.stopRefresh();
-        if (e != null) {
-
-        } else {
-          chatGroups.clear();
-          chatGroups.addAll(subChatGroups);
-          CacheService.registerChatGroupsCache(chatGroups);
-          groupAdapter.notifyDataSetChanged();
+    private void stopLoadMore() {
+        if (listView.getPullLoading()) {
+            listView.stopLoadMore();
         }
-      }
-    }.execute();
-  }
-
-  @Override
-  public void onLoadMore() {
-
-  }
+    }
 }
