@@ -1,0 +1,17 @@
+D:\github\yueme\app\build\intermediates\classes\release
+D:\github\yueme\app\build\intermediates\pre-dexed\release\support-annotations-21.0.3-6c51e4d9f6d7abac3ecabc40cee5932d1c94b9fe.jar
+D:\github\yueme\app\build\intermediates\pre-dexed\release\classes-6a7ef48e7a7aa417234256cfbc8bb87559647e57.jar
+D:\github\yueme\app\build\intermediates\pre-dexed\release\avossearch-v2.6.9.1-955ec4ebc1f76f141194e3607ec8d385520252d9.jar
+D:\github\yueme\app\build\intermediates\pre-dexed\release\httpmime-4.2.4-6e4608facfd1f6b9f04a70c8a5452cb37de8dfe0.jar
+D:\github\yueme\app\build\intermediates\pre-dexed\release\butterknife-6.0.0-17172692837ebeb89c12346e256fab69ec42397c.jar
+D:\github\yueme\app\build\intermediates\pre-dexed\release\avosstatistics-v2.6.9.1-7847946d6b2cf525451246b75421c93b55f3fdb4.jar
+D:\github\yueme\app\build\intermediates\pre-dexed\release\prettytime-3.2.5.Final-b5d213506c62c60dfcedce974c6c2f5b155dd5b0.jar
+D:\github\yueme\app\build\intermediates\pre-dexed\release\android-async-http-1.4.6-535ad3301e115f32cbc26210de540d3187e1ee8c.jar
+D:\github\yueme\app\build\intermediates\pre-dexed\release\internal_impl-21.0.3-c29be50feb587609e000c76702c05dff2d6732ec.jar
+D:\github\yueme\app\build\intermediates\pre-dexed\release\locSDK_4.2-e4daada08687742c01b35f12052c6cdc913263ff.jar
+D:\github\yueme\app\build\intermediates\pre-dexed\release\avospush-v2.6.9.1-5d404d13b3b150ab04882e43118a1f8b9afccdf4.jar
+D:\github\yueme\app\build\intermediates\pre-dexed\release\fastjson-f635e0289866e9be4897b59f67a7e76f52bb071c.jar
+D:\github\yueme\app\build\intermediates\pre-dexed\release\avoscloud-v2.6.9.1-78b43120fdf77e80f6bde7abafaa504d5c0927c8.jar
+D:\github\yueme\app\build\intermediates\pre-dexed\release\universal-image-loader-1.9.2_sources-2db4b1b89060108692e01fb6579fdfe42b3c895e.jar
+D:\github\yueme\app\build\intermediates\pre-dexed\release\classes-73f04cb642db9e0052b63916f4a34a74e2f24a76.jar
+D:\github\yueme\app\build\intermediates\pre-dexed\release\baidumapapi_v3_0_0-63e56c2dbdf63fe8b62e6878cec50a150140212d.jar

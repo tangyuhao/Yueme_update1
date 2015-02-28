@@ -880,8 +880,8 @@ containing a value of this type.
            <colgroup align="left" />
            <colgroup align="left" />
            <tr><th>Attribute</th><th>Description</th></tr>
-           <tr><td><code>{@link #CircleButton_cb_color yueme.com.yuemeapp:cb_color}</code></td><td></td></tr>
-           <tr><td><code>{@link #CircleButton_cb_pressedRingWidth yueme.com.yuemeapp:cb_pressedRingWidth}</code></td><td></td></tr>
+           <tr><td><code>{@link #CircleButton_cb_color com.syc.yueme:cb_color}</code></td><td></td></tr>
+           <tr><td><code>{@link #CircleButton_cb_pressedRingWidth com.syc.yueme:cb_pressedRingWidth}</code></td><td></td></tr>
            </table>
            @see #CircleButton_cb_color
            @see #CircleButton_cb_pressedRingWidth
@@ -890,7 +890,7 @@ containing a value of this type.
             0x7f010000, 0x7f010001
         };
         /**
-          <p>This symbol is the offset where the {@link yueme.com.yuemeapp.R.attr#cb_color}
+          <p>This symbol is the offset where the {@link com.syc.yueme.R.attr#cb_color}
           attribute's value can be found in the {@link #CircleButton} array.
 
 
@@ -901,11 +901,11 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name yueme.com.yuemeapp:cb_color
+          @attr name com.syc.yueme:cb_color
         */
         public static final int CircleButton_cb_color = 0;
         /**
-          <p>This symbol is the offset where the {@link yueme.com.yuemeapp.R.attr#cb_pressedRingWidth}
+          <p>This symbol is the offset where the {@link com.syc.yueme.R.attr#cb_pressedRingWidth}
           attribute's value can be found in the {@link #CircleButton} array.
 
 
@@ -917,7 +917,7 @@ in (inches), mm (millimeters).
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name yueme.com.yuemeapp:cb_pressedRingWidth
+          @attr name com.syc.yueme:cb_pressedRingWidth
         */
         public static final int CircleButton_cb_pressedRingWidth = 1;
         /** Attributes that can be used with a PlayBtn.
@@ -926,7 +926,7 @@ containing a value of this type.
            <colgroup align="left" />
            <colgroup align="left" />
            <tr><th>Attribute</th><th>Description</th></tr>
-           <tr><td><code>{@link #PlayBtn_left yueme.com.yuemeapp:left}</code></td><td></td></tr>
+           <tr><td><code>{@link #PlayBtn_left com.syc.yueme:left}</code></td><td></td></tr>
            </table>
            @see #PlayBtn_left
          */
@@ -934,7 +934,7 @@ containing a value of this type.
             0x7f010002
         };
         /**
-          <p>This symbol is the offset where the {@link yueme.com.yuemeapp.R.attr#left}
+          <p>This symbol is the offset where the {@link com.syc.yueme.R.attr#left}
           attribute's value can be found in the {@link #PlayBtn} array.
 
 
@@ -944,7 +944,7 @@ containing a value of this type.
 theme attribute (in the form
 "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
 containing a value of this type.
-          @attr name yueme.com.yuemeapp:left
+          @attr name com.syc.yueme:left
         */
         public static final int PlayBtn_left = 0;
     };

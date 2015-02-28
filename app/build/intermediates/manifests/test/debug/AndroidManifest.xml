@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="yueme.com.yuemeapp.test">
+    package="com.syc.yueme.test">
 
     <uses-sdk android:minSdkVersion="15" android:targetSdkVersion="15" />
 
@@ -9,8 +9,8 @@
     </application>
 
     <instrumentation android:name="android.test.InstrumentationTestRunner"
-                     android:targetPackage="yueme.com.yuemeapp"
+                     android:targetPackage="com.syc.yueme"
                      android:handleProfiling="false"
                      android:functionalTest="false"
-                     android:label="Tests for yueme.com.yuemeapp"/>
+                     android:label="Tests for com.syc.yueme"/>
 </manifest>

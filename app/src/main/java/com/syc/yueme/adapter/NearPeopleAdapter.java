@@ -98,8 +98,8 @@ public class NearPeopleAdapter extends BaseListAdapter<AVObject> {
         talkButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = getUserChatIntent(ctx,((AVUser)message.getAVObject("sendUser")).getObjectId());
-                ctx.startActivity(intent);
+//                Intent intent = getUserChatIntent(ctx,((AVUser)message.getAVObject("sendUser")).getObjectId());
+//                ctx.startActivity(intent);
             }
         });
 

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="app_name">Yueme_dev</string>
+    <string name="app_name">约么</string>
     <string name="tips">提示</string>
     <string name="please_choose">请选择</string>
     <string name="share">分享</string>
@@ -33,7 +33,7 @@
     <string name="discover">约么</string>
     <string name="emptyStr"></string>
     <string name="avatar">头像</string>
-    <string name="username">用户名</string>
+    <string name="username">用户</string>
     <string name="nickname">昵称</string>
     <string name="please_input_hint">请输入{0}</string>
     <string name="change_title">{0}</string>
@@ -155,8 +155,8 @@
     <string name="hometown">地区</string>
     <string name="YPA">YPA</string>
     <string name="characristics">性格</string>
-    <string name="hobbies">兴趣爱好</string>
-    <string name="sign">个性签名</string>
+    <string name="hobbies">爱好</string>
+    <string name="sign">签名</string>
     <string name="stuId">学号</string>
     <string name="userInfo">个人信息</string>
     <string name="speciality">特长</string>
