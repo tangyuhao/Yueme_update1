@@ -171,10 +171,12 @@
         </activity>
         <activity
             android:name=".ui.activity.UserInfoActivity"
+            android:theme="@style/MainTheme"
             android:label="@string/title_activity_user_info" >
         </activity>
         <activity
             android:name=".ui.activity.UserCharacristicsActivity"
+            android:theme="@style/MainTheme"
             android:label="@string/title_activity_user_characristics" >
         </activity>
         <activity
@@ -184,10 +186,12 @@
         </activity>
         <activity
             android:name=".ui.activity.UserSignActivity"
+            android:theme="@style/MainTheme"
             android:label="@string/title_activity_user_sign" >
         </activity>
         <activity
             android:name=".ui.activity.UserSpecialityActivity"
+            android:theme="@style/MainTheme"
             android:label="@string/title_activity_user_speciality" >
         </activity>
         <activity

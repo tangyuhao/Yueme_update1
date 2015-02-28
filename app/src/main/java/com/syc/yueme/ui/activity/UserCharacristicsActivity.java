@@ -2,58 +2,69 @@ package com.syc.yueme.ui.activity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.LayoutInflater;
 import android.view.View;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.avos.avoscloud.AVException;
 import com.avos.avoscloud.AVUser;
+import com.avos.avoscloud.SaveCallback;
 import com.syc.yueme.R;
 import com.syc.yueme.avobject.User;
 import com.syc.yueme.ui.view.HeaderLayout;
+import com.syc.yueme.util.Utils;
 
-public class UserCharacristicsActivity extends BaseEntryActivity implements View.OnClickListener {
+public class UserCharacristicsActivity extends BaseEntryActivity  {
 
-    TextView Characristics;
-    EditText CharacristicsEdit;
-    View DeletBtn,QuitBtn;
-    HeaderLayout headerLayout;
+
+    TextView chaInfo,chaEdit;
+    String s;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.user_characristics_activity);
+        initActionBar(R.string.characristics);
         // TODO Auto-generated method stub
-        findView();
+
+        LayoutInflater factorys = LayoutInflater.from(UserCharacristicsActivity.this);
+        final View textEntryView = factorys.inflate(R.layout.user_info_activity, null);
+
+        chaInfo = (TextView) textEntryView.findViewById(R.id.characristics);
+        chaEdit = (TextView) findViewById(R.id.userCha);
+        Button b = (Button) findViewById(R.id.save_btn);
+
+        chaEdit.setText(chaInfo.getText().toString());
+
+        b.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                s = chaEdit.getText().toString();
+                AVUser curUser = AVUser.getCurrentUser();
+                User.setCharacristics(curUser,s);
+                curUser.saveInBackground(new SaveCallback() {
+                    @Override
+                    public void done(AVException e) {
+                        if(e == null)
+                        {
+                            chaInfo.setText(s);
+                            Utils.toast(R.string.saveSuccess);
+
+                        }
+                        else
+                        {
+                            Utils.toast(e.getMessage());
+                            return;
+                        }
+                    }
+                });
+            }
+        });
+
     }
 
-    @Override
-    public void onClick(View v) {
-        int id = v.getId();
-        if (id == R.id.buttoncharacristics) {
-            change();
-            Toast.makeText(getBaseContext(), "设置成功", Toast.LENGTH_SHORT).show();
-            finish();
-        }else if (id == R.id.buttonquit) {
-            Toast.makeText(getBaseContext(), "取消设置", Toast.LENGTH_SHORT).show();
-            finish();
-        }
-    }
 
-    private void findView(){
-        Characristics=(TextView)findViewById(R.id.UserNicknameTitle);
-        CharacristicsEdit=(EditText)findViewById(R.id.UserNickname);
-        DeletBtn=findViewById(R.id.buttoncharacristics);
-        headerLayout = (HeaderLayout) findViewById(R.id.headerLayout);
-        headerLayout.showTitle(R.string.userInfo);
-        DeletBtn.setOnClickListener(this);
-        QuitBtn=findViewById(R.id.buttonquit);
-        QuitBtn.setOnClickListener(this);
-    }
-    private void change() {
-        AVUser curUser = AVUser.getCurrentUser();
-        String characristics = CharacristicsEdit.getText().toString();
-        User.setCharacristics(curUser,characristics);
-        curUser.saveInBackground();
-    }
 }
