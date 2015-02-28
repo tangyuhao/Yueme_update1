@@ -20,7 +20,7 @@ import com.syc.yueme.util.Utils;
 public class UserCharacristicsActivity extends BaseEntryActivity  {
 
 
-    TextView chaInfo,chaEdit;
+    TextView chaEdit;
     String s;
 
     @Override
@@ -30,14 +30,10 @@ public class UserCharacristicsActivity extends BaseEntryActivity  {
         initActionBar(R.string.characristics);
         // TODO Auto-generated method stub
 
-        LayoutInflater factorys = LayoutInflater.from(UserCharacristicsActivity.this);
-        final View textEntryView = factorys.inflate(R.layout.user_info_activity, null);
-
-        chaInfo = (TextView) textEntryView.findViewById(R.id.characristics);
         chaEdit = (TextView) findViewById(R.id.userCha);
         Button b = (Button) findViewById(R.id.save_btn);
 
-        chaEdit.setText(chaInfo.getText().toString());
+        chaEdit.setText(UserInfoActivity.characristicsView.getText().toString());
 
         b.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -50,9 +46,9 @@ public class UserCharacristicsActivity extends BaseEntryActivity  {
                     public void done(AVException e) {
                         if(e == null)
                         {
-                            chaInfo.setText(s);
+                            UserInfoActivity.characristicsView.setText(s);
                             Utils.toast(R.string.saveSuccess);
-
+                            finish();
                         }
                         else
                         {

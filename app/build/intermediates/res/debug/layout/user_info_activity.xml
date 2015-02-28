@@ -288,7 +288,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_centerInParent="true"
-                    android:text="sign" />
+                    android:text="" />
                 <ImageView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -314,7 +314,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_centerInParent="true"
-                    android:text="characristics" />
+                    android:text="" />
                 <ImageView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -340,7 +340,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_centerInParent="true"
-                    android:text="hobbies" />
+                    android:text="" />
                 <ImageView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -366,7 +366,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_centerInParent="true"
-                    android:text="speciality" />
+                    android:text="" />
                 <ImageView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -389,4 +389,4 @@
     </ScrollView>
 
 
-</LinearLayout><!-- From: file:/D:/git_master3/Yueme_update1/app/src/main/res/layout/user_info_activity.xml -->
+</LinearLayout><!-- From: file:/Users/kawhi/AndroidStudioProjects/Yueme_update1/app/src/main/res/layout/user_info_activity.xml -->

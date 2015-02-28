@@ -41,8 +41,8 @@ import java.util.Date;
 public class UserInfoActivity extends BaseEntryActivity implements OnClickListener {
     private static final int IMAGE_PICK_REQUEST = 1;
     private static final int CROP_REQUEST = 2;
-    ImageView avatarView;
-    TextView usernameView, genderView, stuidView, birthdayView, headerLayoutView,
+    static ImageView avatarView;
+    static TextView usernameView, genderView, stuidView, birthdayView,
             peoplesView, hometownView, YPAView, schoolView, nicknameView,
             characristicsView, hobbyView, signView, specialityView;
     View usernameLayout, avatarLayout, stuidLayout, birthdayLayout,specialityLayout,

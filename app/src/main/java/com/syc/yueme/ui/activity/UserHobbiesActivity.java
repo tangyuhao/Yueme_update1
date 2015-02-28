@@ -19,7 +19,7 @@ import com.syc.yueme.util.Utils;
 
 public class UserHobbiesActivity extends BaseEntryActivity {
 
-    TextView hobbyInfo,hobbyEdit;
+    TextView hobbyEdit;
     String s;
 
     @Override
@@ -29,14 +29,12 @@ public class UserHobbiesActivity extends BaseEntryActivity {
         initActionBar(R.string.hobbies);
         // TODO Auto-generated method stub
 
-        LayoutInflater factorys = LayoutInflater.from(UserHobbiesActivity.this);
-        final View textEntryView = factorys.inflate(R.layout.user_info_activity, null);
 
-        hobbyInfo = (TextView) textEntryView.findViewById(R.id.hobbies);
+
         hobbyEdit = (TextView) findViewById(R.id.userHobby);
         Button b = (Button) findViewById(R.id.save_btn);
 
-        hobbyEdit.setText(hobbyInfo.getText().toString());
+        hobbyEdit.setText(UserInfoActivity.hobbyView.getText().toString());
 
         b.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -49,9 +47,9 @@ public class UserHobbiesActivity extends BaseEntryActivity {
                     public void done(AVException e) {
                         if(e == null)
                         {
-                            hobbyInfo.setText(s);
                             Utils.toast(R.string.saveSuccess);
-
+                            UserInfoActivity.hobbyView.setText(s);
+                            finish();
                         }
                         else
                         {
@@ -60,6 +58,7 @@ public class UserHobbiesActivity extends BaseEntryActivity {
                         }
                     }
                 });
+
             }
         });
 
