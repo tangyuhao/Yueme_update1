@@ -6,14 +6,7 @@
     android:layout_height="match_parent"
     android:background="@color/base_bg">
 
-    <!--<include layout="@layout/base_header_layout" />-->
 
-    <com.syc.yueme.ui.view.HeaderLayout xmlns:android="http://schemas.android.com/apk/res/android"
-        android:id="@+id/headerLayout"
-        android:orientation="vertical"
-        android:layout_width="match_parent"
-        android:text="@string/userInfo"
-        android:layout_height="48dp" />
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent">

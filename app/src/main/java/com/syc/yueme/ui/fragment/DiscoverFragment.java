@@ -62,7 +62,7 @@ public class DiscoverFragment extends BaseFragment {
     }
     private void intHeader() {
         headerLayout = (HeaderLayout) getView().findViewById(R.id.headerLayout);
-        headerLayout.showTitle(App.ctx.getString(R.string.contact));
+        headerLayout.showTitle(App.ctx.getString(R.string.discover));
 
         headerLayout.showRightImageButton(R.drawable.base_action_bar_filter, new OnClickListener() {
             @Override
