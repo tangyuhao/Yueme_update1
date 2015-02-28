@@ -26,6 +26,7 @@ import com.avos.avoscloud.AVUser;
 import com.avos.avoscloud.SaveCallback;
 import com.syc.yueme.R;
 import com.syc.yueme.avobject.User;
+import com.syc.yueme.base.App;
 import com.syc.yueme.service.UserService;
 import com.syc.yueme.ui.view.HeaderLayout;
 import com.syc.yueme.util.Logger;
@@ -41,7 +42,6 @@ public class UserInfoActivity extends BaseEntryActivity implements OnClickListen
     private static final int IMAGE_PICK_REQUEST = 1;
     private static final int CROP_REQUEST = 2;
     ImageView avatarView;
-    HeaderLayout headerLayout;
     TextView usernameView, genderView, stuidView, birthdayView, headerLayoutView,
             peoplesView, hometownView, YPAView, schoolView, nicknameView,
             characristicsView, hobbyView, signView, specialityView;
@@ -54,14 +54,13 @@ public class UserInfoActivity extends BaseEntryActivity implements OnClickListen
         // TODO Auto-generated method stub
         super.onCreate(savedInstanceState);
         setContentView(R.layout.user_info_activity);
-//        initActionBar(App.ctx.getString(R.string.userInfo));
 
         findView();
         setView();
     }
 
     private void findView() {
-//        initActionBar(App.ctx.getString(R.string.userInfo));闪退
+        initActionBar(App.ctx.getString(R.string.userInfo));
 
         usernameView = (TextView) findViewById(R.id.myusername);
         avatarView = (ImageView) findViewById(R.id.myavatar);
@@ -89,7 +88,6 @@ public class UserInfoActivity extends BaseEntryActivity implements OnClickListen
         hobbyLayout=findViewById(R.id.hobbiesLayout);
         signLayout=findViewById(R.id.signLayout);
         specialityLayout=findViewById(R.id.specialityLayout);
-        headerLayout = (HeaderLayout) findViewById(R.id.headerLayout);
 
 
         avatarLayout.setOnClickListener(this);
@@ -119,7 +117,6 @@ public class UserInfoActivity extends BaseEntryActivity implements OnClickListen
         specialityView.setText(User.getSpeciality(curUser));
         hobbyView.setText(User.getHobbies(curUser));
         schoolView.setText(User.getSchool(curUser));
-        headerLayout.showTitle(R.string.userInfo);
         UserService.displayAvatar(User.getAvatarUrl(curUser), avatarView);
     }
 
