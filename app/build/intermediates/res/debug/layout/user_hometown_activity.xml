@@ -1,0 +1,36 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.syc.yueme.ui.activity.UserHometownActivity">
+
+
+    <EditText
+        android:id="@+id/userHome"
+        android:layout_width="match_parent"
+        android:padding="10dp"
+        android:layout_margin="10dp"
+        android:layout_height="48dp"
+        android:background="@drawable/edittext"
+        android:drawablePadding="25dip"
+        android:paddingLeft="15dip"
+        android:shadowDx="0.0"
+        android:shadowDy="1.0"
+        android:shadowRadius="1.0"
+        android:textColorHint="#ffdddddd"
+        android:hint="@string/hometown"
+        android:gravity="top"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/base_action_bar_height"
+        android:text="@string/save"
+        android:layout_margin="10dp"
+        android:id="@+id/save_btn"
+        android:layout_below="@+id/userHome"
+        android:background="@drawable/common_btn"
+        android:textColor="@color/base_color_text_white"
+        android:textSize="@dimen/text_size_large"
+        />
+</RelativeLayout>
+<!-- From: file:/Users/kawhi/AndroidStudioProjects/Yueme_update1/app/src/main/res/layout/user_hometown_activity.xml -->

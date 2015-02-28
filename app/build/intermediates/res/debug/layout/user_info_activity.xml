@@ -63,12 +63,17 @@
 
                 <TextView
                     style="@style/myspace_left_text"
+                    android:id="@+id/myusername1"
                     android:text="@string/username" />
 
                 <TextView
                     android:id="@+id/myusername"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@+id/myusername1"
+                    android:layout_marginLeft="60dp"
+                    android:layout_width="250dp"
+                    android:layout_height="20dp"
+                    android:gravity="center"
+                    android:textSize="14sp"
                     android:layout_centerInParent="true"
                     android:text="username" />
             </RelativeLayout>
@@ -82,12 +87,17 @@
 
                 <TextView
                     style="@style/myspace_left_text"
+                    android:id="@+id/school1"
                     android:text="@string/school" />
 
                 <TextView
                     android:id="@+id/school"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@+id/school1"
+                    android:layout_marginLeft="60dp"
+                    android:layout_width="250dp"
+                    android:layout_height="20dp"
+                    android:gravity="center"
+                    android:textSize="14sp"
                     android:layout_centerInParent="true"
                     android:text="school" />
             </RelativeLayout>
@@ -100,12 +110,17 @@
 
                 <TextView
                     style="@style/myspace_left_text"
+                    android:id="@+id/stuId1"
                     android:text="@string/stuId" />
 
                 <TextView
                     android:id="@+id/stuId"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@+id/stuId1"
+                    android:layout_marginLeft="60dp"
+                    android:layout_width="250dp"
+                    android:layout_height="20dp"
+                    android:gravity="center"
+                    android:textSize="14sp"
                     android:layout_centerInParent="true"
                     android:text="stuId" />
             </RelativeLayout>
@@ -118,12 +133,17 @@
 
                 <TextView
                     style="@style/myspace_left_text"
+                    android:id="@+id/YPA1"
                     android:text="@string/YPA" />
 
                 <TextView
                     android:id="@+id/YPA"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@+id/YPA1"
+                    android:layout_marginLeft="60dp"
+                    android:layout_width="250dp"
+                    android:layout_height="20dp"
+                    android:gravity="center"
+                    android:textSize="14sp"
                     android:layout_centerInParent="true"
                     android:text="YPA" />
             </RelativeLayout>
@@ -143,12 +163,17 @@
 
                 <TextView
                     style="@style/myspace_left_text"
+                    android:id="@+id/nickname1"
                     android:text="@string/nickname" />
 
                 <TextView
                     android:id="@+id/nickname"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@+id/nickname1"
+                    android:layout_marginLeft="60dp"
+                    android:layout_width="250dp"
+                    android:layout_height="20dp"
+                    android:gravity="center"
+                    android:textSize="14sp"
                     android:layout_centerInParent="true"
                     android:text="nickname" />
                 <ImageView
@@ -169,12 +194,17 @@
 
                 <TextView
                     style="@style/myspace_left_text"
+                    android:id="@+id/sex1"
                     android:text="@string/sex" />
 
                 <TextView
                     android:id="@+id/sex"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@+id/sex1"
+                    android:layout_marginLeft="60dp"
+                    android:layout_width="250dp"
+                    android:layout_height="20dp"
+                    android:gravity="center"
+                    android:textSize="14sp"
                     android:layout_centerInParent="true"
                     android:text="sex" />
                 <ImageView
@@ -186,58 +216,58 @@
                     android:drawablePadding="10dp"
                     android:src="@drawable/register_bottom_arrow" />
             </RelativeLayout>
-            <RelativeLayout
-                android:id="@+id/birthdayLayout"
-                android:layout_width="match_parent"
-                android:layout_height="40dp"
-                android:background="@drawable/layoutpress"
-                android:padding="10dp">
+            <!--<RelativeLayout-->
+                <!--android:id="@+id/birthdayLayout"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="40dp"-->
+                <!--android:background="@drawable/layoutpress"-->
+                <!--android:padding="10dp">-->
 
-                <TextView
-                    style="@style/myspace_left_text"
-                    android:text="@string/birthday" />
+                <!--<TextView-->
+                    <!--style="@style/myspace_left_text"-->
+                    <!--android:text="@string/birthday" />-->
 
-                <TextView
-                    android:id="@+id/birthday"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_centerInParent="true"
-                    android:text="birthday" />
-                <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignParentRight="true"
-                    android:layout_centerVertical="true"
-                    android:layout_marginRight="10dp"
-                    android:drawablePadding="10dp"
-                    android:src="@drawable/register_bottom_arrow" />
-            </RelativeLayout>
-            <RelativeLayout
-                android:id="@+id/peoplesLayout"
-                android:layout_width="match_parent"
-                android:layout_height="40dp"
-                android:background="@drawable/layoutpress"
-                android:padding="10dp">
+                <!--<TextView-->
+                    <!--android:id="@+id/birthday"-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_centerInParent="true"-->
+                    <!--android:text="birthday" />-->
+                <!--<ImageView-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_alignParentRight="true"-->
+                    <!--android:layout_centerVertical="true"-->
+                    <!--android:layout_marginRight="10dp"-->
+                    <!--android:drawablePadding="10dp"-->
+                    <!--android:src="@drawable/register_bottom_arrow" />-->
+            <!--</RelativeLayout>-->
+            <!--<RelativeLayout-->
+                <!--android:id="@+id/peoplesLayout"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="40dp"-->
+                <!--android:background="@drawable/layoutpress"-->
+                <!--android:padding="10dp">-->
 
-                <TextView
-                    style="@style/myspace_left_text"
-                    android:text="@string/peoples" />
+                <!--<TextView-->
+                    <!--style="@style/myspace_left_text"-->
+                    <!--android:text="@string/peoples" />-->
 
-                <TextView
-                    android:id="@+id/peoples"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_centerInParent="true"
-                    android:text="peoples" />
-                <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_alignParentRight="true"
-                    android:layout_centerVertical="true"
-                    android:layout_marginRight="10dp"
-                    android:drawablePadding="10dp"
-                    android:src="@drawable/register_bottom_arrow" />
-            </RelativeLayout>
+                <!--<TextView-->
+                    <!--android:id="@+id/peoples"-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_centerInParent="true"-->
+                    <!--android:text="peoples" />-->
+                <!--<ImageView-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_alignParentRight="true"-->
+                    <!--android:layout_centerVertical="true"-->
+                    <!--android:layout_marginRight="10dp"-->
+                    <!--android:drawablePadding="10dp"-->
+                    <!--android:src="@drawable/register_bottom_arrow" />-->
+            <!--</RelativeLayout>-->
             <RelativeLayout
                 android:id="@+id/hometownLayout"
                 android:layout_width="match_parent"
@@ -246,13 +276,18 @@
                 android:padding="10dp">
 
                 <TextView
+                    android:id="@+id/hometown1"
                     style="@style/myspace_left_text"
                     android:text="@string/hometown" />
 
                 <TextView
                     android:id="@+id/hometown"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@+id/hometown1"
+                    android:layout_marginLeft="60dp"
+                    android:layout_width="250dp"
+                    android:layout_height="20dp"
+                    android:gravity="center"
+                    android:textSize="14sp"
                     android:layout_centerInParent="true"
                     android:text="hometown" />
                 <ImageView

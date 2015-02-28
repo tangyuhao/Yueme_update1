@@ -171,33 +171,43 @@
         </activity>
         <activity
             android:name=".ui.activity.UserInfoActivity"
-            android:theme="@style/MainTheme"
-            android:label="@string/title_activity_user_info" >
+            android:label="@string/title_activity_user_info"
+            android:theme="@style/MainTheme" >
         </activity>
         <activity
             android:name=".ui.activity.UserCharacristicsActivity"
-            android:theme="@style/MainTheme"
-            android:label="@string/title_activity_user_characristics" >
+            android:label="@string/title_activity_user_characristics"
+            android:theme="@style/MainTheme" >
         </activity>
         <activity
             android:name=".ui.activity.UserHobbiesActivity"
-            android:theme="@style/MainTheme"
-            android:label="@string/title_activity_user_hobbies" >
+            android:label="@string/title_activity_user_hobbies"
+            android:theme="@style/MainTheme" >
         </activity>
         <activity
             android:name=".ui.activity.UserSignActivity"
-            android:theme="@style/MainTheme"
-            android:label="@string/title_activity_user_sign" >
+            android:label="@string/title_activity_user_sign"
+            android:theme="@style/MainTheme" >
         </activity>
         <activity
             android:name=".ui.activity.UserSpecialityActivity"
-            android:theme="@style/MainTheme"
-            android:label="@string/title_activity_user_speciality" >
+            android:label="@string/title_activity_user_speciality"
+            android:theme="@style/MainTheme" >
         </activity>
         <activity
             android:name=".ui.activity.PasswordResetActivity"
-            android:theme="@android:style/Theme.Light.NoTitleBar.Fullscreen"
-            android:label="@string/title_activity_password_reset" >
+            android:label="@string/title_activity_password_reset"
+            android:theme="@android:style/Theme.Light.NoTitleBar.Fullscreen" >
+        </activity>
+        <activity
+            android:name=".ui.activity.UserHometownActivity"
+            android:label="@string/title_activity_user_hometown"
+            android:theme="@style/MainTheme" >
+        </activity>
+        <activity
+            android:name=".ui.activity.UserNicknameActivity"
+            android:theme="@style/MainTheme"
+            android:label="@string/title_activity_user_nickname" >
         </activity>
     </application>
 
