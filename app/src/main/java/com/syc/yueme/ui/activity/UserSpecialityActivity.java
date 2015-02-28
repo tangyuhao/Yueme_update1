@@ -18,7 +18,7 @@ import com.syc.yueme.ui.view.HeaderLayout;
 import com.syc.yueme.util.Utils;
 
 public class UserSpecialityActivity extends BaseEntryActivity  {
-    TextView speInfo,speEdit;
+    TextView speEdit;
     String s;
 
     @Override
@@ -28,14 +28,10 @@ public class UserSpecialityActivity extends BaseEntryActivity  {
         initActionBar(R.string.speciality);
         // TODO Auto-generated method stub
 
-        LayoutInflater factorys = LayoutInflater.from(UserSpecialityActivity.this);
-        final View textEntryView = factorys.inflate(R.layout.user_info_activity, null);
-
-        speInfo = (TextView) textEntryView.findViewById(R.id.speciality);
         speEdit = (TextView) findViewById(R.id.userSpe);
         Button b = (Button) findViewById(R.id.save_btn);
 
-        speEdit.setText(speInfo.getText().toString());
+        speEdit.setText(UserInfoActivity.specialityView.getText().toString());
 
         b.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -48,9 +44,9 @@ public class UserSpecialityActivity extends BaseEntryActivity  {
                     public void done(AVException e) {
                         if(e == null)
                         {
-                            speInfo.setText(s);
+                            UserInfoActivity.specialityView.setText(s);
                             Utils.toast(R.string.saveSuccess);
-
+                            finish();
                         }
                         else
                         {

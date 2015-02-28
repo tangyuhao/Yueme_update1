@@ -20,7 +20,7 @@ import com.syc.yueme.util.Utils;
 public class UserSignActivity extends BaseEntryActivity {
 
 
-    TextView signInfo,signEdit;
+    TextView signEdit;
     String s;
 
     @Override
@@ -30,14 +30,10 @@ public class UserSignActivity extends BaseEntryActivity {
         initActionBar(R.string.sign);
         // TODO Auto-generated method stub
 
-        LayoutInflater factorys = LayoutInflater.from(UserSignActivity.this);
-        final View textEntryView = factorys.inflate(R.layout.user_info_activity, null);
-
-        signInfo = (TextView) textEntryView.findViewById(R.id.sign);
         signEdit = (TextView) findViewById(R.id.userSign);
         Button b = (Button) findViewById(R.id.save_btn);
 
-        signEdit.setText(signInfo.getText().toString());
+        signEdit.setText(UserInfoActivity.signView.getText().toString());
 
         b.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -50,9 +46,9 @@ public class UserSignActivity extends BaseEntryActivity {
                     public void done(AVException e) {
                         if(e == null)
                         {
-                            signInfo.setText(s);
+                            UserInfoActivity.signView.setText(s);
                             Utils.toast(R.string.saveSuccess);
-
+                            finish();
                         }
                         else
                         {
