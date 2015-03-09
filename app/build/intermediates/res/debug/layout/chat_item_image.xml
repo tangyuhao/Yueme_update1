@@ -5,4 +5,4 @@
     android:maxWidth="@dimen/chatImageWidth"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
-    android:src="@null" /><!-- From: file:/D:/github/yueme/app/src/main/res/layout/chat_item_image.xml -->
+    android:src="@null" /><!-- From: file:/Users/kawhi/AndroidStudioProjects/Yueme_update1/app/src/main/res/layout/chat_item_image.xml -->

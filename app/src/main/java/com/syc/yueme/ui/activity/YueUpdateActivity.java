@@ -75,16 +75,21 @@ public class YueUpdateActivity extends BaseActivity implements View.OnClickListe
             Date createTime = new Date();
             createTime.getTime();
 
-            AVObject Message = new AVObject("Message");
-            Message.put("contents", content);
-            Message.put("location", location);
-            Message.put("time", time);
-            Message.put("sendUser", curUser);
-            Message.put("createTime", createTime);
-            Message.put("username", curUser.getUsername());
-            Message.put("avatarUrl", User.getAvatarUrl(curUser));
+            AVObject message = new AVObject("Message");
+            message.put("contents", content);
+            message.put("location", location);
+            message.put("time", time);
+            message.put("sendUser", curUser);
+            message.put("createTime", createTime);
+            message.put("username", curUser.getUsername());
+            message.put("avatarUrl", User.getAvatarUrl(curUser));
 
-            Message.saveInBackground();
+            message.saveInBackground();
+
+            curUser.getRelation("sendMesg").add(message);
+            message.saveInBackground();
+
+
             Utils.toast("success!");
             MainActivity.goMainActivity(YueUpdateActivity.this);
             /*

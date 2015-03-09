@@ -69,8 +69,8 @@
                     android:id="@+id/myusername"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_centerInParent="true"
-                    android:text="username" />
+                    android:text="username"
+                    android:layout_centerHorizontal="true" />
             </RelativeLayout>
 
             <RelativeLayout
@@ -150,8 +150,9 @@
                     android:id="@+id/nickname"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_centerInParent="true"
-                    android:text="nickname" />
+                    android:text="nickname"
+                    android:layout_alignTop="@+id/nickname1"
+                    android:layout_centerInParent="true" />
                 <ImageView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -177,8 +178,9 @@
                     android:id="@+id/sex"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_centerInParent="true"
-                    android:text="sex" />
+                    android:text="sex"
+                    android:layout_alignTop="@+id/imageView2"
+                    android:layout_centerInParent="true" />
                 <ImageView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -186,7 +188,8 @@
                     android:layout_centerVertical="true"
                     android:layout_marginRight="10dp"
                     android:drawablePadding="10dp"
-                    android:src="@drawable/register_bottom_arrow" />
+                    android:src="@drawable/register_bottom_arrow"
+                    android:id="@+id/imageView2" />
             </RelativeLayout>
             <!--<RelativeLayout-->
                 <!--android:id="@+id/birthdayLayout"-->
@@ -291,8 +294,12 @@
                     android:id="@+id/sign"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_centerInParent="true"
-                    android:text="" />
+                    android:layout_marginLeft="30dp"
+                    android:layout_alignParentBottom="false"
+                    android:layout_toRightOf="@+id/sign1"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="20dp"
+                    android:singleLine="true" />
                 <ImageView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -318,8 +325,11 @@
                     android:id="@+id/characristics"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_centerInParent="true"
-                    android:text="" />
+                    android:layout_marginLeft="30dp"
+                    android:layout_alignTop="@+id/cha1"
+                    android:layout_toRightOf="@+id/cha1"
+                    android:layout_marginRight="20dp"
+                    android:singleLine="true" />
                 <ImageView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -346,8 +356,11 @@
                     android:id="@+id/hobbies"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_centerInParent="true"
-                    android:text="" />
+                    android:layout_marginLeft="30dp"
+                    android:layout_alignBottom="@+id/imageView3"
+                    android:layout_toRightOf="@+id/hobbies1"
+                    android:layout_marginRight="20dp"
+                    android:singleLine="true" />
                 <ImageView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -355,7 +368,8 @@
                     android:layout_centerVertical="true"
                     android:layout_marginRight="10dp"
                     android:drawablePadding="10dp"
-                    android:src="@drawable/register_bottom_arrow" />
+                    android:src="@drawable/register_bottom_arrow"
+                    android:id="@+id/imageView3" />
             </RelativeLayout>
             <RelativeLayout
                 android:id="@+id/specialityLayout"
@@ -373,8 +387,12 @@
                     android:id="@+id/speciality"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_centerInParent="true"
-                    android:text="" />
+                    android:layout_alignBottom="@+id/imageView4"
+                    android:layout_toRightOf="@+id/spe1"
+                    android:layout_marginLeft="30dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="20dp"
+                    android:singleLine="true" />
                 <ImageView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -382,7 +400,8 @@
                     android:layout_centerVertical="true"
                     android:layout_marginRight="10dp"
                     android:drawablePadding="10dp"
-                    android:src="@drawable/register_bottom_arrow" />
+                    android:src="@drawable/register_bottom_arrow"
+                    android:id="@+id/imageView4" />
             </RelativeLayout>
 
 
@@ -397,4 +416,4 @@
     </ScrollView>
 
 
-</LinearLayout><!-- From: file:/D:/github/yueme/app/src/main/res/layout/user_info_activity.xml -->
+</LinearLayout><!-- From: file:/Users/kawhi/AndroidStudioProjects/Yueme_update1/app/src/main/res/layout/user_info_activity.xml -->
