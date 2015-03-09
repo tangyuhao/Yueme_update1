@@ -67,6 +67,15 @@ public class UserService {
     CacheService.registerBatchUser(users);
     return users;
   }
+    public static List<AVUser> findlikeFriends() throws AVException {
+        AVUser curUser = AVUser.getCurrentUser();
+        AVRelation<AVUser> relation = curUser.getRelation(User.LIKEUSER);
+        relation.setTargetClass("_User");
+        AVQuery<AVUser> query = relation.getQuery(AVUser.class);
+        query.setCachePolicy(AVQuery.CachePolicy.NETWORK_ELSE_CACHE);
+        List<AVUser> users = query.find();
+        return users;
+    }
 
 
   public static List<AVUser> findNearbyPeople(int orderType, int skip, int limit) throws AVException {

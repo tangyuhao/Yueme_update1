@@ -11,7 +11,9 @@ import com.avos.avoscloud.AVUser;
 import com.syc.yueme.R;
 import com.syc.yueme.adapter.AddFriendAdapter;
 import com.syc.yueme.adapter.SpecialAttentionAdapter;
+import com.syc.yueme.avobject.AddRequest;
 import com.syc.yueme.base.App;
+import com.syc.yueme.service.AddRequestService;
 import com.syc.yueme.service.UserService;
 import com.syc.yueme.ui.view.xlist.XListView;
 import com.syc.yueme.util.ChatUtils;
@@ -28,7 +30,6 @@ public class GroupListActivity extends BaseActivity implements OnClickListener, 
     XListView listView;
     SpecialAttentionAdapter adapter;
     String searchName = "";
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         // TODO Auto-generated method stub
@@ -36,6 +37,7 @@ public class GroupListActivity extends BaseActivity implements OnClickListener, 
         setContentView(R.layout.contact_add_friend_activity);
         initView();
         search(searchName);
+
     }
 
     private void initView() {
@@ -81,7 +83,7 @@ public class GroupListActivity extends BaseActivity implements OnClickListener, 
 
             @Override
             protected void doInBack() throws Exception {
-                users = UserService.searchUser(searchName, adapter.getCount());
+                users = UserService.findlikeFriends();
             }
 
             @Override

@@ -46,6 +46,7 @@ public class ContactFragment extends BaseFragment implements OnItemClickListener
     HeaderLayout headerLayout;
     ImageView msgTipsView;
     LinearLayout newFriendLayout, groupLayout;
+    private String[] type = new String[] { "添加为特别关注","删除联系人" };
 
     static CharacterParser characterParser;
     static PinyinComparator pinyinComparator;
@@ -280,13 +281,44 @@ public class ContactFragment extends BaseFragment implements OnItemClickListener
     }
 
     public void showDeleteDialog(final SortUser user) {
-        new AlertDialog.Builder(ctx).setMessage(R.string.deleteContact)
-                .setPositiveButton(R.string.sure, new DialogInterface.OnClickListener() {
+        new AlertDialog.Builder(ctx)
+                .setTitle("请选择：")
+                .setSingleChoiceItems(type, 0,
+                        new DialogInterface.OnClickListener() {
+                            public void onClick(DialogInterface dialog, int which) {
+                                String types=type[which];
+                                if (types.equals("添加为特别关注")){
+                                    SpecialAttention(user);
+                                    dialog.dismiss();
+
+                                }else if (types.equals("删除联系人")){
+                                    deleteFriend(user);
+                                    dialog.dismiss();
+                                }
+                            }
+                        })
+                .setPositiveButton("确定", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
-                        deleteFriend(user);
+//                        String types=type[which];
+//                        if (types.equals("添加为特别关注")){
+//                            SpecialAttention(user);
+//                        }else if (types.equals("删除联系人")){
+//                            deleteFriend(user);
+//                        }
+                        dialog.dismiss();
                     }
-                }).setNegativeButton(R.string.cancel, null).show();
+                })
+                .setNegativeButton("取消", null)
+                .show();
+
+//        new AlertDialog.Builder(ctx).setMessage(R.string.deleteContact)
+//                .setPositiveButton(R.string.sure, new DialogInterface.OnClickListener() {
+//                    @Override
+//                    public void onClick(DialogInterface dialog, int which) {
+//                        deleteFriend(user);
+//                    }
+//                }).setNegativeButton(R.string.cancel, null).show();
     }
 
     private void deleteFriend(final SortUser user) {
@@ -299,6 +331,21 @@ public class ContactFragment extends BaseFragment implements OnItemClickListener
             @Override
             public void onSucceed() {
                 Utils.toast(App.ctx.getString(R.string.deleteSucceed));
+                onRefresh();
+            }
+        }.execute();
+    }
+    private void SpecialAttention(final SortUser user) {
+        new SimpleNetTask(ctx) {
+            @Override
+            protected void doInBack() throws Exception {
+                user.getInnerUser().getRelation("likeUser").add(AVUser.getCurrentUser());
+                user.getInnerUser().saveInBackground();
+            }
+
+            @Override
+            public void onSucceed() {
+                Utils.toast(App.ctx.getString(R.string.addSucceed));
                 onRefresh();
             }
         }.execute();

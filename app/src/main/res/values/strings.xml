@@ -170,6 +170,7 @@
     <string name="sport">约运动</string>
     <string name="eat">约美食</string>
     <string name="others">约其他</string>
+    <string name="addSucceed">添加成功</string>
 
     <string-array name="school_array">
         <item>复旦大学</item>

@@ -83,6 +83,7 @@ public class MessageService {
         }
         return comments;
     }
+
     public static List<AVObject> findeattypeByMsg(int skip, int limit) throws AVException {
         AVQuery<AVObject> query = new AVQuery<AVObject>("Message");
         query.whereEqualTo("type", "美食");
