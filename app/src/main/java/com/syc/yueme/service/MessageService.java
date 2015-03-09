@@ -83,6 +83,76 @@ public class MessageService {
         }
         return comments;
     }
+    public static List<AVObject> findeattypeByMsg(int skip, int limit) throws AVException {
+        AVQuery<AVObject> query = new AVQuery<AVObject>("Message");
+        query.whereEqualTo("type", "美食");
+        query.orderByDescending("createdAt");
+        query.skip(skip);
+        query.limit(limit);
+        query.setCachePolicy(AVQuery.CachePolicy.NETWORK_ELSE_CACHE);
+
+        List<AVObject> message = query.find();
+        for (AVObject msg : message) {
+            // msg.getAVObject("sendUser").fetch();
+        }
+        return message;
+    }
+    public static List<AVObject> findplaytypeByMsg(int skip, int limit) throws AVException {
+        AVQuery<AVObject> query = new AVQuery<AVObject>("Message");
+        query.whereEqualTo("type", "娱乐");
+        query.orderByDescending("createdAt");
+        query.skip(skip);
+        query.limit(limit);
+        query.setCachePolicy(AVQuery.CachePolicy.NETWORK_ELSE_CACHE);
+
+        List<AVObject> message = query.find();
+        for (AVObject msg : message) {
+            // msg.getAVObject("sendUser").fetch();
+        }
+        return message;
+    }
+    public static List<AVObject> findsporttypeByMsg(int skip, int limit) throws AVException {
+        AVQuery<AVObject> query = new AVQuery<AVObject>("Message");
+        query.whereEqualTo("type", "运动");
+        query.orderByDescending("createdAt");
+        query.skip(skip);
+        query.limit(limit);
+        query.setCachePolicy(AVQuery.CachePolicy.NETWORK_ELSE_CACHE);
+
+        List<AVObject> message = query.find();
+        for (AVObject msg : message) {
+            // msg.getAVObject("sendUser").fetch();
+        }
+        return message;
+    }
+    public static List<AVObject> findstudytypeByMsg(int skip, int limit) throws AVException {
+        AVQuery<AVObject> query = new AVQuery<AVObject>("Message");
+        query.whereEqualTo("type", "学习");
+        query.orderByDescending("createdAt");
+        query.skip(skip);
+        query.limit(limit);
+        query.setCachePolicy(AVQuery.CachePolicy.NETWORK_ELSE_CACHE);
+
+        List<AVObject> message = query.find();
+        for (AVObject msg : message) {
+            // msg.getAVObject("sendUser").fetch();
+        }
+        return message;
+    }
+    public static List<AVObject> findothertypeByMsg(int skip, int limit) throws AVException {
+        AVQuery<AVObject> query = new AVQuery<AVObject>("Message");
+        query.whereEqualTo("type", "其他");
+        query.orderByDescending("createdAt");
+        query.skip(skip);
+        query.limit(limit);
+        query.setCachePolicy(AVQuery.CachePolicy.NETWORK_ELSE_CACHE);
+
+        List<AVObject> message = query.find();
+        for (AVObject msg : message) {
+            // msg.getAVObject("sendUser").fetch();
+        }
+        return message;
+    }
     public static List<AVObject> findCommentsByMsg2(AVObject msg, int skip, int limit) throws AVException {
 
         AVQuery<AVObject> query =  AVRelation.reverseQuery("Comments", "BelongMsg", msg);

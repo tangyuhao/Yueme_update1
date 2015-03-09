@@ -50,7 +50,7 @@ public class DiscoverFragment extends BaseFragment {
     Button yueButton;
     @InjectView(R.id.list_near)
     BaseListView<AVObject> listView;
-    private String[] type = new String[] { "生活", "学习", "锻炼", "娱乐", "其他" };
+    private String[] type = new String[] { "全部显示","美食", "学习", "运动", "娱乐", "其他" };
     private ListView lv;
 
     NearPeopleAdapter adapter;
@@ -71,7 +71,7 @@ public class DiscoverFragment extends BaseFragment {
             @Override
             public void onClick(View v) {
 //                Utils.goActivity(ctx, YueUpdateActivity.class);
-                showMultiChoiceItems();
+                showSingleChoiceItems();
             }
 
         });
@@ -84,59 +84,172 @@ public class DiscoverFragment extends BaseFragment {
         });
 
     }
-    private void showMultiChoiceItems()
+    private void intallHeader() {
+        headerLayout = (HeaderLayout) getView().findViewById(R.id.headerLayout);
+        headerLayout.showTitle(App.ctx.getString(R.string.discover));
+
+//        headerLayout.showRightImageButton(R.drawable.base_action_bar_filter, new OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+////                Utils.goActivity(ctx, YueUpdateActivity.class);
+//                showSingleChoiceItems();
+//            }
+//
+//        });
+//        headerLayout.showRightImageButton(R.drawable.base_action_bar_add_bg_selector, new OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                Utils.goActivity(ctx, YueUpdateActivity.class);
+//            }
+//
+//        });
+
+    }
+    private void intplayHeader() {
+        headerLayout = (HeaderLayout) getView().findViewById(R.id.headerLayout);
+        headerLayout.showTitle(App.ctx.getString(R.string.play));
+
+//        headerLayout.showRightImageButton(R.drawable.base_action_bar_filter, new OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+////                Utils.goActivity(ctx, YueUpdateActivity.class);
+//                showMultiChoiceItems();
+//            }
+//
+//        });
+//        headerLayout.showRightImageButton(R.drawable.base_action_bar_add_bg_selector, new OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                Utils.goActivity(ctx, YueUpdateActivity.class);
+//            }
+//
+//        });
+
+    }
+    private void intstudyHeader() {
+        headerLayout = (HeaderLayout) getView().findViewById(R.id.headerLayout);
+        headerLayout.showTitle(App.ctx.getString(R.string.study));
+
+//        headerLayout.showRightImageButton(R.drawable.base_action_bar_filter, new OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+////                Utils.goActivity(ctx, YueUpdateActivity.class);
+//                showMultiChoiceItems();
+//            }
+//
+//        });
+//        headerLayout.showRightImageButton(R.drawable.base_action_bar_add_bg_selector, new OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                Utils.goActivity(ctx, YueUpdateActivity.class);
+//            }
+//
+//        });
+
+    }
+    private void inteatHeader() {
+        headerLayout = (HeaderLayout) getView().findViewById(R.id.headerLayout);
+        headerLayout.showTitle(App.ctx.getString(R.string.eat));
+
+//        headerLayout.showRightImageButton(R.drawable.base_action_bar_filter, new OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+////                Utils.goActivity(ctx, YueUpdateActivity.class);
+//                showMultiChoiceItems();
+//            }
+//
+//        });
+//        headerLayout.showRightImageButton(R.drawable.base_action_bar_add_bg_selector, new OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                Utils.goActivity(ctx, YueUpdateActivity.class);
+//            }
+//
+//        });
+
+    }
+    private void intsportHeader() {
+        headerLayout = (HeaderLayout) getView().findViewById(R.id.headerLayout);
+        headerLayout.showTitle(App.ctx.getString(R.string.sport));
+
+//        headerLayout.showRightImageButton(R.drawable.base_action_bar_filter, new OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+////                Utils.goActivity(ctx, YueUpdateActivity.class);
+//                showMultiChoiceItems();
+//            }
+//
+//        });
+//        headerLayout.showRightImageButton(R.drawable.base_action_bar_add_bg_selector, new OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                Utils.goActivity(ctx, YueUpdateActivity.class);
+//            }
+//
+//        });
+
+    }
+    private void intothersHeader() {
+        headerLayout = (HeaderLayout) getView().findViewById(R.id.headerLayout);
+        headerLayout.showTitle(App.ctx.getString(R.string.others));
+
+//        headerLayout.showRightImageButton(R.drawable.base_action_bar_filter, new OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+////                Utils.goActivity(ctx, YueUpdateActivity.class);
+//                showMultiChoiceItems();
+//            }
+//
+//        });
+//        headerLayout.showRightImageButton(R.drawable.base_action_bar_add_bg_selector, new OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                Utils.goActivity(ctx, YueUpdateActivity.class);
+//            }
+//
+//        });
+
+    }
+    private void showSingleChoiceItems()
     {
-        AlertDialog builder = new AlertDialog.Builder(ctx)
-                .setTitle("请选择约的类别：")
-                .setMultiChoiceItems(type,
-                        new boolean[] { true, true, true, true, true },
-                        new DialogInterface.OnMultiChoiceClickListener()
-                        {
+        new AlertDialog.Builder(ctx)
+                .setTitle("请选择约的类型")
+                .setSingleChoiceItems(type, 0,
+                        new DialogInterface.OnClickListener() {
 
-                            @Override
-                            public void onClick(DialogInterface dialog,
-                                                int which, boolean isChecked)
-                            {
-                                // TODO Auto-generated method stub
-
-                            }
-                        })
-                .setPositiveButton("确定", new DialogInterface.OnClickListener()
-                {
-
-                    @Override
-                    public void onClick(DialogInterface dialog, int which)
-                    {
-
-                        String s = "您选择了：";
-                        // 扫描所有的列表项，如果当前列表项被选中，将列表项的文本追加到s变量中。
-                        for (int i = 0; i < type.length; i++)
-                        {
-                            if (lv.getCheckedItemPositions().get(i))
-                            {
-                                s += i + ":" + lv.getAdapter().getItem(i) + " ";
+                            public void onClick(DialogInterface dialog, int which) {
+                                String types=type[which];
+                                if (types.equals("美食")){
+                                    inteatHeader();
+                                    initeatXListView();
+                                    listView.onRefresh();
+                                }else if (types.equals("学习")){
+                                    intstudyHeader();
+                                    initstudyXListView();
+                                    listView.onRefresh();
+                                }else if (types.equals("运动")){
+                                    intsportHeader();
+                                    initsportXListView();
+                                    listView.onRefresh();
+                                }else if (types.equals("娱乐")){
+                                    intplayHeader();
+                                    initplayXListView();
+                                    listView.onRefresh();
+                                }else if (types.equals("其他")){
+                                    intothersHeader();
+                                    initotherXListView();
+                                    listView.onRefresh();
+                                }else{
+                                    intallHeader();
+                                    initXListView();
+                                    listView.onRefresh();
+                                }
+                                dialog.dismiss();
                             }
                         }
-
-                        // 用户至少选择了一个列表项
-//                        if (lv.getCheckedItemPositions().size() > 0)
-//                        {
-//                            new AlertDialog.Builder(MainActivity.this)
-//                                    .setMessage(s).show();
-//                            System.out.println(lv.getCheckedItemPositions().size());
-//                        }
-//
-//                        // 用户未选择任何列表项
-//                        else if(lv.getCheckedItemPositions().size() <= 0 )
-//                        {
-//                            new AlertDialog.Builder(DiscoverFragment.this)
-//                                    .setMessage("您未选择任何类别").show();
-//                        }
-                    }
-                }).setNegativeButton("取消", null).create();
-        //
-        lv = builder.getListView();
-        builder.show();
+                )
+                .setNegativeButton("取消", null)
+                .show();
 
     }
 //    private void findView() {
@@ -158,7 +271,7 @@ public class DiscoverFragment extends BaseFragment {
     @Override
     public void onActivityCreated(Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
-        headerLayout.showTitle(R.string.discover);
+//        headerLayout.showTitle(R.string.discover);
 //        headerLayout.showRightImageButton(R.drawable.nearby_order, new View.OnClickListener() {
 //            @Override
 //            public void onClick(View v) {
@@ -194,7 +307,108 @@ public class DiscoverFragment extends BaseFragment {
         listView.init(new BaseListView.DataInterface<AVObject>() {
             @Override
             public List<AVObject> getDatas(int skip, int limit, List<AVObject> currentDatas) throws Exception {
+//                List<AVObject> msgs = MessageService.findMsg(skip, limit);
                 List<AVObject> msgs = MessageService.findMsg(skip, limit);
+                return msgs;
+            }
+
+            @Override
+            public void onItemSelected(AVObject item) {
+            }
+        }, adapter);
+        listView.onRefresh();
+//        PauseOnScrollListener listener = new PauseOnScrollListener(MessageService.imageLoader,
+//                true, true);
+//        listView.setOnScrollListener(listener);
+    }
+    private void initeatXListView() {
+        adapter = new NearPeopleAdapter(ctx, nears);
+        listView = (BaseListView<AVObject>) getView().findViewById(R.id.list_near);
+        listView.init(new BaseListView.DataInterface<AVObject>() {
+            @Override
+            public List<AVObject> getDatas(int skip, int limit, List<AVObject> currentDatas) throws Exception {
+//                List<AVObject> msgs = MessageService.findMsg(skip, limit);
+                List<AVObject> msgs = MessageService.findeattypeByMsg(skip, limit);
+                return msgs;
+            }
+
+            @Override
+            public void onItemSelected(AVObject item) {
+            }
+        }, adapter);
+        listView.onRefresh();
+//        PauseOnScrollListener listener = new PauseOnScrollListener(MessageService.imageLoader,
+//                true, true);
+//        listView.setOnScrollListener(listener);
+    }
+    private void initsportXListView() {
+        adapter = new NearPeopleAdapter(ctx, nears);
+        listView = (BaseListView<AVObject>) getView().findViewById(R.id.list_near);
+        listView.init(new BaseListView.DataInterface<AVObject>() {
+            @Override
+            public List<AVObject> getDatas(int skip, int limit, List<AVObject> currentDatas) throws Exception {
+//                List<AVObject> msgs = MessageService.findMsg(skip, limit);
+                List<AVObject> msgs = MessageService.findsporttypeByMsg(skip, limit);
+                return msgs;
+            }
+
+            @Override
+            public void onItemSelected(AVObject item) {
+            }
+        }, adapter);
+        listView.onRefresh();
+//        PauseOnScrollListener listener = new PauseOnScrollListener(MessageService.imageLoader,
+//                true, true);
+//        listView.setOnScrollListener(listener);
+    }
+    private void initstudyXListView() {
+        adapter = new NearPeopleAdapter(ctx, nears);
+        listView = (BaseListView<AVObject>) getView().findViewById(R.id.list_near);
+        listView.init(new BaseListView.DataInterface<AVObject>() {
+            @Override
+            public List<AVObject> getDatas(int skip, int limit, List<AVObject> currentDatas) throws Exception {
+//                List<AVObject> msgs = MessageService.findMsg(skip, limit);
+                List<AVObject> msgs = MessageService.findstudytypeByMsg(skip, limit);
+                return msgs;
+            }
+
+            @Override
+            public void onItemSelected(AVObject item) {
+            }
+        }, adapter);
+        listView.onRefresh();
+//        PauseOnScrollListener listener = new PauseOnScrollListener(MessageService.imageLoader,
+//                true, true);
+//        listView.setOnScrollListener(listener);
+    }
+    private void initplayXListView() {
+        adapter = new NearPeopleAdapter(ctx, nears);
+        listView = (BaseListView<AVObject>) getView().findViewById(R.id.list_near);
+        listView.init(new BaseListView.DataInterface<AVObject>() {
+            @Override
+            public List<AVObject> getDatas(int skip, int limit, List<AVObject> currentDatas) throws Exception {
+//                List<AVObject> msgs = MessageService.findMsg(skip, limit);
+                List<AVObject> msgs = MessageService.findplaytypeByMsg(skip, limit);
+                return msgs;
+            }
+
+            @Override
+            public void onItemSelected(AVObject item) {
+            }
+        }, adapter);
+        listView.onRefresh();
+//        PauseOnScrollListener listener = new PauseOnScrollListener(MessageService.imageLoader,
+//                true, true);
+//        listView.setOnScrollListener(listener);
+    }
+    private void initotherXListView() {
+        adapter = new NearPeopleAdapter(ctx, nears);
+        listView = (BaseListView<AVObject>) getView().findViewById(R.id.list_near);
+        listView.init(new BaseListView.DataInterface<AVObject>() {
+            @Override
+            public List<AVObject> getDatas(int skip, int limit, List<AVObject> currentDatas) throws Exception {
+//                List<AVObject> msgs = MessageService.findMsg(skip, limit);
+                List<AVObject> msgs = MessageService.findeattypeByMsg(skip, limit);
                 return msgs;
             }
 

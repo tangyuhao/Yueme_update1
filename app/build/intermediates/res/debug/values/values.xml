@@ -13,9 +13,9 @@
         <item>\@sjtu.edu.cn</item>
     </string-array>
     <string-array name="type_array">
-        <item>生活</item>
+        <item>美食</item>
         <item>学习</item>
-        <item>锻炼</item>
+        <item>运动</item>
         <item>娱乐</item>
         <item>其他</item>
     </string-array>
@@ -123,6 +123,7 @@
     <string name="detailInfo">详细资料</string>
     <string name="discover">约么</string>
     <string name="distance">距离</string>
+    <string name="eat">约美食</string>
     <string name="email_input">请输入学号邮箱</string>
     <string name="emotion">表情</string>
     <string name="emptyStr"/>
@@ -180,6 +181,7 @@
     <string name="notifySetting">相关设置</string>
     <string name="notifyWhenNews">接收新消息通知</string>
     <string name="oldPassword">旧密码</string>
+    <string name="others">约其他</string>
     <string name="password">密码</string>
     <string name="passwordResetNotice">请在下面输入您的用户名和学号邮箱，验证正确之后，我们将发送一份重置密码的指令到您的邮箱</string>
     <string name="password_can_not_null">密码不能为空</string>
@@ -187,6 +189,7 @@
     <string name="peoples">民族</string>
     <string name="personalInfo">个人资料</string>
     <string name="picture">照片</string>
+    <string name="play">约娱乐</string>
     <string name="pleaseCheckNetwork">请检查网络</string>
     <string name="pleaseSayMore">说多点吧～</string>
     <string name="please_choose">请选择</string>
@@ -223,11 +226,13 @@
     <string name="sort">排序</string>
     <string name="specialattention">特别关注</string>
     <string name="speciality">特长</string>
+    <string name="sport">约运动</string>
     <string name="status_offline">[离线请留言]</string>
     <string name="status_online">[在线]</string>
     <string name="stuId">学号</string>
     <string name="student_id">学号</string>
     <string name="student_id_empty">学号不能为空</string>
+    <string name="study">约学习</string>
     <string name="sure">确定</string>
     <string name="sureToUpdate">确定更新版本吗</string>
     <string name="talk">聊天</string>
