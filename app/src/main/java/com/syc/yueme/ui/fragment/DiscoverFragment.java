@@ -32,6 +32,7 @@ import com.nostra13.universalimageloader.core.listener.PauseOnScrollListener;
 import android.view.View.OnClickListener;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ListView;
 import android.widget.RelativeLayout;
 
 import com.syc.yueme.ui.view.HeaderLayout;
@@ -49,6 +50,8 @@ public class DiscoverFragment extends BaseFragment {
     Button yueButton;
     @InjectView(R.id.list_near)
     BaseListView<AVObject> listView;
+    private String[] type = new String[] { "生活", "学习", "锻炼", "娱乐", "其他" };
+    private ListView lv;
 
     NearPeopleAdapter adapter;
     List<AVObject> nears = new ArrayList<AVObject>();
@@ -67,7 +70,8 @@ public class DiscoverFragment extends BaseFragment {
         headerLayout.showRightImageButton(R.drawable.base_action_bar_filter, new OnClickListener() {
             @Override
             public void onClick(View v) {
-                Utils.goActivity(ctx, YueUpdateActivity.class);
+//                Utils.goActivity(ctx, YueUpdateActivity.class);
+                showMultiChoiceItems();
             }
 
         });
@@ -78,6 +82,61 @@ public class DiscoverFragment extends BaseFragment {
             }
 
         });
+
+    }
+    private void showMultiChoiceItems()
+    {
+        AlertDialog builder = new AlertDialog.Builder(ctx)
+                .setTitle("请选择约的类别：")
+                .setMultiChoiceItems(type,
+                        new boolean[] { true, true, true, true, true },
+                        new DialogInterface.OnMultiChoiceClickListener()
+                        {
+
+                            @Override
+                            public void onClick(DialogInterface dialog,
+                                                int which, boolean isChecked)
+                            {
+                                // TODO Auto-generated method stub
+
+                            }
+                        })
+                .setPositiveButton("确定", new DialogInterface.OnClickListener()
+                {
+
+                    @Override
+                    public void onClick(DialogInterface dialog, int which)
+                    {
+
+                        String s = "您选择了：";
+                        // 扫描所有的列表项，如果当前列表项被选中，将列表项的文本追加到s变量中。
+                        for (int i = 0; i < type.length; i++)
+                        {
+                            if (lv.getCheckedItemPositions().get(i))
+                            {
+                                s += i + ":" + lv.getAdapter().getItem(i) + " ";
+                            }
+                        }
+
+                        // 用户至少选择了一个列表项
+//                        if (lv.getCheckedItemPositions().size() > 0)
+//                        {
+//                            new AlertDialog.Builder(MainActivity.this)
+//                                    .setMessage(s).show();
+//                            System.out.println(lv.getCheckedItemPositions().size());
+//                        }
+//
+//                        // 用户未选择任何列表项
+//                        else if(lv.getCheckedItemPositions().size() <= 0 )
+//                        {
+//                            new AlertDialog.Builder(DiscoverFragment.this)
+//                                    .setMessage("您未选择任何类别").show();
+//                        }
+                    }
+                }).setNegativeButton("取消", null).create();
+        //
+        lv = builder.getListView();
+        builder.show();
 
     }
 //    private void findView() {

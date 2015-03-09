@@ -59,6 +59,15 @@
         android:shadowRadius="1.0"
         android:textColorHint="#ffdddddd"/>
 
+    <Spinner
+        android:id="@+id/spin_type"
+        android:layout_width="300dp"
+        android:layout_height="@dimen/base_action_bar_height"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="center"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="0dp" />
+
     <Button
         android:id="@+id/btn_yue_update"
         android:layout_width="match_parent"
@@ -68,8 +77,9 @@
         android:gravity="center"
         android:text="发布"
         android:textColor="@color/base_color_text_white"
-        android:textSize="@dimen/text_size_large" />
+        android:textSize="@dimen/text_size_large"
+        android:layout_marginBottom="0dp" />
 
 
 </LinearLayout>
-<!-- From: file:/Users/kawhi/AndroidStudioProjects/Yueme_update1/app/src/main/res/layout/yue_update_activity.xml -->
+<!-- From: file:/D:/git_master3/Yueme_update1/app/src/main/res/layout/yue_update_activity.xml -->

@@ -164,6 +164,7 @@
     <string name="talk">聊天</string>
     <string name="deleteSpecial">删除特别关注</string>
     <string name="Choose">请选择</string>
+    <string name="choose_type">您的发布信息不完整，请重新输入！</string>
 
     <string-array name="school_array">
         <item>复旦大学</item>
@@ -174,6 +175,13 @@
         <item>\@fudan.edu.cn</item>
         <item>\@tongji.edu.cn</item>
         <item>\@sjtu.edu.cn</item>
+    </string-array>
+    <string-array name="type_array">
+        <item>生活</item>
+        <item>学习</item>
+        <item>锻炼</item>
+        <item>娱乐</item>
+        <item>其他</item>
     </string-array>
 
     <string name="title_activity_user_info">UserInfoActivity</string>
