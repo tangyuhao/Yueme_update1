@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <!-- From: file:/D:/git_master3/Yueme_update1/app/src/main/res/values/strings.xml -->
+    <!-- From: file:/Users/kawhi/AndroidStudioProjects/Yueme_update1/app/src/main/res/values/strings.xml -->
     <eat-comment/>
     <string-array name="school_array">
         <item>复旦大学</item>
@@ -19,12 +19,12 @@
         <item>娱乐</item>
         <item>其他</item>
     </string-array>
-    <!-- From: file:/D:/git_master3/Yueme_update1/app/src/main/res/values/bools.xml -->
+    <!-- From: file:/Users/kawhi/AndroidStudioProjects/Yueme_update1/app/src/main/res/values/bools.xml -->
     <eat-comment/>
     <bool name="defaultNotifyWhenNews">true</bool>
     <bool name="defaultVibrateNotify">true</bool>
     <bool name="defaultVoiceNotify">true</bool>
-    <!-- From: file:/D:/git_master3/Yueme_update1/app/src/main/res/values/colors.xml -->
+    <!-- From: file:/Users/kawhi/AndroidStudioProjects/Yueme_update1/app/src/main/res/values/colors.xml -->
     <eat-comment/>
     <color name="base_actionbar_bg">#f5f5f5</color>
     <color name="base_bg">#f4f6f6</color>
@@ -50,7 +50,7 @@
     <color name="white">#fff</color>
     <declare-styleable name="CircleButton"><attr format="color" name="cb_color"/><attr format="dimension" name="cb_pressedRingWidth"/></declare-styleable>
     <declare-styleable name="PlayBtn"><attr format="boolean" name="left"/></declare-styleable>
-    <!-- From: file:/D:/git_master3/Yueme_update1/app/src/main/res/values/dimens.xml -->
+    <!-- From: file:/Users/kawhi/AndroidStudioProjects/Yueme_update1/app/src/main/res/values/dimens.xml -->
     <eat-comment/>
     <dimen name="ActionBarMenuSize">16sp</dimen>
     <dimen name="activity_horizontal_margin">16dp</dimen>
@@ -81,7 +81,7 @@
     <dimen name="tip_icon_size">10dp</dimen>
     <dimen name="titlebar_text_size">18sp</dimen>
     <dimen name="userHead">45dp</dimen>
-    <!-- From: file:/D:/git_master3/Yueme_update1/app/src/main/res/values/strings.xml -->
+    <!-- From: file:/Users/kawhi/AndroidStudioProjects/Yueme_update1/app/src/main/res/values/strings.xml -->
     <eat-comment/>
     <string name="Choose">请选择</string>
     <string name="YPA">YPA</string>
@@ -263,7 +263,7 @@
     <string name="xlistview_footer_hint_normal">查看更多</string>
     <string name="xlistview_footer_hint_ready">松开载入更多</string>
     <string name="yue">约！</string>
-    <!-- From: file:/D:/git_master3/Yueme_update1/app/src/main/res/values/styles.xml -->
+    <!-- From: file:/Users/kawhi/AndroidStudioProjects/Yueme_update1/app/src/main/res/values/styles.xml -->
     <eat-comment/>
     <style name="ActionBar">
         <item name="android:orientation">horizontal</item>

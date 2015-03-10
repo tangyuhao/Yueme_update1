@@ -92,6 +92,10 @@ public class NearPeopleAdapter extends BaseListAdapter<AVObject> {
             public void onClick(View v) {
                 message.getRelation("likeUser").add(AVUser.getCurrentUser());
                 message.saveInBackground();
+                AVUser user = AVUser.getCurrentUser();
+                User.changeLikeMesg(user, message, User.relationMode_user.ADD);
+                user.saveInBackground();
+
             }
         });
         final CircleButton talkButton = ViewHolder.findViewById(convertView, R.id.talkBtn);
@@ -119,6 +123,9 @@ public class NearPeopleAdapter extends BaseListAdapter<AVObject> {
             public void onClick(View v) {
                 message.getRelation("yueUser").add(AVUser.getCurrentUser());
                 message.saveInBackground();
+                AVUser user = AVUser.getCurrentUser();
+                User.changeTryYueMesg(user, message, User.relationMode_user.ADD);
+                user.saveInBackground();
             }
         });
 

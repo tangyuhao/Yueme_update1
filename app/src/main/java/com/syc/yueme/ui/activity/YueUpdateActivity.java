@@ -44,6 +44,8 @@ import com.nostra13.universalimageloader.core.ImageLoaderConfiguration;
 import com.nostra13.universalimageloader.utils.StorageUtils;
 
 import java.io.File;
+import java.util.List;
+import java.util.Objects;
 
 import com.syc.yueme.R;
 import com.syc.yueme.util.Utils;
@@ -56,6 +58,9 @@ public class YueUpdateActivity extends BaseActivity implements View.OnClickListe
     ArrayAdapter<String> typeAdapter = null; //学校选择适配器
     private String[] types = null;//存放学校内容的数组
     String type = null;
+//    AVObject message;
+//    AVUser curUser;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -181,10 +186,27 @@ public class YueUpdateActivity extends BaseActivity implements View.OnClickListe
                 message.put("username", curUser.getUsername());
                 message.put("avatarUrl", User.getAvatarUrl(curUser));
                 message.saveInBackground();
-                curUser.getRelation("sendMesg").add(message);
-                message.saveInBackground();
+
+
+
+//                AVQuery<AVObject> query = AVQuery.getQuery("Message");
+//                query.whereEqualTo("objectId",message.getObjectId());
+//                query.findInBackground(new FindCallback<AVObject>() {
+//                    @Override
+//                    public void done(List<AVObject> avObjects, AVException e) {
+//                      //  User.changeSendMesg( curUser , avObjects.get(0), User.relationMode_user.ADD);
+//                        curUser.getRelation("sendMesg").add(message);
+//                        curUser.saveInBackground();
+//                    }
+//                });
+
+//                后台保存已发状态
+
                 Utils.toast("success!");
-                MainActivity.goMainActivity(YueUpdateActivity.this);
+
+                finish();
+
+               // MainActivity.goMainActivity(YueUpdateActivity.this);
 
             /*
             Message.saveInBackground(new SaveCallback() {
