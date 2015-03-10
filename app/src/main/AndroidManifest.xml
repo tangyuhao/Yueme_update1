@@ -206,9 +206,20 @@
         </activity>
         <activity
             android:name=".ui.activity.UserNicknameActivity"
-            android:theme="@style/MainTheme"
-            android:label="@string/title_activity_user_nickname" >
+            android:label="@string/title_activity_user_nickname"
+            android:theme="@style/MainTheme" >
         </activity>
+
+        <service
+            android:name=".service.receiver.MyYueMessageService"
+            android:enabled="true"
+            android:exported="true" >
+        </service>
+        <service
+            android:name=".service.MyYueMessageService"
+            android:enabled="true"
+            android:exported="true" >
+        </service>
     </application>
 
 </manifest>

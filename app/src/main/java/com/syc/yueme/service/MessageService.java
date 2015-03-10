@@ -62,11 +62,11 @@ public class MessageService {
 
     public static List<AVObject> findYingMessage(AVUser user, int skip, int limit) throws AVException {
         AVQuery<AVObject> message_query = new AVQuery<AVObject>("Message");
-        List<AVObject> message_list = message_query.find();
         message_query.skip(skip);
         message_query.limit(limit);
         message_query.orderByDescending("createdAt");
         message_query.setCachePolicy(AVQuery.CachePolicy.NETWORK_ELSE_CACHE);
+        List<AVObject> message_list = message_query.find();
         int index = message_list.size();
         String uname = user.getUsername();
         Log.i("新的总的message数", String.valueOf(index));

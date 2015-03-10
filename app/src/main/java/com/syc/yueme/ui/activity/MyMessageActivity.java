@@ -7,6 +7,7 @@ import com.avos.avoscloud.AVObject;
 import com.avos.avoscloud.AVUser;
 import com.syc.yueme.R;
 import com.syc.yueme.adapter.MyMessageAdapter;
+import com.syc.yueme.adapter.NearPeopleAdapter;
 import com.syc.yueme.service.MessageService;
 import com.syc.yueme.ui.view.BaseListView;
 
