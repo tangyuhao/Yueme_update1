@@ -20,65 +20,65 @@ import java.util.List;
 
 public class NewFriendAdapter extends BaseListAdapter<AddRequest> {
 
-  public NewFriendAdapter(Context context, List<AddRequest> list) {
-    super(context, list);
-    // TODO Auto-generated constructor stub
-  }
-
-  @Override
-  public View getView(int position, View conView, ViewGroup parent) {
-    // TODO Auto-generated method stub
-    if (conView == null) {
-      LayoutInflater mInflater = LayoutInflater.from(ctx);
-      conView = mInflater.inflate(R.layout.contact_add_friend_item, null);
+    public NewFriendAdapter(Context context, List<AddRequest> list) {
+        super(context, list);
+        // TODO Auto-generated constructor stub
     }
-    final AddRequest addRequest = datas.get(position);
-    TextView nameView = ViewHolder.findViewById(conView, R.id.name);
-    ImageView avatarView = ViewHolder.findViewById(conView, R.id.avatar);
-    final Button addBtn = ViewHolder.findViewById(conView, R.id.add);
 
-    UserService.displayAvatar(addRequest.getFromUser(),avatarView);
-    int status = addRequest.getStatus();
-    if (status == AddRequest.STATUS_WAIT) {
-      addBtn.setOnClickListener(new OnClickListener() {
-
-        @Override
-        public void onClick(View arg0) {
-          // TODO Auto-generated method stub
-          agreeAdd(addBtn, addRequest);
+    @Override
+    public View getView(int position, View conView, ViewGroup parent) {
+        // TODO Auto-generated method stub
+        if (conView == null) {
+            LayoutInflater mInflater = LayoutInflater.from(ctx);
+            conView = mInflater.inflate(R.layout.contact_add_friend_item, null);
         }
-      });
-    } else if (status == AddRequest.STATUS_DONE) {
-      toAgreedTextView(addBtn);
-    }
-    if(addRequest.getFromUser()!=null){
-      nameView.setText(addRequest.getFromUser().getUsername());
-    }
-    return conView;
-  }
+        final AddRequest addRequest = datas.get(position);
+        TextView nameView = ViewHolder.findViewById(conView, R.id.name);
+        ImageView avatarView = ViewHolder.findViewById(conView, R.id.avatar);
+        final Button addBtn = ViewHolder.findViewById(conView, R.id.add);
 
-  public void toAgreedTextView(Button addBtn) {
-    addBtn.setText(R.string.agreed);
-    addBtn.setBackgroundDrawable(null);
-    addBtn.setTextColor(Utils.getColor(R.color.base_color_text_black));
-    addBtn.setEnabled(false);
-  }
+        UserService.displayAvatar(addRequest.getFromUser(),avatarView);
+        int status = addRequest.getStatus();
+        if (status == AddRequest.STATUS_WAIT) {
+            addBtn.setOnClickListener(new OnClickListener() {
 
-  private void agreeAdd(final Button addBtn, final AddRequest addRequest) {
-    new NetAsyncTask(ctx) {
-      @Override
-      protected void doInBack() throws Exception {
-        CloudService.agreeAddRequest(addRequest.getObjectId());
-      }
-
-      @Override
-      protected void onPost(Exception e) {
-        if (e != null) {
-          Utils.toast(e.getMessage());
-        } else {
-          toAgreedTextView(addBtn);
+                @Override
+                public void onClick(View arg0) {
+                    // TODO Auto-generated method stub
+                    agreeAdd(addBtn, addRequest);
+                }
+            });
+        } else if (status == AddRequest.STATUS_DONE) {
+            toAgreedTextView(addBtn);
         }
-      }
-    }.execute();
-  }
+        if(addRequest.getFromUser()!=null){
+            nameView.setText(addRequest.getFromUser().getUsername());
+        }
+        return conView;
+    }
+
+    public void toAgreedTextView(Button addBtn) {
+        addBtn.setText(R.string.agreed);
+        addBtn.setBackgroundDrawable(null);
+        addBtn.setTextColor(Utils.getColor(R.color.base_color_text_black));
+        addBtn.setEnabled(false);
+    }
+
+    private void agreeAdd(final Button addBtn, final AddRequest addRequest) {
+        new NetAsyncTask(ctx) {
+            @Override
+            protected void doInBack() throws Exception {
+                CloudService.agreeAddRequest(addRequest.getObjectId());
+            }
+
+            @Override
+            protected void onPost(Exception e) {
+                if (e != null) {
+                    Utils.toast(e.getMessage());
+                } else {
+                    toAgreedTextView(addBtn);
+                }
+            }
+        }.execute();
+    }
 }

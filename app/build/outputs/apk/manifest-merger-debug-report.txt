@@ -390,19 +390,11 @@ ADDED from AndroidManifest.xml:207:9
 		ADDED from AndroidManifest.xml:210:13
 	android:name
 		ADDED from AndroidManifest.xml:208:13
-service#com.syc.yueme.service.receiver.MyYueMessageService
-ADDED from AndroidManifest.xml:213:9
-	android:enabled
-		ADDED from AndroidManifest.xml:215:13
-	android:exported
-		ADDED from AndroidManifest.xml:216:13
+activity#com.syc.yueme.ui.activity.DealWithYueActivity
+ADDED from AndroidManifest.xml:224:9
+	android:label
+		ADDED from AndroidManifest.xml:227:13
+	android:theme
+		ADDED from AndroidManifest.xml:226:13
 	android:name
-		ADDED from AndroidManifest.xml:214:13
-service#com.syc.yueme.service.MyYueMessageService
-ADDED from AndroidManifest.xml:218:9
-	android:enabled
-		ADDED from AndroidManifest.xml:220:13
-	android:exported
-		ADDED from AndroidManifest.xml:221:13
-	android:name
-		ADDED from AndroidManifest.xml:219:13
+		ADDED from AndroidManifest.xml:225:13

@@ -212,16 +212,22 @@
             android:theme="@style/MainTheme" >
         </activity>
 
-        <service
-            android:name="com.syc.yueme.service.receiver.MyYueMessageService"
-            android:enabled="true"
-            android:exported="true" >
-        </service>
-        <service
-            android:name="com.syc.yueme.service.MyYueMessageService"
-            android:enabled="true"
-            android:exported="true" >
-        </service>
+        <!-- <service -->
+        <!-- android:name=".service.receiver.MyYueMessageService" -->
+        <!-- android:enabled="true" -->
+        <!-- android:exported="true" > -->
+        <!-- </service> -->
+        <!-- <service -->
+        <!-- android:name=".service.MyYueMessageService" -->
+        <!-- android:enabled="true" -->
+        <!-- android:exported="true" > -->
+        <!-- </service> -->
+
+        <activity
+            android:name="com.syc.yueme.ui.activity.DealWithYueActivity"
+            android:label="@string/title_activity_deal_with_yue"
+            android:theme="@style/MainTheme" >
+        </activity>
     </application>
 
 </manifest>
