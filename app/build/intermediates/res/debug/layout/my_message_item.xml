@@ -1,7 +1,8 @@
 <LinearLayout
-    android:layout_height="wrap_content"
+    android:layout_height="match_parent"
     android:layout_width="match_parent"
     xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:weightSum="1">
 
 
@@ -16,7 +17,7 @@
         android:layout_marginTop="10dp" />
 
     <RelativeLayout
-        android:layout_width="299dp"
+        android:layout_width="230dp"
         android:layout_height="wrap_content"
         android:layout_marginLeft="10dp"
         android:id="@+id/_34"
@@ -32,7 +33,7 @@
             style="@style/My.TextView._Black"
             android:textSize="15sp"
             android:text="时间：2015年1月31日晚上"
-            android:layout_below="@+id/distance_text"
+            android:layout_below="@+id/yue_text"
             android:layout_alignParentLeft="true"
             android:singleLine="true" />
         <TextView
@@ -53,16 +54,45 @@
             android:layout_alignParentLeft="true"
             android:layout_width="wrap_content"
             android:singleLine="true" />
-        <TextView
-            android:id="@+id/distance_text"
-            style="@style/My.TextView._Gray"
-            android:text=" "
-            android:singleLine="true"
-            android:textSize="15sp"
-            android:layout_gravity="left"
-            android:layout_toRightOf="@+id/login_text"
-            android:layout_below="@+id/yue_text"
-            android:layout_alignParentRight="true" />
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_below="@+id/publish_time_text"
+            android:layout_height="wrap_content">
+
+            <at.markushi.ui.CircleButton
+                android:id="@+id/commentBtn"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/comments_btn"
+                app:cb_color="@color/common_blue"
+                app:cb_pressedRingWidth="2dip"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@+id/yue_text"
+                />
+
+            <at.markushi.ui.CircleButton
+                android:id="@+id/deleteBtn"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/delete_btn"
+                app:cb_color="@color/common_blue"
+                app:cb_pressedRingWidth="2dip"/>
+
+            <TextView
+                android:id="@+id/distance_text"
+                android:layout_height="30dp"
+                android:layout_width="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:text="邀约请求处理"
+                android:singleLine="true"
+                android:layout_gravity="center"
+                android:textSize="20sp"
+                android:layout_marginLeft="60dp"
+                android:textColor="@color/base_color_text_white"
+                android:background="@color/common_blue"/>
+        </LinearLayout>
 
         <TextView
             android:id="@+id/yue_text"
@@ -74,12 +104,7 @@
             android:layout_alignParentLeft="true"
             android:layout_height="wrap_content"
             android:layout_width="wrap_content"
-            android:layout_marginTop="20dp" />
-
-
-
-
-
+            />
 
     </RelativeLayout>
 

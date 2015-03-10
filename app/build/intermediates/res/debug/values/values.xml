@@ -117,6 +117,8 @@
     <string name="contact">联系人</string>
     <string name="create">创建</string>
     <string name="dataLoadFinish">数据加载完成</string>
+    <string name="deal_with_apply">邀约请求处理</string>
+    <string name="deleteApplyRequest">删除邀约请求</string>
     <string name="deleteContact">删除联系人</string>
     <string name="deleteFriendRequest">删除好友请求</string>
     <string name="deleteSpecial">删除特别关注</string>
@@ -238,6 +240,7 @@
     <string name="sureToUpdate">确定更新版本吗</string>
     <string name="talk">聊天</string>
     <string name="tips">提示</string>
+    <string name="title_activity_deal_with_yue">DealWithYueActivity</string>
     <string name="title_activity_password_change">PasswordChangeActivity</string>
     <string name="title_activity_password_reset">PasswordResetActivity</string>
     <string name="title_activity_register_activity1">RegisterActivity1</string>

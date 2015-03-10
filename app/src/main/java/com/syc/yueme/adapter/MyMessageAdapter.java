@@ -6,14 +6,13 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.avos.avoscloud.AVGeoPoint;
 import com.avos.avoscloud.AVObject;
 import com.avos.avoscloud.AVUser;
 import com.syc.yueme.R;
 import com.syc.yueme.avobject.User;
 import com.syc.yueme.service.UserService;
 import com.syc.yueme.ui.activity.CommentUpdateActivity;
-import com.syc.yueme.ui.view.BaseListView;
+import com.syc.yueme.ui.activity.DealWithYueActivity;
 import com.syc.yueme.ui.view.ViewHolder;
 import com.syc.yueme.util.Utils;
 
@@ -27,15 +26,10 @@ import at.markushi.ui.CircleButton;
 
 public class MyMessageAdapter extends BaseListAdapter<AVObject> {
     PrettyTime prettyTime;
-    AVGeoPoint location;
-    BaseListView<AVObject> listView;
-    CommentAdapter adapter;
     List<AVObject> nears = new ArrayList<AVObject>();
     TextView nameView;
     ImageView avatarView;
-    AVUser user;
     public static AVObject which_msg;
-
     public MyMessageAdapter(Context ctx) {
         super(ctx);
         init();
@@ -53,7 +47,7 @@ public class MyMessageAdapter extends BaseListAdapter<AVObject> {
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
         if (convertView == null) {
-            convertView = inflater.inflate(R.layout.discover_near_people_item, null, false);
+            convertView = inflater.inflate(R.layout.my_message_item, null, false);
         }
         final AVObject message = datas.get(position);
         // get and set the name, content, time, publish_time, location
@@ -63,6 +57,8 @@ public class MyMessageAdapter extends BaseListAdapter<AVObject> {
         TextView yueTimeView = ViewHolder.findViewById(convertView, R.id.login_text);
         final TextView yueContentView = ViewHolder.findViewById(convertView, R.id.yue_text);
         avatarView = ViewHolder.findViewById(convertView, R.id.avatar_view);
+
+
         final CircleButton commentBtn = ViewHolder.findViewById(convertView, R.id.commentBtn);
         commentBtn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -71,55 +67,21 @@ public class MyMessageAdapter extends BaseListAdapter<AVObject> {
                 Utils.goActivity(ctx, CommentUpdateActivity.class);
             }
         });
-        final CircleButton likeButton = ViewHolder.findViewById(convertView, R.id.likeBtn);
-        likeButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                message.getRelation("likeUser").add(AVUser.getCurrentUser());
-                message.saveInBackground();
-                AVUser user = AVUser.getCurrentUser();
-                User.changeLikeMesg(user, message, User.relationMode_user.ADD);
-                user.saveInBackground();
 
-            }
-        });
-        final CircleButton talkButton = ViewHolder.findViewById(convertView, R.id.talkBtn);
-        talkButton.setOnClickListener(new View.OnClickListener() {
+        final TextView dealBtn = ViewHolder.findViewById(convertView, R.id.distance_text);
+        dealBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-//                Intent intent = getUserChatIntent(ctx,message.getAVUser("sendUser").getObjectId());
-//                ctx.startActivity(intent);
-//                final AVQuery<AVObject> userQuery = AVRelation.reverseQuery("_User","sendUser",message);
-//                userQuery.findInBackground(new FindCallback<AVObject>() {
-//                    @Override
-//                    public void done(List<AVObject> users, AVException avException) {
-//                            Intent intent = getUserChatIntent(ctx,users.("objectId"));
-//                            ctx.startActivity(intent);
-//
-//                    }
-//                });
-//
+                Utils.goActivity(ctx, DealWithYueActivity.class);
             }
         });
 
-        final CircleButton yueButton = ViewHolder.findViewById(convertView, R.id.yueBtn);
-        yueButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                message.getRelation("yueUser").add(AVUser.getCurrentUser());
-                message.saveInBackground();
-                AVUser user = AVUser.getCurrentUser();
-                User.changeTryYueMesg(user, message, User.relationMode_user.ADD);
-                user.saveInBackground();
-            }
-        });
 
-        //AVUser u = (AVUser) message.getAVObject("sendUser");
-        //nameView.setText(u.getString("username"));
-        nameView.setText(message.getString("username"));
-        String avatarUrl = message.getString("avatarUrl");
+        AVUser u = AVUser.getCurrentUser();
+        nameView.setText(u.getString("username"));
+        String avatarUrl = User.getAvatarUrl(u);
         UserService.displayAvatar(avatarUrl, avatarView);
-        Date updatedAt = message.getCreatedAt();
+        Date updatedAt = message.getUpdatedAt();
         // get the content
         String yueTime = (String) message.get("time");
         String prettyTimeStr = this.prettyTime.format(updatedAt);
@@ -132,6 +94,5 @@ public class MyMessageAdapter extends BaseListAdapter<AVObject> {
 
         return convertView;
     }
-
 
 }

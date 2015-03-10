@@ -210,5 +210,9 @@
     <string name="saveSuccess">保存成功</string>
     <string name="title_activity_user_hometown">UserHometownActivity</string>
     <string name="title_activity_user_nickname">UserNickname</string>
+    <string name="title_activity_deal_with_yue">DealWithYueActivity</string>
+
+    <string name="deal_with_apply">邀约请求处理</string>
+    <string name="deleteApplyRequest">删除邀约请求</string>
 
 </resources>
