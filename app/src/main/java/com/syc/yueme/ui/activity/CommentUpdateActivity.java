@@ -44,15 +44,18 @@ public class CommentUpdateActivity extends BaseActivity implements View.OnClickL
             String content = "";
             String location = "";
             String time = "";
-
+            AVUser u = AVUser.getCurrentUser();
+            String username = u.getUsername();
+            String avatarUrl = u.getString("avatarUrl");
             EditText contenttmp = (EditText) findViewById(R.id.comment_text_edit);
             content = contenttmp.getText().toString();
             if (content != null && !content.equals("")) {
                 AVObject msg = NearPeopleAdapter.which_msg;
                 AVObject comment = new AVObject("Comments");
-                comment.put("userSend", AVUser.getCurrentUser());
                 comment.put("contents", content);
                 comment.put("BelongMsg", msg);
+                comment.put("avatarUrl", avatarUrl);
+                comment.put("username", username);
                 comment.saveInBackground();
                 Utils.toast("success!");
             }

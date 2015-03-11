@@ -52,9 +52,9 @@ public class CommentAdapter extends BaseListAdapter<AVObject> {
         avatarView = ViewHolder.findViewById(convertView, R.id.avatar_view);
         String content = (String) comment.get("contents");
         contentView.setText(content);
-        AVUser u = (AVUser) comment.getAVObject("userSend");
-        String title = u.getString("username");
-        String avatarUrl = User.getAvatarUrl(u);
+        //AVUser u = (AVUser) comment.getAVObject("userSend");
+        String title = comment.getString("username");
+        String avatarUrl = comment.getString("avatarUrl");
         UserService.displayAvatar(avatarUrl, avatarView);
         nameView.setText(title);
 

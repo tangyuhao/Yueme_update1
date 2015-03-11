@@ -184,7 +184,7 @@ public class MessageService {
         query.setCachePolicy(AVQuery.CachePolicy.NETWORK_ELSE_CACHE);
         List<AVObject> comments = query.find();
         for (AVObject com : comments) {
-            com.getAVObject("userSend").fetch();
+            //com.getAVObject("userSend").fetch();
         }
         return comments;
     }

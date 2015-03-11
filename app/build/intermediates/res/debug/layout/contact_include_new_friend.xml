@@ -108,4 +108,4 @@
         android:layout_below="@id/layout_group"
         android:background="@drawable/base_horizontal_line"></View>
 
-</RelativeLayout><!-- From: file:/Users/kawhi/AndroidStudioProjects/Yueme_update1/app/src/main/res/layout/contact_include_new_friend.xml -->
+</RelativeLayout><!-- From: file:/Users/lemon/AndroidStudioProjects/new-git/app/src/main/res/layout/contact_include_new_friend.xml -->
