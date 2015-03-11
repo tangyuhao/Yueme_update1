@@ -2,6 +2,7 @@ package com.syc.yueme.adapter;
 
 import android.content.Context;
 import android.graphics.Color;
+import android.graphics.drawable.Drawable;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
@@ -10,6 +11,7 @@ import android.widget.TextView;
 
 import com.avos.avoscloud.AVObject;
 import com.avos.avoscloud.AVUser;
+import com.avos.avoscloud.search.Resources;
 import com.syc.yueme.R;
 import com.syc.yueme.avobject.User;
 import com.syc.yueme.service.UserService;
@@ -31,8 +33,8 @@ public class DealYueAdapter extends BaseListAdapter<AVObject> {
     List<AVObject> nears = new ArrayList<AVObject>();
     TextView nameView;
     ImageView avatarView;
-    public static final int lightblue=0xff0000ff;
-    public static final int red = 0xffff0000;
+    public static final int lightblue=0xff4699f5;
+    public static final int red = 0xff98989b;
     public DealYueAdapter(Context ctx) {
         super(ctx);
     }

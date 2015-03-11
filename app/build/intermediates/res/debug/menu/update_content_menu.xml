@@ -5,4 +5,4 @@
         android:id="@+id/sure"
         android:title="@string/sure"
         android:showAsAction="always" />
-</menu><!-- From: file:/Users/lemon/AndroidStudioProjects/new-git/app/src/main/res/menu/update_content_menu.xml -->
+</menu><!-- From: file:/D:/git_master3/Yueme_update1/app/src/main/res/menu/update_content_menu.xml -->

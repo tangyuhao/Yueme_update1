@@ -283,7 +283,7 @@ public class ContactFragment extends BaseFragment implements OnItemClickListener
     public void showDeleteDialog(final SortUser user) {
         new AlertDialog.Builder(ctx)
                 .setTitle("请选择：")
-                .setSingleChoiceItems(type, 0,
+                .setSingleChoiceItems(type, -1,
                         new DialogInterface.OnClickListener() {
                             public void onClick(DialogInterface dialog, int which) {
                                 String types=type[which];
@@ -297,18 +297,6 @@ public class ContactFragment extends BaseFragment implements OnItemClickListener
                                 }
                             }
                         })
-                .setPositiveButton("确定", new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialog, int which) {
-//                        String types=type[which];
-//                        if (types.equals("添加为特别关注")){
-//                            SpecialAttention(user);
-//                        }else if (types.equals("删除联系人")){
-//                            deleteFriend(user);
-//                        }
-                        dialog.dismiss();
-                    }
-                })
                 .setNegativeButton("取消", null)
                 .show();
 

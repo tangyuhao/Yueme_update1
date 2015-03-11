@@ -214,7 +214,7 @@ public class DiscoverFragment extends BaseFragment {
     {
         new AlertDialog.Builder(ctx)
                 .setTitle("请选择约的类型")
-                .setSingleChoiceItems(type, 0,
+                .setSingleChoiceItems(type, -1,
                         new DialogInterface.OnClickListener() {
 
                             public void onClick(DialogInterface dialog, int which) {
@@ -408,7 +408,7 @@ public class DiscoverFragment extends BaseFragment {
             @Override
             public List<AVObject> getDatas(int skip, int limit, List<AVObject> currentDatas) throws Exception {
 //                List<AVObject> msgs = MessageService.findMsg(skip, limit);
-                List<AVObject> msgs = MessageService.findeattypeByMsg(skip, limit);
+                List<AVObject> msgs = MessageService.findothertypeByMsg(skip, limit);
                 return msgs;
             }
 

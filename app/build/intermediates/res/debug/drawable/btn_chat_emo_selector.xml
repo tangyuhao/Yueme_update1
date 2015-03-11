@@ -5,4 +5,4 @@
     <item android:drawable="@drawable/chat_emo_pressed" android:state_focused="true"/>
     <item android:drawable="@drawable/chat_emo_normal"/>
 
-</selector><!-- From: file:/Users/lemon/AndroidStudioProjects/new-git/app/src/main/res/drawable/btn_chat_emo_selector.xml -->
+</selector><!-- From: file:/D:/git_master3/Yueme_update1/app/src/main/res/drawable/btn_chat_emo_selector.xml -->
