@@ -4,8 +4,7 @@
     android:background="@drawable/layoutpress"
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:weightSum="1"
-    android:id="@+id/">
+    android:weightSum="1">
 
 
     <ImageView
