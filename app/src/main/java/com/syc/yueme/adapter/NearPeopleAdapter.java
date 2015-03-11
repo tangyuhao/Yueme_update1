@@ -102,18 +102,24 @@ public class NearPeopleAdapter extends BaseListAdapter<AVObject> {
         talkButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-//                Intent intent = getUserChatIntent(ctx,message.getAVUser("sendUser").getObjectId());
-//                ctx.startActivity(intent);
+                message.fetchIfNeededInBackground(new GetCallback<AVObject>() {
+                    @Override
+                    public void done(AVObject avObject, AVException e) {
+                        Intent intent = getUserChatIntent(ctx,message.getAVUser("sendUser").getObjectId());
+                        ctx.startActivity(intent);
+                    }
+                });
+
 //                final AVQuery<AVObject> userQuery = AVRelation.reverseQuery("_User","sendUser",message);
 //                userQuery.findInBackground(new FindCallback<AVObject>() {
 //                    @Override
 //                    public void done(List<AVObject> users, AVException avException) {
-//                            Intent intent = getUserChatIntent(ctx,users.("objectId"));
+//                            Intent intent = getUserChatIntent(ctx,users.get("objectId"));
 //                            ctx.startActivity(intent);
 //
 //                    }
 //                });
-//
+
             }
         });
 

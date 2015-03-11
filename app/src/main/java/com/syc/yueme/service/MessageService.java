@@ -201,5 +201,14 @@ public class MessageService {
         }
         return message;
     }
+    public static List<AVObject> findYueUser(AVObject message, int skip, int limit) throws AVException {
+        AVRelation relation = message.getRelation("yueUser");
+        relation.setTargetClass("_User");
+        AVQuery<AVObject> query = relation.getQuery();
+        query.skip(skip);
+        query.limit(limit);
+        query.setCachePolicy(AVQuery.CachePolicy.NETWORK_ELSE_CACHE);
+        return query.find();
+    }
 
 }

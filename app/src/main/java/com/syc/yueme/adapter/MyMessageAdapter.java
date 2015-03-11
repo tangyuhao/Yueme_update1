@@ -72,6 +72,7 @@ public class MyMessageAdapter extends BaseListAdapter<AVObject> {
         dealBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                DealWithYueActivity.msg = message;
                 Utils.goActivity(ctx, DealWithYueActivity.class);
             }
         });

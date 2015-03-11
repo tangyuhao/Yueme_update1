@@ -5,8 +5,8 @@
     android:background="@color/base_bg"
     android:orientation="vertical">
 
-    <ListView
-        android:id="@+id/newfriendList"
+    <com.syc.yueme.ui.view.BaseListView
+        android:id="@+id/dealYueList"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="@android:color/transparent"

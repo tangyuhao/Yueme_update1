@@ -1,0 +1,44 @@
+<LinearLayout
+    android:layout_height="wrap_content"
+    android:layout_width="match_parent"
+    android:background="@drawable/layoutpress"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:weightSum="1">
+
+
+    <ImageView
+        android:id="@+id/avatar_view"
+        style="@style/My.ImageView.Photo_Avatar"
+        android:src="@drawable/default_user_avatar"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_gravity="top|left"
+        android:layout_margin="10dp"
+        android:layout_marginLeft="10dp" />
+    <TextView
+        android:id="@+id/name_text"
+        style="@style/My.TextView._Blue"
+        android:textSize="14sp"
+        android:text="xxxxx"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_marginTop="10dp" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="约"
+        android:id="@+id/yueBtn"
+        android:layout_marginLeft="40dp"
+        android:layout_marginRight="20dp" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="不约"
+        android:id="@+id/noyueBtn" />
+
+
+</LinearLayout>
+<!-- From: file:/Users/lemon/AndroidStudioProjects/new-git/app/src/main/res/layout/deal_with_yue_item.xml -->
